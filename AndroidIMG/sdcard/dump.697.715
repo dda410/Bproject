@@ -1,0 +1,18 @@
+1493055146216687: public void java.lang.Thread("Thread[AsyncTask #3,5,main]").run()
+1493055146409245:  protected java.lang.Object com.android.browser.SystemAllowGeolocationOrigins$1("com.android.browser.SystemAllowGeolocationOrigins$1@40534650").doInBackground((java.lang.Object[]) "[Ljava.lang.Void;@405348b0")
+1493055146409704:   protected java.lang.Void com.android.browser.SystemAllowGeolocationOrigins$1("com.android.browser.SystemAllowGeolocationOrigins$1@40534650").doInBackground((java.lang.Void[]) "[Ljava.lang.Void;@405348b0")
+1493055146410210:    static void com.android.browser.SystemAllowGeolocationOrigins.access$000((com.android.browser.SystemAllowGeolocationOrigins) "com.android.browser.SystemAllowGeolocationOrigins@40523ef0")
+1493055146410482:     private void com.android.browser.SystemAllowGeolocationOrigins("com.android.browser.SystemAllowGeolocationOrigins@40523ef0").maybeApplySetting()
+1493055146410723:      private java.lang.String com.android.browser.SystemAllowGeolocationOrigins("com.android.browser.SystemAllowGeolocationOrigins@40523ef0").getSystemSetting()
+1493055146411024:       public android.content.ContentResolver android.content.ContextWrapper("com.android.browser.Browser@40577db0").getContentResolver()
+1493055146411267:       return (android.content.ContentResolver) "android.app.ContextImpl$ApplicationContentResolver@40577a70"
+1493055146411518:       public static java.lang.String android.provider.Settings$Secure.getString((android.content.ContentResolver) "android.app.ContextImpl$ApplicationContentResolver@40577a70", (java.lang.String) "allowed_geolocation_origins")
+1493055146416052:       return (java.lang.String) "null"
+1493055146416123:      return (java.lang.String) ""
+1493055146416192:      public static android.content.SharedPreferences android.preference.PreferenceManager.getDefaultSharedPreferences((android.content.Context) "com.android.browser.Browser@40577db0")
+1493055146416965:      return (android.content.SharedPreferences) "android.app.ContextImpl$SharedPreferencesImpl@40591580"
+1493055146417273:      public java.lang.String android.app.ContextImpl$SharedPreferencesImpl("android.app.ContextImpl$SharedPreferencesImpl@40591580").getString((java.lang.String) "last_read_allow_geolocation_origins", (java.lang.String) "")
+1493055146417575:      return (java.lang.String) ""
+1493055146417656:      public static boolean android.text.TextUtils.equals((java.lang.CharSequence) "", (java.lang.CharSequence) "")
+1493055146417748:      return (boolean) "true"
+1493055146417795:     return (void

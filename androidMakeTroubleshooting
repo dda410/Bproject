@@ -1,0 +1,19 @@
+/usr/bin/ld: cannot find -lz:
+apt-get install libz-dev
+
+frameworks/base errors because of new gcc version:
+1. downgrade gcc to 4.4: `apt-get install gcc-4.4`
+2. fix symbolic link of gcc to point to `/usr/bin/gcc-4.4`
+3. having the ANDROID build directory as root open `frameworks/base/libs/utils/Android.mk`
+4. change line 60 from `LOCAL_CFLAGS += -DLIBUTILS_NATIVE=1 $(TOOL_CFLAGS)` to `LOCAL_CFLAGS += -DLIBUTILS_NATIVE=1 $(TOOL_CFLAGS) -fpermissive`
+
+host C++: obbtool <= frameworks/base/tools/obbtool/Main.cpp:
+remove -Werror from frameworks/base/tools/obbtool/Android.mk on line 16 and on line 37
+
+gcc: error trying to exec 'cc1plus': execvp: No such file or directory:
+1. downgrade version of g++ as well (diocane)
+2. apt-get install gcc-4.4-multilib g++-4.4-multilib
+3. cd /usr/bin
+4. ln -s /usr/bin/g++-4.4 g++
+5. ln -s /usr/bin/gcc-4.4 gcc
+6. ln -s /usr/bin/cpp-4.4 cpp

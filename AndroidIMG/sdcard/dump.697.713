@@ -1,0 +1,400 @@
+1493055146144556: public void java.lang.Thread("Thread[AsyncTask #2,5,main]").run()
+1493055146145669:  protected java.lang.Object com.android.browser.BrowserActivity$18("com.android.browser.BrowserActivity$18@40522bf8").doInBackground((java.lang.Object[]) "[Ljava.lang.Void;@405231e0")
+1493055146146146:   protected java.util.Set com.android.browser.BrowserActivity$18("com.android.browser.BrowserActivity$18@40522bf8").doInBackground((java.lang.Void[]) "[Ljava.lang.Void;@405231e0")
+1493055146146554:    new java.util.HashSet()
+1493055146146721:    return (void)
+1493055146146786:    public android.content.pm.PackageManager android.content.ContextWrapper("com.android.browser.BrowserActivity@405abce8").getPackageManager()
+1493055146147022:    return (android.content.pm.PackageManager) "android.app.ContextImpl$ApplicationPackageManager@405acb50"
+1493055146147252:    public java.util.List android.app.ContextImpl$ApplicationPackageManager("android.app.ContextImpl$ApplicationPackageManager@405acb50").getInstalledPackages((int) "0")
+1493055146243892:    return (java.util.List) "[PackageInfo{40528288 com.android.soundrecorder}, PackageInfo{40528730 com.android.gesture.builder}, PackageInfo{40528bf8 com.android.defcontainer}, PackageInfo{405290d0 com.android.launcher}, PackageInfo{405295c0 android}, PackageInfo{40529a20 com.android.providers.contacts}, PackageInfo{40529f50 com.android.settings}, PackageInfo{4052a3b0 com.android.quicksearchbox}, PackageInfo{4052a8f0 com.android.protips}, PackageInfo{4052ad48 com.android.providers.applications}, PackageInfo{4052b2b0 com.android.contacts}, PackageInfo{4052b770 com.android.inputmethod.latin}, PackageInfo{4052bcd0 com.android.phone}, PackageInfo{4052c1b8 com.android.calculator2}, PackageInfo{4052c640 com.android.providers.drm}, PackageInfo{4052cb30 com.android.htmlviewer}, PackageInfo{4052cf98 com.example.android.softkeyboard}, PackageInfo{4052d490 com.android.term}, PackageInfo{4052d8b8 com.android.systemui}, PackageInfo{4052dd78 com.android.bluetooth}, PackageInfo{4052e1e0 com.android.providers.calendar}, PackageInfo{4052e728 com.android.speechrecorder}, PackageInfo{4052ebd0 com.android.packageinstaller}, PackageInfo{4052f0b8 com.android.development}, PackageInfo{4052f598 com.android.calendar}, PackageInfo{4052fa88 com.android.browser}, PackageInfo{405316b0 com.android.providers.telephony}, PackageInfo{40531bf0 com.android.providers.subscribedfeeds}, PackageInfo{40532160 com.android.music}, PackageInfo{40532588 com.android.camera}, PackageInfo{40532950 com.svox.pico}, PackageInfo{40532d58 com.cooliris.media}, PackageInfo{40533198 com.android.email}, PackageInfo{40533628 com.example.android.livecubes}, PackageInfo{40596b90 com.android.providers.downloads.ui}, PackageInfo{40595d50 com.android.providers.userdictionary}, PackageInfo{4058cfc0 com.android.spare_parts}, PackageInfo{4057f288 com.android.deskclock}, PackageInfo{405230d0 android.tts}, PackageInfo{4051ab60 com.android.providers.settings}, PackageInfo{40510d68 com.android.mms}, PackageInfo{4050aba8 com.android.provision}, PackageInfo{40596438 com.android.providers.media}, PackageInfo{40586440 com.android.providers.downloads}, PackageInfo{40556610 com.android.certinstaller}, PackageInfo{40554b10 com.example.android.apis}, PackageInfo{40513538 com.android.server.vpn}]"
+1493055146428789:    private static void dalvik.system.VMDebug.startClassPrep()
+1493055146428861:     public java.lang.Class java.lang.ClassLoader("dalvik.system.PathClassLoader[/system/app/Browser.apk]").loadClass((java.lang.String) "java.util.List")
+1493055146429161:     return (java.lang.Class) "interface java.util.List"
+1493055146429489:    return (void)
+1493055146429560:    public java.util.Iterator java.util.ArrayList("[PackageInfo{40528288 com.android.soundrecorder}, PackageInfo{40528730 com.android.gesture.builder}, PackageInfo{40528bf8 com.android.defcontainer}, PackageInfo{405290d0 com.android.launcher}, PackageInfo{405295c0 android}, PackageInfo{40529a20 com.android.providers.contacts}, PackageInfo{40529f50 com.android.settings}, PackageInfo{4052a3b0 com.android.quicksearchbox}, PackageInfo{4052a8f0 com.android.protips}, PackageInfo{4052ad48 com.android.providers.applications}, PackageInfo{4052b2b0 com.android.contacts}, PackageInfo{4052b770 com.android.inputmethod.latin}, PackageInfo{4052bcd0 com.android.phone}, PackageInfo{4052c1b8 com.android.calculator2}, PackageInfo{4052c640 com.android.providers.drm}, PackageInfo{4052cb30 com.android.htmlviewer}, PackageInfo{4052cf98 com.example.android.softkeyboard}, PackageInfo{4052d490 com.android.term}, PackageInfo{4052d8b8 com.android.systemui}, PackageInfo{4052dd78 com.android.bluetooth}, PackageInfo{4052e1e0 com.android.providers.calendar}, PackageInfo{4052e728 com.android.speechrecorder}, PackageInfo{4052ebd0 com.android.packageinstaller}, PackageInfo{4052f0b8 com.android.development}, PackageInfo{4052f598 com.android.calendar}, PackageInfo{4052fa88 com.android.browser}, PackageInfo{405316b0 com.android.providers.telephony}, PackageInfo{40531bf0 com.android.providers.subscribedfeeds}, PackageInfo{40532160 com.android.music}, PackageInfo{40532588 com.android.camera}, PackageInfo{40532950 com.svox.pico}, PackageInfo{40532d58 com.cooliris.media}, PackageInfo{40533198 com.android.email}, PackageInfo{40533628 com.example.android.livecubes}, PackageInfo{40596b90 com.android.providers.downloads.ui}, PackageInfo{40595d50 com.android.providers.userdictionary}, PackageInfo{4058cfc0 com.android.spare_parts}, PackageInfo{4057f288 com.android.deskclock}, PackageInfo{405230d0 android.tts}, PackageInfo{4051ab60 com.android.providers.settings}, PackageInfo{40510d68 com.android.mms}, PackageInfo{4050aba8 com.android.provision}, PackageInfo{40596438 com.android.providers.media}, PackageInfo{40586440 com.android.providers.downloads}, PackageInfo{40556610 com.android.certinstaller}, PackageInfo{40554b10 com.example.android.apis}, PackageInfo{40513538 com.android.server.vpn}]").iterator()
+1493055146441203:    return (java.util.Iterator) "java.util.ArrayList$ArrayListIterator@40583a80"
+1493055146441555:    private static void dalvik.system.VMDebug.startClassPrep()
+1493055146441674:     public java.lang.Class java.lang.ClassLoader("dalvik.system.PathClassLoader[/system/app/Browser.apk]").loadClass((java.lang.String) "java.util.Iterator")
+1493055146441985:     return (java.lang.Class) "interface java.util.Iterator"
+1493055146442175:    return (void)
+1493055146442234:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146442477:    return (boolean) "true"
+1493055146442536:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146442834:    return (java.lang.Object) "PackageInfo{40528288 com.android.soundrecorder}"
+1493055146443145:    private static void dalvik.system.VMDebug.startClassPrep()
+1493055146443208:     public java.lang.Class java.lang.ClassLoader("dalvik.system.PathClassLoader[/system/app/Browser.apk]").loadClass((java.lang.String) "android.content.pm.PackageInfo")
+1493055146443507:     return (java.lang.Class) "class android.content.pm.PackageInfo"
+1493055146443750:    return (void)
+1493055146443813:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146443882:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146444163:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.soundrecorder")
+1493055146444479:    return (boolean) "false"
+1493055146444544:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146444830:    return (boolean) "true"
+1493055146444883:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146445119:    return (java.lang.Object) "PackageInfo{40528730 com.android.gesture.builder}"
+1493055146445397:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146445469:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146445785:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.gesture.builder")
+1493055146446084:    return (boolean) "false"
+1493055146446137:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146446372:    return (boolean) "true"
+1493055146446423:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146446799:    return (java.lang.Object) "PackageInfo{40528bf8 com.android.defcontainer}"
+1493055146447096:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146447156:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146447406:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.defcontainer")
+1493055146447702:    return (boolean) "false"
+1493055146447755:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146448040:    return (boolean) "true"
+1493055146448092:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146448327:    return (java.lang.Object) "PackageInfo{405290d0 com.android.launcher}"
+1493055146448623:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146448683:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146448993:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.launcher")
+1493055146449285:    return (boolean) "false"
+1493055146449337:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146449580:    return (boolean) "true"
+1493055146449632:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146449923:    return (java.lang.Object) "PackageInfo{405295c0 android}"
+1493055146450185:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146450245:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146450507:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "android")
+1493055146450792:    return (boolean) "false"
+1493055146450844:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146451128:    return (boolean) "true"
+1493055146451181:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146451416:    return (java.lang.Object) "PackageInfo{40529a20 com.android.providers.contacts}"
+1493055146451704:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146451764:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146452038:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.contacts")
+1493055146452388:    return (boolean) "false"
+1493055146452453:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146452688:    return (boolean) "true"
+1493055146452739:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146452970:    return (java.lang.Object) "PackageInfo{40529f50 com.android.settings}"
+1493055146453302:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146453362:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146453626:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.settings")
+1493055146453912:    return (boolean) "false"
+1493055146453964:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146454247:    return (boolean) "true"
+1493055146454300:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146454544:    return (java.lang.Object) "PackageInfo{4052a3b0 com.android.quicksearchbox}"
+1493055146454822:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146454881:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146455132:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.quicksearchbox")
+1493055146455501:    return (boolean) "false"
+1493055146455556:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146455786:    return (boolean) "true"
+1493055146455837:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146456068:    return (java.lang.Object) "PackageInfo{4052a8f0 com.android.protips}"
+1493055146456400:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146589753:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146590121:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.protips")
+1493055146590457:    return (boolean) "false"
+1493055146590514:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146590870:    return (boolean) "true"
+1493055146590925:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146591163:    return (java.lang.Object) "PackageInfo{4052ad48 com.android.providers.applications}"
+1493055146591465:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146591527:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146591781:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.applications")
+1493055146592140:    return (boolean) "false"
+1493055146592194:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146592442:    return (boolean) "true"
+1493055146592494:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146592725:    return (java.lang.Object) "PackageInfo{4052b2b0 com.android.contacts}"
+1493055146593061:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146593122:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146593385:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.contacts")
+1493055146593680:    return (boolean) "false"
+1493055146593733:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146594020:    return (boolean) "true"
+1493055146594073:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146594322:    return (java.lang.Object) "PackageInfo{4052b770 com.android.inputmethod.latin}"
+1493055146594610:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146594670:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146594924:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.inputmethod.latin")
+1493055146595274:    return (boolean) "false"
+1493055146595350:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146595592:    return (boolean) "true"
+1493055146595643:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146595873:    return (java.lang.Object) "PackageInfo{4052bcd0 com.android.phone}"
+1493055146596187:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146596248:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146615276:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.phone")
+1493055146615586:    return (boolean) "false"
+1493055146615643:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146615998:    return (boolean) "true"
+1493055146616053:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146677610:    return (java.lang.Object) "PackageInfo{4052c1b8 com.android.calculator2}"
+1493055146677972:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146678038:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146678317:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.calculator2")
+1493055146678722:    return (boolean) "false"
+1493055146678778:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146679014:    return (boolean) "true"
+1493055146679065:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146679312:    return (java.lang.Object) "PackageInfo{4052c640 com.android.providers.drm}"
+1493055146679654:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146679715:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146679976:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.drm")
+1493055146680283:    return (boolean) "false"
+1493055146680336:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146680632:    return (boolean) "true"
+1493055146680685:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146680920:    return (java.lang.Object) "PackageInfo{4052cb30 com.android.htmlviewer}"
+1493055146681210:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146681272:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146681572:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.htmlviewer")
+1493055146681949:    return (boolean) "false"
+1493055146682003:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146682244:    return (boolean) "true"
+1493055146682297:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146682527:    return (java.lang.Object) "PackageInfo{4052cf98 com.example.android.softkeyboard}"
+1493055146682861:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146682922:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146683174:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.example.android.softkeyboard")
+1493055146683473:    return (boolean) "false"
+1493055146683525:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146683812:    return (boolean) "true"
+1493055146683865:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146684103:    return (java.lang.Object) "PackageInfo{4052d490 com.android.term}"
+1493055146684373:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146684433:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146684703:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.term")
+1493055146685049:    return (boolean) "false"
+1493055146685103:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146685344:    return (boolean) "true"
+1493055146685396:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146685651:    return (java.lang.Object) "PackageInfo{4052d8b8 com.android.systemui}"
+1493055146686015:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146686077:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146713513:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.systemui")
+1493055146713827:    return (boolean) "false"
+1493055146713883:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146714229:    return (boolean) "true"
+1493055146714283:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146714520:    return (java.lang.Object) "PackageInfo{4052dd78 com.android.bluetooth}"
+1493055146714805:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146714876:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146715138:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.bluetooth")
+1493055146715499:    return (boolean) "false"
+1493055146715554:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146715785:    return (boolean) "true"
+1493055146715836:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146716068:    return (java.lang.Object) "PackageInfo{4052e1e0 com.android.providers.calendar}"
+1493055146716501:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146716563:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146716834:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.calendar")
+1493055146717136:    return (boolean) "false"
+1493055146717199:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146717497:    return (boolean) "true"
+1493055146717551:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146717787:    return (java.lang.Object) "PackageInfo{4052e728 com.android.speechrecorder}"
+1493055146718066:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146718126:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146718387:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.speechrecorder")
+1493055146718735:    return (boolean) "false"
+1493055146718789:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146719022:    return (boolean) "true"
+1493055146719073:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146719316:    return (java.lang.Object) "PackageInfo{4052ebd0 com.android.packageinstaller}"
+1493055146719650:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146719712:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146719963:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.packageinstaller")
+1493055146720260:    return (boolean) "false"
+1493055146720313:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146720596:    return (boolean) "true"
+1493055146720648:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146720881:    return (java.lang.Object) "PackageInfo{4052f0b8 com.android.development}"
+1493055146721165:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146721226:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146721611:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.development")
+1493055146721906:    return (boolean) "false"
+1493055146721959:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146722198:    return (boolean) "true"
+1493055146722249:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146722480:    return (java.lang.Object) "PackageInfo{4052f598 com.android.calendar}"
+1493055146722834:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146722895:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146723147:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.calendar")
+1493055146723448:    return (boolean) "false"
+1493055146723501:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146723785:    return (boolean) "true"
+1493055146723838:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146724074:    return (java.lang.Object) "PackageInfo{4052fa88 com.android.browser}"
+1493055146724343:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146724404:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146724655:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.browser")
+1493055146725008:    return (boolean) "false"
+1493055146725061:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146725311:    return (boolean) "true"
+1493055146725369:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146725702:    return (java.lang.Object) "PackageInfo{405316b0 com.android.providers.telephony}"
+1493055146726065:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146726131:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146729923:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.telephony")
+1493055146730228:    return (boolean) "false"
+1493055146730282:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146730601:    return (boolean) "true"
+1493055146730654:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146730889:    return (java.lang.Object) "PackageInfo{40531bf0 com.android.providers.subscribedfeeds}"
+1493055146731181:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146731242:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146731549:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.subscribedfeeds")
+1493055146731841:    return (boolean) "false"
+1493055146731906:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146732141:    return (boolean) "true"
+1493055146732205:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146732617:    return (java.lang.Object) "PackageInfo{40532160 com.android.music}"
+1493055146732893:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146732956:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146733234:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.music")
+1493055146733560:    return (boolean) "false"
+1493055146733613:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146733927:    return (boolean) "true"
+1493055146733981:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146734228:    return (java.lang.Object) "PackageInfo{40532588 com.android.camera}"
+1493055146734489:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146734548:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146734853:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.camera")
+1493055146735150:    return (boolean) "false"
+1493055146735205:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146735431:    return (boolean) "true"
+1493055146735482:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146735713:    return (java.lang.Object) "PackageInfo{40532950 com.svox.pico}"
+1493055146736025:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146736086:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146736420:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.svox.pico")
+1493055146736707:    return (boolean) "false"
+1493055146736760:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146737045:    return (boolean) "true"
+1493055146737098:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146737342:    return (java.lang.Object) "PackageInfo{40532d58 com.cooliris.media}"
+1493055146737605:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146737665:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146737915:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.cooliris.media")
+1493055146738295:    return (boolean) "false"
+1493055146738350:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146738579:    return (boolean) "true"
+1493055146738630:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146738861:    return (java.lang.Object) "PackageInfo{40533198 com.android.email}"
+1493055146739180:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146739242:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146739493:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.email")
+1493055146739779:    return (boolean) "false"
+1493055146739831:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146740113:    return (boolean) "true"
+1493055146740177:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146740412:    return (java.lang.Object) "PackageInfo{40533628 com.example.android.livecubes}"
+1493055146740691:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146740751:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146741001:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.example.android.livecubes")
+1493055146741358:    return (boolean) "false"
+1493055146741412:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146741690:    return (boolean) "true"
+1493055146741741:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146741972:    return (java.lang.Object) "PackageInfo{40596b90 com.android.providers.downloads.ui}"
+1493055146742337:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146742400:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146742653:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.downloads.ui")
+1493055146742939:    return (boolean) "false"
+1493055146742991:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146743287:    return (boolean) "true"
+1493055146743340:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146743573:    return (java.lang.Object) "PackageInfo{40595d50 com.android.providers.userdictionary}"
+1493055146743852:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146743911:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146744225:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.userdictionary")
+1493055146744517:    return (boolean) "false"
+1493055146744570:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146744797:    return (boolean) "true"
+1493055146744848:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146745142:    return (java.lang.Object) "PackageInfo{4058cfc0 com.android.spare_parts}"
+1493055146745427:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146745491:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146745741:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.spare_parts")
+1493055146746029:    return (boolean) "false"
+1493055146746081:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146762738:    return (boolean) "true"
+1493055146762804:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146763135:    return (java.lang.Object) "PackageInfo{4057f288 com.android.deskclock}"
+1493055146763461:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146763523:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146763843:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.deskclock")
+1493055146764151:    return (boolean) "false"
+1493055146764205:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146764433:    return (boolean) "true"
+1493055146764484:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146764770:    return (java.lang.Object) "PackageInfo{405230d0 android.tts}"
+1493055146765030:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146765090:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146765351:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "android.tts")
+1493055146765641:    return (boolean) "false"
+1493055146765693:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146765977:    return (boolean) "true"
+1493055146766029:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146769652:    return (java.lang.Object) "PackageInfo{4051ab60 com.android.providers.settings}"
+1493055146769964:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146770026:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146770305:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.settings")
+1493055146770700:    return (boolean) "false"
+1493055146770755:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146770997:    return (boolean) "true"
+1493055146771049:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146771292:    return (java.lang.Object) "PackageInfo{40510d68 com.android.mms}"
+1493055146771606:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146771667:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146771921:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.mms")
+1493055146772220:    return (boolean) "false"
+1493055146772274:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146772557:    return (boolean) "true"
+1493055146772610:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146772843:    return (java.lang.Object) "PackageInfo{4050aba8 com.android.provision}"
+1493055146773130:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146773191:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146773446:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.provision")
+1493055146773792:    return (boolean) "false"
+1493055146773845:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146774076:    return (boolean) "true"
+1493055146774137:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146774369:    return (java.lang.Object) "PackageInfo{40596438 com.android.providers.media}"
+1493055146774703:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146774764:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146775016:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.media")
+1493055146775317:    return (boolean) "false"
+1493055146775371:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146775661:    return (boolean) "true"
+1493055146775713:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146775968:    return (java.lang.Object) "PackageInfo{40586440 com.android.providers.downloads}"
+1493055146776333:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146776396:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146776647:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.providers.downloads")
+1493055146776995:    return (boolean) "false"
+1493055146777049:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146777292:    return (boolean) "true"
+1493055146777343:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146777580:    return (java.lang.Object) "PackageInfo{40556610 com.android.certinstaller}"
+1493055146777918:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146777979:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146778244:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.certinstaller")
+1493055146778533:    return (boolean) "false"
+1493055146778585:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146778894:    return (boolean) "true"
+1493055146778948:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146779196:    return (java.lang.Object) "PackageInfo{40554b10 com.example.android.apis}"
+1493055146779476:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146779536:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146780077:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.example.android.apis")
+1493055146780391:    return (boolean) "false"
+1493055146780445:    public boolean java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").hasNext()
+1493055146780675:    return (boolean) "true"
+1493055146780726:    public java.lang.Object java.util.ArrayList$ArrayListIterator("java.util.ArrayList$ArrayListIterator@40583a80").next()
+1493055146780957:    return (java.lang.Object) "PackageInfo{40513538 com.android.server.vpn}"
+1493055146781306:    static java.util.Set com.android.browser.BrowserActivity.access$100()
+1493055146781368:    return (java.util.Set) "[com.google.android.youtube]"
+1493055146781625:    public boolean java.util.HashSet("[com.google.android.youtube]").contains((java.lang.Object) "com.android.server.vpn")
+1493055146781914:    return (boolean) "false"
+1493055146781966:    public boolean java.util.ArrayList$ArrayListIter

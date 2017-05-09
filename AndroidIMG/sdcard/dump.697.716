@@ -1,0 +1,89 @@
+1493055146858049: public void java.lang.Thread("Thread[AsyncTask #4,5,main]").run()
+1493055146859248:  protected java.lang.Object com.android.browser.BrowserActivity$6("com.android.browser.BrowserActivity$6@405b4688").doInBackground((java.lang.Object[]) "[Ljava.lang.Void;@405b4bf8")
+1493055146859675:   protected java.lang.Void com.android.browser.BrowserActivity$6("com.android.browser.BrowserActivity$6@405b4688").doInBackground((java.lang.Void[]) "[Ljava.lang.Void;@405b4bf8")
+1493055146860106:    private static void dalvik.system.VMDebug.startClassPrep()
+1493055146860259:     public java.lang.Class java.lang.ClassLoader("dalvik.system.PathClassLoader[/system/app/Browser.apk]").loadClass((java.lang.String) "com.android.browser.BrowserBookmarksAdapter")
+1493055146861043:     return (java.lang.Class) "class com.android.browser.BrowserBookmarksAdapter"
+1493055146861243:    return (void)
+1493055146861342:    private static void dalvik.system.VMDebug.startClassPrep()
+1493055146861402:     public java.lang.Class java.lang.ClassLoader("dalvik.system.PathClassLoader[/system/app/Browser.apk]").loadClass((java.lang.String) "android.view.ViewGroup")
+1493055146861773:     return (java.lang.Class) "class android.view.ViewGroup"
+1493055146862027:    return (void)
+1493055146862163:    static android.database.Cursor com.android.browser.BrowserBookmarksAdapter.queryBookmarksForUrl((android.content.ContentResolver) "android.app.ContextImpl$ApplicationContentResolver@405acb18", (java.lang.String) "about:blank", (java.lang.String) "about:blank", (boolean) "true")
+1493055146862514:     private static java.lang.String com.android.browser.BrowserBookmarksAdapter.removeQuery((java.lang.String) "about:blank")
+1493055146862599:      public int java.lang.String("about:blank").indexOf((int) "63")
+1493055146862683:      return (int) "-1"
+1493055146862734:     return (java.lang.String) "about:blank"
+1493055146862794:     private static java.lang.String com.android.browser.BrowserBookmarksAdapter.removeQuery((java.lang.String) "about:blank")
+1493055146862868:      public int java.lang.String("about:blank").indexOf((int) "63")
+1493055146863002:      return (int) "-1"
+1493055146863065:     return (java.lang.String) "about:blank"
+1493055146863135:     new java.lang.StringBuilder()
+1493055146863202:     return (void)
+1493055146863248:     public java.lang.StringBuilder java.lang.StringBuilder("").append((java.lang.String) "about:blank")
+1493055146863357:     return (java.lang.StringBuilder) "about:blank"
+1493055146863444:     public java.lang.StringBuilder java.lang.StringBuilder("about:blank").append((char) "?")
+1493055146863606:     return (java.lang.StringBuilder) "about:blank?"
+1493055146863693:     public java.lang.String java.lang.StringBuilder("about:blank?").toString()
+1493055146863797:     return (java.lang.String) "about:blank?"
+1493055146863867:     new java.lang.StringBuilder()
+1493055146863932:     return (void)
+1493055146863978:     public java.lang.StringBuilder java.lang.StringBuilder("").append((java.lang.String) "about:blank")
+1493055146864094:     return (java.lang.StringBuilder) "about:blank"
+1493055146864236:     public java.lang.StringBuilder java.lang.StringBuilder("about:blank").append((char) "?")
+1493055146864341:     return (java.lang.StringBuilder) "about:blank?"
+1493055146864426:     public java.lang.String java.lang.StringBuilder("about:blank?").toString()
+1493055146864529:     return (java.lang.String) "about:blank?"
+1493055146864626:     new java.lang.StringBuilder()
+1493055146864693:     return (void)
+1493055146864759:     public java.lang.StringBuilder java.lang.StringBuilder("").append((java.lang.String) "(")
+1493055146864925:     return (java.lang.StringBuilder) "("
+1493055146865035:     public java.lang.StringBuilder java.lang.StringBuilder("(").append((java.lang.String) "url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%'")
+1493055146865192:     return (java.lang.StringBuilder) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%'"
+1493055146865297:     public java.lang.StringBuilder java.lang.StringBuilder("(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%'").append((java.lang.String) ") AND ")
+1493055146865507:     return (java.lang.StringBuilder) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND "
+1493055146865602:     public java.lang.StringBuilder java.lang.StringBuilder("(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND ").append((java.lang.String) "bookmark")
+1493055146865730:     return (java.lang.StringBuilder) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark"
+1493055146865928:     public java.lang.StringBuilder java.lang.StringBuilder("(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark").append((java.lang.String) " == 1")
+1493055146866817:     return (java.lang.StringBuilder) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1"
+1493055146866911:     public java.lang.String java.lang.StringBuilder("(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1").toString()
+1493055146867095:     return (java.lang.String) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1"
+1493055146867185:     final public android.database.Cursor android.content.ContentResolver("android.app.ContextImpl$ApplicationContentResolver@405acb18").query((android.net.Uri) "content://browser/bookmarks", (java.lang.String[]) "[Ljava.lang.String;@405b6a38", (java.lang.String) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1", (java.lang.String[]) "[Ljava.lang.String;@405b63e8", (java.lang.String) "null")
+1493055146868080:      public android.database.Cursor com.android.browser.BrowserProvider("com.android.browser.BrowserProvider@4057b0b0").query((android.net.Uri) "content://browser/bookmarks", (java.lang.String[]) "[Ljava.lang.String;@405b6a38", (java.lang.String) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1", (java.lang.String[]) "[Ljava.lang.String;@405b63e8", (java.lang.String) "null")
+1493055146868821:       public int android.content.UriMatcher("android.content.UriMatcher@40579618").match((android.net.Uri) "content://browser/bookmarks")
+1493055146869170:       return (int) "0"
+1493055146869233:       public android.database.sqlite.SQLiteDatabase android.database.sqlite.SQLiteOpenHelper("com.android.browser.BrowserProvider$DatabaseHelper@4057c110").getReadableDatabase()
+1493055146869482:       return (android.database.sqlite.SQLiteDatabase) "android.database.sqlite.SQLiteDatabase@4054e198"
+1493055146869784:       native public static void java.lang.System.arraycopy((java.lang.Object) "[Ljava.lang.String;@405b6a38", (int) "0", (java.lang.Object) "[Ljava.lang.String;@405b7858", (int) "0", (int) "1")
+1493055146870217:       return (void)
+1493055146870281:       new java.lang.StringBuilder((int) "256")
+1493055146870356:       return (void)
+1493055146870408:       public inline int java.lang.String("(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1").length()
+1493055146870535:       return (int) "82"
+1493055146870587:       public int java.lang.StringBuilder("").length()
+1493055146870664:       return (int) "0"
+1493055146870715:       public java.lang.StringBuilder java.lang.StringBuilder("").append((char) "(")
+1493055146870800:       return (java.lang.StringBuilder) "("
+1493055146870902:       public java.lang.StringBuilder java.lang.StringBuilder("(").append((java.lang.String) "(url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1")
+1493055146871112:       return (java.lang.StringBuilder) "((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1"
+1493055146871221:       public java.lang.StringBuilder java.lang.StringBuilder("((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1").append((char) ")")
+1493055146871341:       return (java.lang.StringBuilder) "((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1)"
+1493055146871495:       public java.lang.String java.lang.StringBuilder("((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1)").toString()
+1493055146871696:       return (java.lang.String) "((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1)"
+1493055146871773:       public android.database.Cursor android.database.sqlite.SQLiteDatabase("android.database.sqlite.SQLiteDatabase@4054e198").query((java.lang.String) "bookmarks", (java.lang.String[]) "[Ljava.lang.String;@405b7858", (java.lang.String) "((url == ? OR url == ? OR url LIKE ? || '%' OR url LIKE ? || '%') AND bookmark == 1)", (java.lang.String[]) "[Ljava.lang.String;@405b63e8", (java.lang.String) "null", (java.lang.String) "null", (java.lang.String) "null", (java.lang.String) "null")
+1493055146875042:       return (android.database.Cursor) "android.database.sqlite.SQLiteCursor@405b8cc0"
+1493055146875348:       final public android.content.Context android.content.ContentProvider("com.android.browser.BrowserProvider@4057b0b0").getContext()
+1493055146875658:       return (android.content.Context) "com.android.browser.Browser@40577db0"
+1493055146875892:       public android.content.ContentResolver android.content.ContextWrapper("com.android.browser.Browser@40577db0").getContentResolver()
+1493055146884936:       return (android.content.ContentResolver) "android.app.ContextImpl$ApplicationContentResolver@40577a70"
+1493055146885195:       public void android.database.AbstractCursor("android.database.sqlite.SQLiteCursor@405b8cc0").setNotificationUri((android.content.ContentResolver) "android.app.ContextImpl$ApplicationContentResolver@40577a70", (android.net.Uri) "content://browser/bookmarks")
+1493055146893370:       return (void)
+1493055146893446:      return (android.database.Cursor) "android.database.sqlite.SQLiteCursor@405b8cc0"
+1493055146894992:     return (android.database.Cursor) "android.content.ContentResolver$CursorWrapperInner@405b9d48"
+1493055146895247:    return (android.database.Cursor) "android.content.ContentResolver$CursorWrapperInner@405b9d48"
+1493055146895581:    public boolean android.database.CursorWrapper("android.content.ContentResolver$CursorWrapperInner@405b9d48").moveToFirst()
+1493055146895843:    return (boolean) "false"
+1493055146895898:    public void android.content.ContentResolver$CursorWrapperInner("android.content.ContentResolver$CursorWrapperInner@405b9d48").close()
+1493055146897885:    return (void)
+1493055146897942:   return (java.lang.Void) "null"
+1493055146898012:  return (java.lang.
