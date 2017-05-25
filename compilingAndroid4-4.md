@@ -31,7 +31,7 @@ version 2.3, do the following:
         updated: 
 		
 		```
-		JAVA_HOME=jdk-6u45-linux-x64
+		JAVA_HOME=/usr/lib/jvm/jdk-6u45-linux-x64
 		export JAVA_HOME
 		PATH=$JAVA_HOME/bin:$PATH
 		export PATH
