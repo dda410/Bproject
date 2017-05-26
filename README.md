@@ -38,15 +38,26 @@ following:
   need to be taken in order to compile, install and run Tracedroid and
   also the steps required to port Tracedroid to android 4.4:
 	  
-  - (compilingTracedroidGuide.md)[https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidGuide.md]:
-		it explains how to compile the Tracedroid android 2.3
-		system.img within an ubuntu 12.04 docker container. All the
-		required libraries and programs used in the process are
-		explained step by step.  
-
-	
-
-
-In order to get everything working there are several steps that need
-to be taken. I wrote a few guides that explains how to run, compile,
-install and get tracedroid working
+  - [compilingTracedroidGuide.md](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidGuide.md):
+	  it explains how to compile the Tracedroid android 2.3
+	  system.img within an ubuntu 12.04 docker container. All the
+	  required libraries and programs used in the process are
+	  explained step by step.
+  -[creatingAVDforTracedroidGuide.md](https://github.com/dda410/Bproject/blob/master/GUIDES/creatingAVDforTracedroidGuide.md):
+	  it explains how to setup and install the android sdk tools that
+	  are needed to emulate and run the compiled system.img. Further
+	  more it is explained how to create and AVD (Android Virtual
+	  Device) in order to make the system.img runnable by the
+	  emulator.
+  - [installingAndroguard.md](https://github.com/dda410/Bproject/blob/master/GUIDES/installingAndroguard.md):
+	  This guide is optional and it explains how to install androguard
+	  in order to provide also static malware analysis of the android
+	  applications. 
+  - [usingTracedroid.md](https://github.com/dda410/Bproject/blob/master/GUIDES/usingTracedroid.md):
+	  it explains how to use Tracedroid by using the emulator with the
+	  system.img compiled image. Step by step it is explained how to
+	  run an application, get is uid and start storing the traces for
+	  that application.
+  - [compilingAndroid4-4.md](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingAndroid4-4.md)
+	  it explains how to compile android 4.4 default system.img within
+	  the previously used docker container.
