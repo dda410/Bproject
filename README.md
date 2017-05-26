@@ -20,6 +20,34 @@ android 4.4 to make it compatible with more recent software. Android
 last android version that supports by default a dalvik virtual machine
 (from version 5.0 and on the runtime changed to art).
 
+The repo has different folders and files, the structure is the
+following:
+
+- Android_2.3: it contains a working system.img of android 2.3
+  compiled with the Tracedroid framework. it contains the uid file
+  that indicates the uid of the file we want to trace and an sdcard
+  folder containing the traces stored for the application with that
+  uid. 
+- JavaOracle6Installer: contains the oracle binary file to install
+  java 6 (required to compile android 4.4).
+- OTHERS: contains some files used during installation, compilation
+  and debugging that can be relevant in the future.
+- PDFs: contains papers and guides relevant to the subject of dynamic
+  malware analysis. 
+- GUIDES: contains the guides and howtos that explain the steps that
+  need to be taken in order to compile, install and run Tracedroid and
+  also the steps required to port Tracedroid to android 4.4:
+	  
+	  - (compilingTracedroidGuide.md)[https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidGuide.md]:
+		it explains how to compile the Tracedroid android 2.3
+		system.img within an ubuntu 12.04 docker container. All the
+		required libraries and programs used in the process are
+		explained step by step. 
+	  - 
+
+	
+
+
 In order to get everything working there are several steps that need
 to be taken. I wrote a few guides that explains how to run, compile,
 install and get tracedroid working
