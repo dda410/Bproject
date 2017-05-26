@@ -1,6 +1,6 @@
 [comment]: <> (auto-fill-mode, flyspell-mode, markdown-preview-mode) 
 
-# RUNNING TRACEDROID
+# CREATING AVD FOR TRACEDROID
 
 ## ANDROID STUDIO INSTALLATION
 
