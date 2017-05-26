@@ -38,12 +38,11 @@ following:
   need to be taken in order to compile, install and run Tracedroid and
   also the steps required to port Tracedroid to android 4.4:
 	  
-	  - (compilingTracedroidGuide.md)[https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidGuide.md]:
+  - (compilingTracedroidGuide.md)[https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidGuide.md]:
 		it explains how to compile the Tracedroid android 2.3
 		system.img within an ubuntu 12.04 docker container. All the
 		required libraries and programs used in the process are
-		explained step by step. 
-	  - 
+		explained step by step.  
 
 	
 
