@@ -1369,7 +1369,7 @@ void dvmMethodTraceReadClocks(Thread* self, u4* cpuClockDiff,
  * rather than mutexes for speed.
  */
 void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
-                       u4 cpuClockDiff, u4 wallClockDiff)
+                       u4 cpuClockDiff, u4 wallClockDiff, int type, void* options) /*DD param*/
 {
     MethodTraceState* state = &gDvm.methodTrace;
 #if DMTRACE_ENABLED
