@@ -1523,6 +1523,7 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     *ptr++ = (u1) (methodVal >> 8);
     *ptr++ = (u1) (methodVal >> 16);
     *ptr++ = (u1) (methodVal >> 24);
+#endif
 
 #if defined(HAVE_POSIX_CLOCKS)
     if (useThreadCpuClock()) {
