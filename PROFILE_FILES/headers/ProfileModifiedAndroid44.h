@@ -154,38 +154,38 @@ enum {
 /*
  * Call these when a method enters or exits.
  */
-#define TRACE_METHOD_ENTER(_self, _method, _type, _args)    /*DD*/                         \
+#define TRACE_METHOD_ENTER(_self, _method, _type, _args)                    \
     do {                                                                    \
         if (_self->interpBreak.ctl.subMode & kSubModeMethodTrace) {         \
             u4 cpuClockDiff = 0;                                            \
             u4 wallClockDiff = 0;                                           \
             dvmMethodTraceReadClocks(_self, &cpuClockDiff, &wallClockDiff); \
-            dvmMethodTraceAdd(_self, _method, METHOD_TRACE_ENTER,           \  /*DD*/
+            dvmMethodTraceAdd(_self, _method, METHOD_TRACE_ENTER,           \
                               cpuClockDiff, wallClockDiff, _type, _args);		\
         }                                                                   \
         if (_self->interpBreak.ctl.subMode & kSubModeEmulatorTrace)         \
             dvmEmitEmulatorTrace(_method, METHOD_TRACE_ENTER);              \
     } while(0);
-#define TRACE_METHOD_EXIT(_self, _method, _type, _retval)       /*DD*/                     \
+#define TRACE_METHOD_EXIT(_self, _method, _type, _retval)                            \
     do {                                                                    \
         if (_self->interpBreak.ctl.subMode & kSubModeMethodTrace) {         \
             u4 cpuClockDiff = 0;                                            \
             u4 wallClockDiff = 0;                                           \
             dvmMethodTraceReadClocks(_self, &cpuClockDiff, &wallClockDiff); \
-            dvmMethodTraceAdd(_self, _method, METHOD_TRACE_EXIT,            \ /*DD*/
+            dvmMethodTraceAdd(_self, _method, METHOD_TRACE_EXIT,            \
                               cpuClockDiff, wallClockDiff, _type, _retval);                 \
         }                                                                   \
         if (_self->interpBreak.ctl.subMode & kSubModeEmulatorTrace)         \
             dvmEmitEmulatorTrace(_method, METHOD_TRACE_EXIT);               \
     } while(0);
-#define TRACE_METHOD_UNROLL(_self, _method, _exception)  /*DD*/		\
+#define TRACE_METHOD_UNROLL(_self, _method, _exception)  		\
     do {                                                                    \
         if (_self->interpBreak.ctl.subMode & kSubModeMethodTrace) {         \
             u4 cpuClockDiff = 0;                                            \
             u4 wallClockDiff = 0;                                           \
             dvmMethodTraceReadClocks(_self, &cpuClockDiff, &wallClockDiff); \
             dvmMethodTraceAdd(_self, _method, METHOD_TRACE_UNROLL,          \
-                              cpuClockDiff, wallClockDiff, 0, _exception);  \ /*DD*/
+                              cpuClockDiff, wallClockDiff, 0, _exception);  \
         }                                                                   \
         if (_self->interpBreak.ctl.subMode & kSubModeEmulatorTrace)         \
             dvmEmitEmulatorTrace(_method, METHOD_TRACE_UNROLL);             \
