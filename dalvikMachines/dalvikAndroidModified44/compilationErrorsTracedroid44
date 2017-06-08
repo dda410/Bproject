@@ -1,27 +1,12 @@
 target thumb C++: libdvm <= dalvik/vm/Profile.cpp
-dalvik/vm/Profile.cpp: In function 'char* objectToString(Thread*, Object*)':
-dalvik/vm/Profile.cpp:1011:33: error: 'dvmIsValidObject' was not declared in this scope
-dalvik/vm/Profile.cpp:1030:60: error: invalid conversion from 'Object*' to 'const StringObject*' [-fpermissive]
-In file included from dalvik/vm/Dalvik.h:44:0,
-                 from dalvik/vm/Profile.cpp:20:
-dalvik/vm/UtfString.h:134:7: error:   initializing argument 1 of 'char* dvmCreateCstrFromString(const StringObject*)' [-fpermissive]
 dalvik/vm/Profile.cpp: In function 'void handle_method(Thread*, const Method*, MethodTraceState*, int, u4*)':
-dalvik/vm/Profile.cpp:1279:11: error: expected unqualified-id before 'this'
-dalvik/vm/Profile.cpp:1279:11: error: expected initializer before 'this'
-dalvik/vm/Profile.cpp:1280:25: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1287:13: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1288:29: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1288:29: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1295:9: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1295:28: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp: In function 'void dvmFastMethodTraceEnter(const Method*, Thread*)':
-dalvik/vm/Profile.cpp:1546:40: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
-dalvik/vm/Profile.cpp: In function 'void dvmFastMethodTraceExit(Thread*)':
-dalvik/vm/Profile.cpp:1562:73: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
-dalvik/vm/Profile.cpp: In function 'void dvmFastNativeMethodTraceExit(const Method*, Thread*)':
-dalvik/vm/Profile.cpp:1578:40: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
+dalvik/vm/Profile.cpp:1280:11: error: expected unqualified-id before 'this'
+dalvik/vm/Profile.cpp:1280:11: error: expected initializer before 'this'
+dalvik/vm/Profile.cpp:1281:25: error: invalid use of 'this' in non-member function
+dalvik/vm/Profile.cpp:1288:13: error: invalid use of 'this' in non-member function
+dalvik/vm/Profile.cpp:1289:29: error: invalid use of 'this' in non-member function
+dalvik/vm/Profile.cpp:1289:29: error: invalid use of 'this' in non-member function
+dalvik/vm/Profile.cpp:1296:9: error: invalid use of 'this' in non-member function
+dalvik/vm/Profile.cpp:1296:28: error: invalid use of 'this' in non-member function
 make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/Profile.o] Error 1
 make: Leaving directory `/root/android44'

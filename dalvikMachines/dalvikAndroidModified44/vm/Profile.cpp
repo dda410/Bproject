@@ -1008,7 +1008,7 @@ char *objectToString(Thread *self, Object *object) {
     }
 
     if (object == 0)               return strcpy(str,"null\0");
-    if (!dvmIsValidObject(object)) return strcpy(str,"invalid\0");
+    if (!(object != NULL && ((uintptr_t)object & (8-1)) == 0)) return strcpy(str,"invalid\0");
     if (dvmCheckException(self))   return strcpy(str,"except\0"); /* exception pending */
 
     /* Get the toString() method */
@@ -1027,7 +1027,8 @@ char *objectToString(Thread *self, Object *object) {
 
     /* <result.l> now contains a StringObject containing the toString() value of <object>. Convert it to a C string. */
     if (result.l == 0) return strcpy(str,"l==0\0");
-    char *string = (char*) dvmCreateCstrFromString(result.l);
+    const StringObject* resultz = (StringObject*) result.l;
+    char *string = (char*) dvmCreateCstrFromString(resultz);
 
     /* convert newlines and quotes */
     char *p;
@@ -1543,7 +1544,7 @@ void dvmFastMethodTraceEnter(const Method* method, Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, method, METHOD_TRACE_ENTER, cpuClockDiff,
-                          wallClockDiff);
+                          wallClockDiff, false, 0);
     }
 }
 
@@ -1559,7 +1560,7 @@ void dvmFastMethodTraceExit(Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, self->interpSave.method,
-                          METHOD_TRACE_EXIT, cpuClockDiff, wallClockDiff);
+                          METHOD_TRACE_EXIT, cpuClockDiff, wallClockDiff, false, 0);
     }
 }
 
@@ -1575,7 +1576,7 @@ void dvmFastNativeMethodTraceExit(const Method* method, Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, method, METHOD_TRACE_EXIT, cpuClockDiff,
-                          wallClockDiff);
+                          wallClockDiff, false, 0);
     }
 }
 
