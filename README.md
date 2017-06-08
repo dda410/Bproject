@@ -58,6 +58,9 @@ following:
 	  system.img compiled image. Step by step it is explained how to
 	  run an application, get is uid and start storing the traces for
 	  that application.
-  - [compilingAndroid4-4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingAndroid4-4.md)
+  - [compilingAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingAndroid4-4.md)
 	  it explains how to compile android 4.4 default system.img within
 	  the previously used docker container.
+  - [compileTracedroidOnAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidOnAndroid44.md)
+	  it explains how to compile tracedroid on top of android 4.4
+      source code.
