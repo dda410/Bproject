@@ -1,0 +1,5 @@
+target arm C++: libdvm <= dalvik/vm/InlineNative.cpp
+dalvik/vm/InlineNative.cpp: In function 'bool dvmPerformInlineOp4Dbg(u4, u4, u4, u4, JValue*, int)':
+dalvik/vm/InlineNative.cpp:911:37: error: invalid conversion from 'void*' to 'u4* {aka unsigned int*}' [-fpermissive]
+make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/InlineNative.o] Error 1
+make: Leaving directory `/root/android44'
