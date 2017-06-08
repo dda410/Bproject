@@ -64,3 +64,12 @@ following:
   - [compileTracedroidOnAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidOnAndroid44.md)
 	  it explains how to compile tracedroid on top of android 4.4
       source code.
+
+- dalvikMachines: contains the dalvik machines source code of android
+  version 2.3 and 4.4 both the original ones and the one containing
+  the tracedroid changes. The dalvikMachines/dalvikAndroidModified44/
+  folder contains the main project sources: the update of tracedroid
+  from android 2.3 to android 4.4. The
+  dalvikMachines/dalvikAndroidModified44/compilationErrorsTracedroid44
+  contains the compilation errors outputted while compiling the
+  changes in the android source code. 
