@@ -1854,7 +1854,7 @@ bool dvmInitAfterZygote()
         char dmtrace_file[64];    
         if (gDvm.tracepath == 0) sprintf(dmtrace_file,"/sdcard/dmtrace.trace");
         else                     sprintf(dmtrace_file,"/data/trace/dmtrace.trace");
-        dvmMethodTraceStart(dmtrace_file, -1, 8 * 1024 * 1024, 0, false);
+        dvmMethodTraceStart(dmtrace_file, -1, 8 * 1024 * 1024, 0, false, false, 0);
     }
     
     return true;

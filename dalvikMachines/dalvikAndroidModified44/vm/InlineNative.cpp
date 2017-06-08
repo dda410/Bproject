@@ -908,7 +908,7 @@ bool dvmPerformInlineOp4Dbg(u4 arg0, u4 arg1, u4 arg2, u4 arg3,
 
     Thread* self = dvmThreadSelf();
 
-    u4 *args = malloc(4 * sizeof(u4));
+    u4 *args = (u4*) malloc(4 * sizeof(u4));
     args[0] = arg0;
     args[1] = arg1;
     args[2] = arg2;

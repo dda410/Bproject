@@ -343,7 +343,7 @@ tryArchive:
 
     ALOGV("Successfully opened '%s' in '%s'", kDexInJarName, fileName);
 
-    pDvmDex->fileName = malloc(strlen(fileName)+1);
+    pDvmDex->fileName = (char*) malloc(strlen(fileName)+1);
     strcpy(pDvmDex->fileName, fileName); 
     pDvmDex->isSystem = false;
     if (strncmp(fileName,"/system/framework/",strlen("/system/framework/")) == 0) pDvmDex->isSystem = true;

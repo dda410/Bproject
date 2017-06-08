@@ -245,7 +245,7 @@ static void getSample(Thread* thread)
          */
         for (int i = newLength - 1; i >= 0; --i) {
             dvmMethodTraceAdd(thread, newStackTrace[i], METHOD_TRACE_ENTER,
-                              cpuClockDiff, wallClockDiff);
+                              cpuClockDiff, wallClockDiff, false, 0);
         }
     } else {
         /*
@@ -263,12 +263,12 @@ static void getSample(Thread* thread)
         /* Iterate top-down over old trace until diff, emitting exit events. */
         for (int i = 0; i <= diffIndexOld; ++i) {
             dvmMethodTraceAdd(thread, oldStackTrace[i], METHOD_TRACE_EXIT,
-                              cpuClockDiff, wallClockDiff);
+                              cpuClockDiff, wallClockDiff, false, 0);
         }
         /* Iterate bottom-up over new trace from diff, emitting entry events. */
         for (int i = diffIndexNew; i >= 0; --i) {
             dvmMethodTraceAdd(thread, newStackTrace[i], METHOD_TRACE_ENTER,
-                              cpuClockDiff, wallClockDiff);
+                              cpuClockDiff, wallClockDiff, false, 0);
         }
     }
 

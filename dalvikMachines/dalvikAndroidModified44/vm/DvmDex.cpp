@@ -195,7 +195,7 @@ void dvmDexFileFree(DvmDex* pDvmDex)
     totalSize += sizeof(DvmDex);
 
     dexFileFree(pDvmDex->pDexFile);
-    dexFileFree(pDvmDex->fileName);
+    // dexFileFree(pDvmDex->fileName);
 
     ALOGV("+++ DEX %p: freeing aux structs", pDvmDex);
     dvmFreeAtomicCache(pDvmDex->pInterfaceCache);
