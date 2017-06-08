@@ -1,5 +1,1 @@
-target thumb C++: libdvm <= dalvik/vm/native/dalvik_system_Zygote.cpp
-dalvik/vm/native/dalvik_system_Zygote.cpp: In function 'int setgroupsIntarray(ArrayObject*)':
-dalvik/vm/native/dalvik_system_Zygote.cpp:193:12: error: invalid conversion from 'void*' to 'gid_t* {aka unsigned int*}' [-fpermissive]
-make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/native/dalvik_system_Zygote.o] Error 1
-make: Leaving directory `/root/android44'
+Solved compilation errors
