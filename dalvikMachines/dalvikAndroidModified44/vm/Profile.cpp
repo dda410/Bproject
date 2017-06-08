@@ -1027,7 +1027,7 @@ char *objectToString(Thread *self, Object *object) {
 
     /* <result.l> now contains a StringObject containing the toString() value of <object>. Convert it to a C string. */
     if (result.l == 0) return strcpy(str,"l==0\0");
-    char *string = dvmCreateCstrFromString(result.l);
+    char *string = (char*) dvmCreateCstrFromString(result.l);
 
     /* convert newlines and quotes */
     char *p;
@@ -1111,7 +1111,7 @@ char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
                     u2 str = (u2) low;
 
                     /* allocate enough space */
-                    char *c = malloc(dvmUtf16_utf8ByteLen(&str, 1));
+                    char *c = (char*) malloc(dvmUtf16_utf8ByteLen(&str, 1));
 
                     /* convert the utf16 string of size 1 to a utf8 string */
                     dvmConvertUtf16ToUtf8(c, &str, 1);
@@ -1170,7 +1170,7 @@ char *getThis(Thread *self, const Method *method, u4 *args) {
     if (dvmIsStaticMethod(method)) return NULL;
     if (args != NULL)              return objectToString(self, (Object *) args[0]);
 
-    u4 *frameptr = self->curFrame;
+    u4 *frameptr = self->interpSave.curFrame;
     return objectToString(self, (Object* ) frameptr[method->registersSize - method->insSize]);
 }
 
@@ -1181,7 +1181,7 @@ char *getThis(Thread *self, const Method *method, u4 *args) {
 char **getParameters(Thread *self, const Method *method, int parameterCount, u4 *args) {
 
     /* string array that will contain the parameters */
-    char **parameters = malloc(parameterCount * sizeof(char *));
+  char **parameters = (char**) malloc(parameterCount * sizeof(char *));
     if (parameters == NULL) return NULL;
 
     DexParameterIterator dpi;
@@ -1195,7 +1195,7 @@ char **getParameters(Thread *self, const Method *method, int parameterCount, u4 
 
     /* populate frameptr and locals */
     if (args == NULL) {
-        frameptr = self->curFrame;
+        frameptr = self->interpSave.curFrame;
         locals   = method->registersSize - method->insSize;
     } else {
         /* arguments will be in args[0], args[1], args[2] and args[3] */
@@ -1394,11 +1394,11 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 
     if (type == TRACE_INLINE) {
         /* For inline functions, we must compare against the class descriptor found in the SAVEAREA. */
-        const StackSaveArea* saveArea = SAVEAREA_FROM_FP(self->curFrame);
+        const StackSaveArea* saveArea = SAVEAREA_FROM_FP(self->interpSave.curFrame);
         caller_clazz = saveArea->method->clazz;
     } else {
         /* For all other invocations, we lookup the caller class of the method */
-        caller_clazz = dvmGetCallerClass(self->curFrame);
+        caller_clazz = dvmGetCallerClass(self->interpSave.curFrame);
     }
 
     if ( caller_clazz != NULL &&
@@ -1412,7 +1412,7 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
          */
 /*      LOGD_TRACE("pDvmDex->filename: %s\n",caller_clazz->pDvmDex->fileName); */
 
-        const Method *caller_method = dvmGetCallerMethod(self->curFrame);
+        const Method *caller_method = dvmGetCallerMethod(self->interpSave.curFrame);
 
         /* java.lang.reflect.Method.invoke() is an exception, we'll trace these
          * calls always.
@@ -1523,23 +1523,12 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     *ptr++ = (u1) (methodVal >> 8);
     *ptr++ = (u1) (methodVal >> 16);
     *ptr++ = (u1) (methodVal >> 24);
+    *ptr++ = (u1) cpuClockDiff;  /* DD BEFORE WAS CALLED clockDiff */
+    *ptr++ = (u1) (cpuClockDiff >> 8);
+    *ptr++ = (u1) (cpuClockDiff >> 16);
+    *ptr++ = (u1) (cpuClockDiff >> 24);
 #endif
 
-#if defined(HAVE_POSIX_CLOCKS)
-    if (useThreadCpuClock()) {
-        *ptr++ = (u1) cpuClockDiff;  /* DD BEFORE WAS CALLED clockDiff */
-        *ptr++ = (u1) (cpuClockDiff >> 8);
-        *ptr++ = (u1) (cpuClockDiff >> 16);
-        *ptr++ = (u1) (cpuClockDiff >> 24);
-    }
-#endif
-
-    if (useWallClock()) {
-        *ptr++ = (u1) wallClockDiff;
-        *ptr++ = (u1) (wallClockDiff >> 8);
-        *ptr++ = (u1) (wallClockDiff >> 16);
-        *ptr++ = (u1) (wallClockDiff >> 24);
-    }
 }
 
 

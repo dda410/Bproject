@@ -982,8 +982,12 @@ static JdwpError handleOR_IsCollected(JdwpState* state,
 static JdwpError handleSR_Value(JdwpState* state,
     const u1* buf, int dataLen, ExpandBuf* pReply)
 {
-    ObjectId stringObject = dvmReadObjectId(&buf);
-    char* str = dvmDbgStringToUtf8(stringObject);
+    
+    ObjectId stringObject;
+    char* str;
+
+    stringObject = dvmReadObjectId(&buf);
+    str = dvmDbgStringToUtf8(stringObject);
 
     ALOGV("  Req for str %llx --> '%s'", stringObject, str);
 

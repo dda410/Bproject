@@ -42,8 +42,8 @@
    - self->dump will be closed and becomes NULL
    - switch back to function x being traced, and fprintf() will crash the VM
  */
-#define LOGX_TRACE(...)    { dvmLockMutex(&state->fwriteLock); LOG(LOG_DEBUG, TRACE_LOG_TAG, __VA_ARGS__); dvmUnlockMutex(&state->fwriteLock); }
-#define LOGD_TRACE(...)                                             \
+#define ALOGX_TRACE(...)    { dvmLockMutex(&state->fwriteLock); LOG(LOG_DEBUG, TRACE_LOG_TAG, __VA_ARGS__); dvmUnlockMutex(&state->fwriteLock); }
+#define ALOGD_TRACE(...)                                             \
     do {                                                            \
         dvmLockMutex(&state->fwriteLock);                           \
         if (self->dump)          fprintf(self->dump, __VA_ARGS__);  \
@@ -66,6 +66,11 @@ void dvmProfilingShutdown(void);
  * most of this per-thread.
  */
 struct MethodTraceState {
+
+    /* these are set during VM init */
+    Method* gcMethod;
+    Method* classPrepMethod;
+
     /* active state */
     pthread_mutex_t startStopLock;
     pthread_mutex_t fwriteLock; // DD ADDED
