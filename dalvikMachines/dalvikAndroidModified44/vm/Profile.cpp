@@ -1271,29 +1271,29 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state, 
 
     /* number of arguments for this method */
     int parameterCount = dexProtoGetParameterCount(&method->prototype);
-    if (!gDvm.parameters) parameterCount = 0;
+    if (!gDvm.parameters)    parameterCount = 0;
 
     char *whitespace         = getWhitespace(self->depth);
     char *modifiers          = getModifiers(method, args);
     char *return_type        = convertDescriptor(dexProtoGetReturnType(&method->prototype));
     char *classDescriptor    = convertDescriptor(method->clazz->descriptor);
-    char *this               = NULL;
-    if (!isConstructor) this = getThis(self, method, args);
+    char *thIs               = NULL; // changing from this to thIs since in c++ this is prevalue expression while in c is not.
+    if (!isConstructor) thIs = getThis(self, method, args);
     char **parameters        = getParameters(self, method, parameterCount, args);
     char *parameterString    = getParameterString(self, method, parameters, parameterCount);
 
 #if ALOGD_TRACE_ENABLED
     if (isConstructor){     ALOGD_TRACE("%snew %s(%s)\n",             whitespace,                         classDescriptor,                     parameterString); }
     else {
-        if (this == NULL) { ALOGD_TRACE("%s%s%s %s.%s(%s)\n",         whitespace, modifiers, return_type, classDescriptor,       method->name, parameterString); }
-        else {              ALOGD_TRACE("%s%s%s %s(\"%s\").%s(%s)\n", whitespace, modifiers, return_type, classDescriptor, this, method->name, parameterString); }
+        if (thIs == NULL) { ALOGD_TRACE("%s%s%s %s.%s(%s)\n",         whitespace, modifiers, return_type, classDescriptor,       method->name, parameterString); }
+        else {              ALOGD_TRACE("%s%s%s %s(\"%s\").%s(%s)\n", whitespace, modifiers, return_type, classDescriptor, thIs, method->name, parameterString); }
     }
 #endif
 
     free(whitespace);
     free(modifiers);
     free(return_type);
-    if (this != NULL) free(this);
+    if (thIs != NULL) free(thIs);
     for (i = 0; i < parameterCount; i++)  free(parameters[i]);
     free(parameters);
     free(parameterString);

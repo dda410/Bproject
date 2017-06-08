@@ -1,12 +1,5 @@
-target thumb C++: libdvm <= dalvik/vm/Profile.cpp
-dalvik/vm/Profile.cpp: In function 'void handle_method(Thread*, const Method*, MethodTraceState*, int, u4*)':
-dalvik/vm/Profile.cpp:1280:11: error: expected unqualified-id before 'this'
-dalvik/vm/Profile.cpp:1280:11: error: expected initializer before 'this'
-dalvik/vm/Profile.cpp:1281:25: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1288:13: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1289:29: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1289:29: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1296:9: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp:1296:28: error: invalid use of 'this' in non-member function
-make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/Profile.o] Error 1
+target thumb C++: libdvm <= dalvik/vm/native/dalvik_system_Zygote.cpp
+dalvik/vm/native/dalvik_system_Zygote.cpp: In function 'int setgroupsIntarray(ArrayObject*)':
+dalvik/vm/native/dalvik_system_Zygote.cpp:193:12: error: invalid conversion from 'void*' to 'gid_t* {aka unsigned int*}' [-fpermissive]
+make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/native/dalvik_system_Zygote.o] Error 1
 make: Leaving directory `/root/android44'
