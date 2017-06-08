@@ -1,3 +1,4 @@
+target thumb C++: libdvm <= dalvik/vm/Profile.cpp
 dalvik/vm/Profile.cpp: In function 'char* objectToString(Thread*, Object*)':
 dalvik/vm/Profile.cpp:1011:33: error: 'dvmIsValidObject' was not declared in this scope
 dalvik/vm/Profile.cpp:1030:60: error: invalid conversion from 'Object*' to 'const StringObject*' [-fpermissive]
@@ -13,17 +14,4 @@ dalvik/vm/Profile.cpp:1288:29: error: invalid use of 'this' in non-member functi
 dalvik/vm/Profile.cpp:1288:29: error: invalid use of 'this' in non-member function
 dalvik/vm/Profile.cpp:1295:9: error: invalid use of 'this' in non-member function
 dalvik/vm/Profile.cpp:1295:28: error: invalid use of 'this' in non-member function
-dalvik/vm/Profile.cpp: In function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)':
-dalvik/vm/Profile.cpp:1530:10: error: 'ptr' was not declared in this scope
-dalvik/vm/Profile.cpp:1538:10: error: 'ptr' was not declared in this scope
-dalvik/vm/Profile.cpp: In function 'void dvmFastMethodTraceEnter(const Method*, Thread*)':
-dalvik/vm/Profile.cpp:1557:40: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
-dalvik/vm/Profile.cpp: In function 'void dvmFastMethodTraceExit(Thread*)':
-dalvik/vm/Profile.cpp:1573:73: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
-dalvik/vm/Profile.cpp: In function 'void dvmFastNativeMethodTraceExit(const Method*, Thread*)':
-dalvik/vm/Profile.cpp:1589:40: error: too few arguments to function 'void dvmMethodTraceAdd(Thread*, const Method*, int, u4, u4, int, void*)'
-dalvik/vm/Profile.cpp:1371:6: note: declared here
 make: *** [out/target/product/generic/obj/SHARED_LIBRARIES/libdvm_intermediates/Profile.o] Error 1
-make: Leaving directory `/root/android44'
