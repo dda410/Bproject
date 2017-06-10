@@ -64,6 +64,9 @@ following:
   - [compileTracedroidOnAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidOnAndroid44.md)
 	  it explains how to compile tracedroid on top of android 4.4
       source code.
+  - [creatingAVDforAndroid44](https://github.com/dda410/Bproject/blob/master/GUIDES/creatingAVDforAndroid44.md)
+	  it explains how to create and avd for android 4.4 and how to
+      emulate it using a custom system.img (the tracedroid one)
 
 - dalvikMachines: contains the dalvik machines source code of android
   version 2.3 and 4.4 both the original ones and the one containing
