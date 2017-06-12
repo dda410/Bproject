@@ -75,4 +75,7 @@ following:
   from android 2.3 to android 4.4. The
   dalvikMachines/dalvikAndroidModified44/compilationErrorsTracedroid44
   contains the compilation errors outputted while compiling the
-  changes in the android source code. 
+  changes in the android source code.
+  
+- DEBUGGING_LOGS: contains the debugging logs of tracedroid based on
+  android 2.3 and based on android 4.4
