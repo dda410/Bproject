@@ -222,7 +222,7 @@ static const Method** getStackTrace(Thread* thread, size_t* pCount)
         fp = saveArea->prevFrame;
     }
     assert(stackDepth == 0);
-
+    ALOGD("TRACE_DEBUG RETURN getStacktrace. stackTrace method name: %s", stackTrace[0]->name);
     return stackTrace;
 }
 /*
@@ -467,6 +467,7 @@ static int dumpMarkedMethods(void* vclazz, void* vfp)
         meth = &clazz->virtualMethods[i];
         if (meth->inProfile) {
             name = dvmDescriptorToName(meth->clazz->descriptor);
+	    ALOGD("TRACE_DEBUG: INSIDE  dumpMarkedMethods. Printing.");
             fprintf(fp, "0x%08x\t%s\t%s\t%s\t%s\t%d\n", (int) meth,
                 name, meth->name,
                 dexProtoGetMethodDescriptor(&meth->prototype, &stringCache),
@@ -480,6 +481,7 @@ static int dumpMarkedMethods(void* vclazz, void* vfp)
         meth = &clazz->directMethods[i];
         if (meth->inProfile) {
             name = dvmDescriptorToName(meth->clazz->descriptor);
+	    ALOGD("TRACE_DEBUG: INSIDE  dumpMarkedMethods. Printing.");
             fprintf(fp, "0x%08x\t%s\t%s\t%s\t%s\t%d\n", (int) meth,
                 name, meth->name,
                 dexProtoGetMethodDescriptor(&meth->prototype, &stringCache),
@@ -977,6 +979,7 @@ char *convertDescriptor(const char *descriptor) {
             case 'D': { sprintf(class_descriptor, "double" ); break; }
             case 'C': { sprintf(class_descriptor, "char"   ); break; }
         }
+	ALOGD("TRACE_DEBUG RETURN convertDescriptor. class_descriptor: %s", class_descriptor);
         return class_descriptor;
     }
 
@@ -992,7 +995,7 @@ char *convertDescriptor(const char *descriptor) {
         memset(class_descriptor, 0, len);
         sprintf(class_descriptor, "%s[]", rest);
         free(rest);
-
+	ALOGD("TRACE_DEBUG RETURN convertDescriptor. class_descriptor: %s", class_descriptor);
         return class_descriptor;
     }
 
@@ -1005,7 +1008,7 @@ char *convertDescriptor(const char *descriptor) {
         else             *dst = *src;
     }
     class_descriptor[len-2] = 0;
-
+    ALOGD("TRACE_DEBUG RETURN convertDescriptor. class_descriptor: %s", class_descriptor);
     return class_descriptor;
 }
 
@@ -1021,6 +1024,7 @@ char *objectToString(Thread *self, Object *object) {
 
     if (!gDvm.tostring) {
         sprintf(str,"%p",object);
+	ALOGD("TRACE_DEBUG RETURN objectToString. str: %s", str);
         return str;
     }
 
@@ -1039,6 +1043,7 @@ char *objectToString(Thread *self, Object *object) {
     /* This may result in an exception being thrown by buggy .toString() implementations, which we have to clear */
     if (dvmCheckException(self)) {
         dvmClearException(self);
+	ALOGD("TRACE_DEBUG RETURN objectToString. str: toStringFailed");
         return strcpy(str,"toString failed\0"); /* toString() failed */
     }
 
@@ -1056,7 +1061,7 @@ char *objectToString(Thread *self, Object *object) {
 
     /* Free our temporary result-string, as we should have a proper one by now */
     free(str);
-    ALOGI("TRACE_DEBUG: INSIDE  objectToString returns: %s", string2);
+    ALOGD("TRACE_DEBUG: RETURN  objectToString. string2: %s", string2);
     return string2;
 }
 
@@ -1064,7 +1069,7 @@ char *objectToString(Thread *self, Object *object) {
  * Given a method, get its modifiers. Caller must free the result.
  */
 char *getModifiers(const Method* method, u4 *args) {
-  ALOGI("TRACE_DEBUG: INSIDE  getModifiers");
+  ALOGD("TRACE_DEBUG: INSIDE  getModifiers. method name: %s", method->name);
     char *modifiers = (char *) malloc(128 * sizeof(char));
     if (modifiers == NULL) return NULL;
 
@@ -1079,7 +1084,7 @@ char *getModifiers(const Method* method, u4 *args) {
     if (dvmIsStaticMethod      (method)) strcat(modifiers, "static "      );
     if (dvmIsSynchronizedMethod(method)) strcat(modifiers, "synchronized ");
     if (args != NULL) strcat(modifiers, "inline ");
-
+    ALOGD("TRACE_DEBUG RETURN getModifiers. modifiers: %s", modifiers);
     return modifiers;
 }
 
@@ -1088,7 +1093,7 @@ char *getModifiers(const Method* method, u4 *args) {
  * representation ( "(<type>) <value>" ). Caller must free the result.
  */
 char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
-  ALOGD("TRACE_DEBUG: INSIDE  parameterToString");
+  ALOGD("TRACE_DEBUG: INSIDE  parameterToString. descriptor: %s", descriptor);
     char *result = (char *) malloc(sizeof(char) * 128);
     if (result == NULL) return NULL;
 
@@ -1178,6 +1183,7 @@ char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
                     break;
                   }
     }
+    ALOGD("TRACE_DEBUG RETURN parameterToString. result: %s", result);
     return result;
 }
 
@@ -1235,7 +1241,7 @@ char **getParameters(Thread *self, const Method *method, int parameterCount, u4 
         if (descriptor[0] == 'J' || descriptor[0] == 'D')
             i++;
     }
-
+    ALOGD("TRACE_DEBUG RETURN getParameters. parameters: %s", parameters[0]);
     return parameters;
 }
 
@@ -1262,7 +1268,7 @@ char *getParameterString(Thread *self, const Method *method, char **parameters, 
             strcat(parameterString, ", ");
         }
     }
-
+    ALOGD("TRACE_DEBUG RETURN getParameterToString. parameterToString: %s", parameterString);
     return parameterString;
 }
 
@@ -1282,7 +1288,7 @@ char *getWhitespace(int depth) {
 
     /* Append \0 */
     whitespace[gDvm.timestamp + depth] = 0;
-
+    ALOGD("TRACE_DEBUG RETURN getwhitspace. whitspace:|%s|", whitespace);
     return whitespace;
 }
 
@@ -1312,7 +1318,7 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state, 
         else {              ALOGD_TRACE("%s%s%s %s(\"%s\").%s(%s)\n", whitespace, modifiers, return_type, classDescriptor, thIs, method->name, parameterString); }
     }
 #endif
-
+    
     free(whitespace);
     free(modifiers);
     free(return_type);
@@ -1334,6 +1340,7 @@ void handle_return(Thread *self, const Method *method, MethodTraceState *state, 
     u4 low  = (retval == 0) ? 0 : (u4)  *((u8*)retval);
     u4 high = (retval == 0) ? 0 : (u4) (*((u8*)retval) >> 32);
     char *returnString = parameterToString(self, dexProtoGetReturnType(&method->prototype), low, high);
+    ALOGD("TRACE_DEBUG handle_return. returnString: %s", returnString);
 
 #if ALOGD_TRACE_ENABLED
     ALOGD_TRACE("%sreturn %s\n", whitespace, returnString);
@@ -1398,7 +1405,7 @@ void dvmMethodTraceReadClocks(Thread* self, u4* cpuClockDiff,
 void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
                        u4 cpuClockDiff, u4 wallClockDiff, int type, void* options) /*DD param*/
 {
-  ALOGD("TRACE_DEBUG: INSIDE  dvmMethodTraceAdd. action: %d. type: %d. threadId: %d", action, type, self->threadId);
+  ALOGD("TRACE_DEBUG: INSIDE  dvmMethodTraceAdd. action: %d. type: %d. threadId: %d. method name: %s", action, type, self->threadId, method->name);
     MethodTraceState* state = &gDvm.methodTrace;
 #if DMTRACE_ENABLED
     u4 clockDiff, methodVal;
