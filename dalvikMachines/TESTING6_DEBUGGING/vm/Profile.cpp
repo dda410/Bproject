@@ -135,6 +135,7 @@ static inline u8 getThreadCpuTimeInUsec(Thread* thread)
 }
 #endif
 
+
 /*
  * Get the clock used for stopwatch-like timing measurements on a single thread.
  */
@@ -1397,11 +1398,10 @@ void dvmMethodTraceReadClocks(Thread* self, u4* cpuClockDiff,
 void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
                        u4 cpuClockDiff, u4 wallClockDiff, int type, void* options) /*DD param*/
 {
-    ALOGD("TRACE_DEBUG: INSIDE  dvmMethodTraceAdd. action: %d. type: %d", action, type);
-  
+  ALOGD("TRACE_DEBUG: INSIDE  dvmMethodTraceAdd. action: %d. type: %d. threadId: %d", action, type, self->threadId);
     MethodTraceState* state = &gDvm.methodTrace;
 #if DMTRACE_ENABLED
-    u4 methodVal;
+    u4 clockDiff, methodVal;
     int oldOffset, newOffset;
     u1* ptr;
 #else
@@ -1487,14 +1487,15 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
      * (Looks like pthread_getcpuclockid(thread, &id) will do what we
      * want, but it doesn't appear to be defined on the device.)
      */
+#if defined(HAVE_POSIX_CLOCKS)
     if (!self->cpuClockBaseSet) {
-        self->cpuClockBase = getClock();
-        self->cpuClockBaseSet = true;
-        //LOGI("thread base id=%d 0x%llx\n",
-        //    self->threadId, self->cpuClockBase);
+      self->cpuClockBase = getThreadCpuTimeInUsec(self);
+      self->cpuClockBaseSet = true;
+      //LOGI("thread base id=%d 0x%llx\n",
+      //    self->threadId, self->cpuClockBase);
     }
 
-
+#endif
     /*
      * Advance "curOffset" atomically.
      */
@@ -1510,8 +1511,9 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 
     //assert(METHOD_ACTION((u4) method) == 0);
 
-    u8 now = measureClockOverhead();
-    clockDiff = (u4) (now - self->cpuClockBase);
+
+    dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
+    clockDiff = cpuClockDiff;
     
     methodVal = METHOD_COMBINE((u4) method, action);
 
