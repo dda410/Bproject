@@ -137,7 +137,7 @@ void dvmConvertUtf8ToUtf16(u2* utf16Str, const char* utf8Str)
  * Given a UTF-16 string, compute the length of the corresponding UTF-8
  * string in bytes.
  */
-static int utf16_utf8ByteLen(const u2* utf16Str, int len)
+int dvmUtf16_utf8ByteLen(const u2* utf16Str, int len)
 {
     int utf8Len = 0;
 
@@ -161,10 +161,10 @@ static int utf16_utf8ByteLen(const u2* utf16Str, int len)
 /*
  * Convert a UTF-16 string to UTF-8.
  *
- * Make sure you allocate "utf8Str" with the result of utf16_utf8ByteLen(),
+ * Make sure you allocate "utf8Str" with the result of dvmUtf16_utf8ByteLen(),
  * not just "len".
  */
-static void convertUtf16ToUtf8(char* utf8Str, const u2* utf16Str, int len)
+void dvmConvertUtf16ToUtf8(char* utf8Str, const u2* utf16Str, int len)
 {
     assert(len >= 0);
 
@@ -295,23 +295,25 @@ char* dvmCreateCstrFromString(const StringObject* jstr)
     const u2* data = (const u2*)(void*)chars->contents + offset;
     assert(offset + len <= (int) chars->length);
 
-    int byteLen = utf16_utf8ByteLen(data, len);
+    int byteLen = dvmUtf16_utf8ByteLen(data, len);
     char* newStr = (char*) malloc(byteLen+1);
     if (newStr == NULL) {
         return NULL;
     }
-    convertUtf16ToUtf8(newStr, data, len);
+    dvmConvertUtf16ToUtf8(newStr, data, len);
 
     return newStr;
 }
 
+/*Previously called dvmCreateCstrFromStringRegion*/
 void dvmGetStringUtfRegion(const StringObject* jstr,
         int start, int len, char* buf)
 {
     const u2* data = jstr->chars() + start;
-    convertUtf16ToUtf8(buf, data, len);
+    dvmConvertUtf16ToUtf8(buf, data, len);
 }
 
+/*Previously called dvmStringUtf8ByteLen*/
 int StringObject::utfLength() const
 {
     assert(gDvm.classJavaLangString != NULL);
@@ -323,7 +325,7 @@ int StringObject::utfLength() const
     const u2* data = (const u2*)(void*)chars->contents + offset;
     assert(offset + len <= (int) chars->length);
 
-    return utf16_utf8ByteLen(data, len);
+    return dvmUtf16_utf8ByteLen(data, len);
 }
 
 int StringObject::length() const

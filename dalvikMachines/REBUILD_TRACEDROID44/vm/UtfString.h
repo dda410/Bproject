@@ -111,6 +111,14 @@ size_t dvmUtf8Len(const char* utf8Str);
 void dvmConvertUtf8ToUtf16(u2* utf16Str, const char* utf8Str);
 
 /*
+ * Convert a UTF-16 string to UTF-8.
+ *
+ * Make sure you allocate "utf8Str" with the result of utf16_utf8ByteLen(),
+ * not just "len".
+ */
+void dvmConvertUtf16ToUtf8(char* utf8Str, const u2* utf16Str, int len);
+
+/*
  * Create a java/lang/String from a Unicode string.
  *
  * The caller must call dvmReleaseTrackedAlloc() on the return value.
@@ -124,6 +132,12 @@ StringObject* dvmCreateStringFromUnicode(const u2* unichars, int len);
  * Returns NULL if "jstr" is NULL.
  */
 char* dvmCreateCstrFromString(const StringObject* jstr);
+
+/*
+ * Given a UTF-16 string, compute the length of the corresponding UTF-8
+ * string in bytes.
+ */
+int dvmUtf16_utf8ByteLen(const u2* utf16Str, int len);
 
 /*
  * Create a UTF-8 C string from a region of a java/lang/String.  (Used by

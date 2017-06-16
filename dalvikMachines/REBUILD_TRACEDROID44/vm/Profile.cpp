@@ -951,6 +951,141 @@ char *convertDescriptor(const char *descriptor) {
     return class_descriptor;
 }
 
+char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
+    char *result = (char *) malloc(sizeof(char) * 128);
+    if (result == NULL) return NULL;
+
+    memset(result, 0, 128);
+
+    switch (descriptor[0]) {
+        case 'Z': { if ((bool)low) sprintf(result, "(boolean) \"true\"");
+                    else           sprintf(result, "(boolean) \"false\"");  break; }
+
+        case 'B': { sprintf(result, "(byte) \"%hhd\"", (s1) low);    break; }
+        case 'S': { sprintf(result, "(short) \"%hd\"", (s2) low);    break; }
+        case 'I': { sprintf(result, "(int) \"%d\"",    (s4) low);    break; }
+        case 'F': { sprintf(result, "(float) \"%f\"",  (float) low); break; }
+
+        case 'J': { 
+                    long long int l;
+                    memcpy( ((char *)&l)+0, &low,  sizeof(low)  );
+                    memcpy( ((char *)&l)+4, &high, sizeof(high) );
+
+                    sprintf(result, "(long) \"%lld\"", l); 
+                    break; 
+                  }
+        case 'D': { 
+                    double d;
+                    /* By converting the double to a char pointer, we can jump
+                     * to an offset within the double. We can then easily
+                     * memcpy the low and high values.
+                     */
+                    memcpy( ((char *)&d)+0, &low,  sizeof(low)  );
+                    memcpy( ((char *)&d)+4, &high, sizeof(high) );
+
+                    sprintf(result, "(double) \"%f\"", d); 
+                    break; 
+                  }
+
+        case 'V': { sprintf(result, "(void)"); break; }
+
+        case 'C': {
+                    /* dvmConvertUtf16ToUtf8() expects a string */
+                    u2 str = (u2) low;
+
+                    /* allocate enough space */
+                    char *c = (char*) malloc(dvmUtf16_utf8ByteLen(&str, 1));
+
+                    /* convert the utf16 string of size 1 to a utf8 string */
+                    dvmConvertUtf16ToUtf8(c, &str, 1);
+
+                    /* convert newlines and quotes */
+                    char *p;
+                    for (p = c; *p; p++) {
+                        if (*p == '\n' || *p == '\r') *p = ' ';
+                        if (*p == '"')                *p = '\'';
+                    }
+
+                    /* setup the parameter string */
+                    sprintf(result, "(char) \"%s\"", c);
+
+                    /* free the utf8 string */
+                    free(c);
+
+                    break;
+                  }
+
+        case '[': /* fall through */
+        case 'L': {
+                    /* free the temporary result string, as we may need a larger buffer */
+                    free(result);
+                    /* convert descriptor string to its usual format */
+                    char *descriptorClass = convertDescriptor(descriptor);
+                    /* allocate enough memory to store this string plus some extras */
+                    result = (char *) malloc(sizeof(char) * (strlen(descriptorClass) + 32));
+                    /* setup the parameter string */
+                    sprintf(result, "case L: %s ", descriptorClass);
+                    /* free the descriptor string */
+                    free(descriptorClass);
+                    /* free the string representation, as we copied it into the result string */
+                    break;
+                  }
+    }
+    return result;
+}
+
+char **getParameters(Thread *self, const Method *method, int parameterCount) {
+    /* string array that will contain the parameters */
+  char **parameters = (char**) malloc(parameterCount * sizeof(char *));
+    if (parameters == NULL) return NULL;
+
+    DexParameterIterator dpi;
+    dexParameterIteratorInit(&dpi, &method->prototype);
+
+    /* frame pointer */
+    const u4 *frameptr;
+
+    /* number of locals for this method */
+    int locals;
+
+    /* populate frameptr and locals */
+        frameptr = self->interpSave.curFrame;
+        locals   = method->registersSize - method->insSize;
+
+    /* loop over registers and get a string representation of them. Skip the first register if this is a <this> reference */
+    int i, j;
+    for (i = locals + (dvmIsStaticMethod(method) ? 0 : 1), j = 0; parameterCount > 0; parameterCount--, i++, j++) {
+        const char *descriptor = dexParameterIteratorNextDescriptor(&dpi);
+        parameters[j] = parameterToString(self, descriptor, frameptr[i], frameptr[i + 1]);
+
+        /* 64 bit fields (longs and doubles) use two registers. make sure we skip the next register */
+        if (descriptor[0] == 'J' || descriptor[0] == 'D')
+            i++;
+    }
+    return parameters;
+}
+
+char *getParameterString(Thread *self, const Method *method, char **parameters, int parameterCount) {
+    int i;
+    ALOGD("TRACE ENTERING getParameterString");
+    /* concatenate the parameters */
+    int len = 0;
+    for (i = 0; i < parameterCount; i++) len += strlen(parameters[i]);
+    char *parameterString = (char *) malloc((sizeof(char) * len) + (parameterCount * 8) + 1);
+    if (parameterString == NULL) return NULL;
+    memset(parameterString, 0, sizeof(parameterString));
+
+    for (i = 0; i < parameterCount; i++) {
+        strcat(parameterString, parameters[i]);
+	
+        /* append ", " only if another parameter follows */
+        if (i + 1 < parameterCount) {
+            strcat(parameterString, ", ");
+        }
+    }
+    return parameterString;
+}
+
 char *getModifiers(const Method* method) {
     char *modifiers = (char *) malloc(128 * sizeof(char));
     if (modifiers == NULL) return NULL;
@@ -981,29 +1116,43 @@ char *getWhitespace(int depth) {
 }
 
 void handle_method(Thread *self, const Method *method, MethodTraceState *state) {
-    // int i;
+    int i;
     bool isConstructor = false;
     if (dvmIsConstructorMethod(method)) isConstructor = true;
     
     /* number of arguments for this method */
     int parameterCount = dexProtoGetParameterCount(&method->prototype);
     if (!gDvm.parameters)    parameterCount = 0;
+
+    char **parameters = NULL;
+    char *parameterString = NULL;
     
     char *whitespace         = getWhitespace(self->depth);
     char *modifiers          = getModifiers(method);
     char *return_type        = convertDescriptor(dexProtoGetReturnType(&method->prototype));
     char *classDescriptor    = convertDescriptor(method->clazz->descriptor);
+    if (parameterCount != 0) {
+      parameters        = (char**) getParameters(self, method, parameterCount);
+      parameterString    = (char*) getParameterString(self, method, parameters, parameterCount);
+    }
 
     if (isConstructor) {
       ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s", whitespace, classDescriptor);
+    } else if (parameterCount != 0) {
+      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s. parameterString: %s", whitespace, classDescriptor, modifiers, return_type, method->name, parameterString);
     } else {
-      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s", whitespace, classDescriptor, modifiers, return_type, method->name);
+      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s.", whitespace, classDescriptor, modifiers, return_type, method->name);
     }
     
     free(whitespace);
     free(modifiers);
     free(return_type);
     free(classDescriptor);
+    if (parameterCount != 0) {
+      for (i = 0; i < parameterCount; i++)  free(parameters[i]);
+      free(parameters);
+      free(parameterString);
+    }
     
 }
 
