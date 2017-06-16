@@ -859,6 +859,10 @@ static Thread* allocThread(int interpStackSize)
     thread->interpStackStart = stackBottom + interpStackSize;
     thread->interpStackEnd = stackBottom + STACK_OVERFLOW_RESERVE;
 
+        /* we are definitely not in dvmMethodTraceAdd() */
+    thread->inMethodTraceAdd = false;
+    thread->depth = 0;
+
 #ifndef DVM_NO_ASM_INTERP
     thread->mainHandlerTable = dvmAsmInstructionStart;
     thread->altHandlerTable = dvmAsmAltInstructionStart;

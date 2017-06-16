@@ -901,6 +901,44 @@ void dvmMethodTraceStop()
     }
 }
 
+char *getWhitespace(int depth) {
+    /* gDvm.timestamp will be either 0 or the number of characters "%llu: " will occupy */
+    char *whitespace = (char *) malloc((depth * sizeof(char)) + gDvm.timestamp + 1);
+    if (whitespace == NULL) return NULL;
+    if (gDvm.timestamp) sprintf(whitespace, "%llu: ", getWallTimeInUsec());
+    /* Fill the whitespace */
+    memset(whitespace + gDvm.timestamp, ' ', depth);
+    /* Append \0 */
+    whitespace[gDvm.timestamp + depth] = 0;
+    return whitespace;
+}
+
+void handle_method(Thread *self, const Method *method, MethodTraceState *state) {
+    // int i;
+    bool isConstructor = false;
+    if (dvmIsConstructorMethod(method)) isConstructor = true;
+    /* number of arguments for this method */
+    int parameterCount = dexProtoGetParameterCount(&method->prototype);
+    if (!gDvm.parameters)    parameterCount = 0;
+    char *whitespace         = getWhitespace(self->depth);
+    ALOGD ("handle_method whitespace: |%s|", whitespace);
+    free(whitespace);
+}
+
+void handle_return(Thread *self, const Method *method, MethodTraceState *state) {
+    char *whitespace = getWhitespace(self->depth);
+
+    ALOGD("handle_return whitespace: |%s|", whitespace);
+    free(whitespace);
+}
+
+void handle_throws(Thread *self, const Method *method, MethodTraceState *state, int action) {
+    char *whitespace = getWhitespace(self->depth);
+    ALOGD("handle_throws whitespace: |%s|", whitespace);
+    free(whitespace);
+}
+
+
 /*
  * Read clocks and generate time diffs for method trace events.
  */
@@ -932,7 +970,7 @@ void dvmMethodTraceReadClocks(Thread* self, u4* cpuClockDiff,
 void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
                        u4 cpuClockDiff, u4 wallClockDiff)
 {
-  ALOGD("TRACE_DEBUG: INSIDE dvmMethodTraceAdd. method->name: %s", method->name);
+  
     MethodTraceState* state = &gDvm.methodTrace;
     u4 methodVal;
     int oldOffset, newOffset;
@@ -940,6 +978,23 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 
     assert(method != NULL);
 
+    /* If the bytecode of the caller of this method is from a system jar, then
+     * enter only if the current method code is not from a system jar.
+     *
+     * If you would like to see *everything*, you can remove this. You would
+     * then probably have to increase the launch timeout to ensure packages can
+     * still be started while logging with adb though.
+     *
+     * This also removes trace output from system threads (GC, Binder, HeapWorker, ...).
+     */
+
+    // ClassObject *caller_clazz = dvmGetCallerClass(self->interpSave.curFrame);
+    // ALOGD("TRACE_DEBUG: INSIDE dvmMethodTraceAdd. method->name: %s. caller_clazz->descriptor: %s", method->name, caller_clazz->descriptor);
+
+      // const Method *caller_method = dvmGetCallerMethod(self->interpSave.curFrame);
+      // ALOGD("This is the caller_method->name: %s", caller_method->name);
+
+    
     /*
      * Advance "curOffset" atomically.
      */
@@ -957,6 +1012,23 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 
     methodVal = METHOD_COMBINE((u4) method, action);
 
+    if (action == METHOD_TRACE_ENTER) {
+      /* We are entering a method... */
+      handle_method(self, method, state);
+      self->depth++;
+
+    } else if  (action == METHOD_TRACE_EXIT && !dvmCheckException(self)) {
+      /* We are returning from a method... */
+      self->depth = (self->depth == 0 ? 0 : self->depth-1);
+      handle_return(self, method, state);
+
+    } else if ((action == METHOD_TRACE_EXIT &&  dvmCheckException(self)) ||
+               (action == METHOD_TRACE_UNROLL)) {
+      /* We are unrolling... */
+      self->depth = (self->depth == 0 ? 0 : self->depth-1);
+      handle_throws(self, method, state, action);
+    }
+    
     /*
      * Write data into "oldOffset".
      */

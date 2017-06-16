@@ -287,6 +287,10 @@ struct Thread {
     bool        cpuClockBaseSet;
     u8          cpuClockBase;
 
+      /* are we in dvmMethodTraceAdd()? */
+    bool        inMethodTraceAdd;
+    int         depth;
+
     /* previous stack trace sample and length (used by sampling profiler) */
     const Method** stackTraceSample;
     size_t stackTraceSampleLength;

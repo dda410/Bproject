@@ -245,6 +245,11 @@ void* dvmGetCallerFP(const void* curFrame);
 ClassObject* dvmGetCallerClass(const void* curFrame);
 
 /*
+ * Get the method that called us.
+ */
+const Method* dvmGetCallerMethod(const void* curFrame);
+
+/*
  * Get the caller's caller's class.  Pass in the current fp.
  *
  * This is used by e.g. java.lang.Class, which wants to know about the

@@ -917,6 +917,22 @@ ClassObject* dvmGetCallerClass(const void* curFrame)
 }
 
 /*
+ * Get the caller's method. Pass in the current fp.
+ *
+ * This is used by tracedroid to keep track of invoke() calls.
+ */
+const Method* dvmGetCallerMethod(const void* curFrame)
+{
+    void* caller;
+
+    caller = dvmGetCallerFP(curFrame);
+    if (caller == NULL)
+        return NULL;
+
+    return SAVEAREA_FROM_FP(caller)->method;
+}
+
+/*
  * Get the caller's caller's class.  Pass in the current fp.
  *
  * This is used by e.g. java.lang.Class, which wants to know about the

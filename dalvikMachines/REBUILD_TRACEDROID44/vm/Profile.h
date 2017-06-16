@@ -38,6 +38,8 @@ void dvmProfilingShutdown(void);
 struct MethodTraceState {
     /* active state */
     pthread_mutex_t startStopLock;
+    pthread_mutex_t fwriteLock; 
+    pthread_cond_t  lockExitCond;
     pthread_cond_t  threadExitCond;
     FILE*   traceFile;
     bool    directToDdms;
