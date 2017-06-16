@@ -997,7 +997,7 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     if (isConstructor) {
       ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s", whitespace, classDescriptor);
     } else {
-      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s", whitespace, classDescriptor, modifiers, return_type);
+      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s", whitespace, classDescriptor, modifiers, return_type, method->name);
     }
     
     free(whitespace);
