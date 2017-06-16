@@ -901,6 +901,73 @@ void dvmMethodTraceStop()
     }
 }
 
+char *convertDescriptor(const char *descriptor) {
+    int len = strlen(descriptor);
+
+    if (len == 1) {
+        char *class_descriptor = (char *) malloc(sizeof(char) * 8);
+        if (class_descriptor == NULL) return NULL;
+
+        memset(class_descriptor, 0, 8);
+
+        switch(*descriptor) {
+            case 'V': { sprintf(class_descriptor, "void"   ); break; }
+            case 'Z': { sprintf(class_descriptor, "boolean"); break; }
+            case 'B': { sprintf(class_descriptor, "byte"   ); break; }
+            case 'S': { sprintf(class_descriptor, "short"  ); break; }
+            case 'I': { sprintf(class_descriptor, "int"    ); break; }
+            case 'F': { sprintf(class_descriptor, "float"  ); break; }
+            case 'J': { sprintf(class_descriptor, "long"   ); break; }
+            case 'D': { sprintf(class_descriptor, "double" ); break; }
+            case 'C': { sprintf(class_descriptor, "char"   ); break; }
+        }
+        return class_descriptor;
+    }
+
+    if (*descriptor == '[') {
+        /* recursion! */
+        char *rest = convertDescriptor(descriptor + 1);
+
+        /* allocate enough space for <rest> plus 3: ....[]\0 */
+        len = strlen(rest) + 3;
+        char *class_descriptor = (char *) malloc(sizeof(char) * len);
+        if (class_descriptor == NULL) return NULL;
+
+        memset(class_descriptor, 0, len);
+        sprintf(class_descriptor, "%s[]", rest);
+        free(rest);
+        return class_descriptor;
+    }
+
+    char *class_descriptor = (char *) malloc(sizeof(char) * len);
+
+    const char *src;
+    char *dst;
+    for (dst = class_descriptor, src = descriptor + 1; *src != 0; src++, dst++) {
+        if (*src == '/') *dst = '.';
+        else             *dst = *src;
+    }
+    class_descriptor[len-2] = 0;
+    return class_descriptor;
+}
+
+char *getModifiers(const Method* method) {
+    char *modifiers = (char *) malloc(128 * sizeof(char));
+    if (modifiers == NULL) return NULL;
+
+    memset(modifiers, 0, 128);
+
+    if (dvmIsAbstractMethod    (method)) strcat(modifiers, "abstract "    );
+    if (dvmIsFinalMethod       (method)) strcat(modifiers, "final "       );
+    if (dvmIsNativeMethod      (method)) strcat(modifiers, "native "      );
+    if (dvmIsPrivateMethod     (method)) strcat(modifiers, "private "     );
+    if (dvmIsProtectedMethod   (method)) strcat(modifiers, "protected "   );
+    if (dvmIsPublicMethod      (method)) strcat(modifiers, "public "      );
+    if (dvmIsStaticMethod      (method)) strcat(modifiers, "static "      );
+    if (dvmIsSynchronizedMethod(method)) strcat(modifiers, "synchronized ");
+    return modifiers;
+}
+
 char *getWhitespace(int depth) {
     /* gDvm.timestamp will be either 0 or the number of characters "%llu: " will occupy */
     char *whitespace = (char *) malloc((depth * sizeof(char)) + gDvm.timestamp + 1);
@@ -917,12 +984,27 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     // int i;
     bool isConstructor = false;
     if (dvmIsConstructorMethod(method)) isConstructor = true;
+    
     /* number of arguments for this method */
     int parameterCount = dexProtoGetParameterCount(&method->prototype);
     if (!gDvm.parameters)    parameterCount = 0;
+    
     char *whitespace         = getWhitespace(self->depth);
-    ALOGD ("handle_method whitespace: |%s|", whitespace);
+    char *modifiers          = getModifiers(method);
+    char *return_type        = convertDescriptor(dexProtoGetReturnType(&method->prototype));
+    char *classDescriptor    = convertDescriptor(method->clazz->descriptor);
+
+    if (isConstructor) {
+      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s", whitespace, classDescriptor);
+    } else {
+      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s", whitespace, classDescriptor, modifiers, return_type);
+    }
+    
     free(whitespace);
+    free(modifiers);
+    free(return_type);
+    free(classDescriptor);
+    
 }
 
 void handle_return(Thread *self, const Method *method, MethodTraceState *state) {
