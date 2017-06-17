@@ -1153,7 +1153,7 @@ void dvmInterpretPortable(Thread* self)
      * Handle any ongoing profiling and prep for debugging.
      */
     if (self->interpBreak.ctl.subMode != 0) {
-        TRACE_METHOD_ENTER(self, curMethod);
+      TRACE_METHOD_ENTER(self, curMethod);
         self->debugIsMethodEntry = true;   // Always true on startup
     }
     /*

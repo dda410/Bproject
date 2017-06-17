@@ -910,6 +910,6 @@ bool dvmPerformInlineOp4Dbg(u4 arg0, u4 arg1, u4 arg2, u4 arg3,
     TRACE_METHOD_ENTER(self, method);
     bool result = (*gDvmInlineOpsTable[opIndex].func)(arg0, arg1, arg2, arg3,
         pResult);
-    TRACE_METHOD_EXIT(self, method);
+    TRACE_METHOD_EXIT(self, method, pResult);
     return result;
 }

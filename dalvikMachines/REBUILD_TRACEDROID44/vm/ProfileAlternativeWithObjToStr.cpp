@@ -242,7 +242,7 @@ static void getSample(Thread* thread)
          */
         for (int i = newLength - 1; i >= 0; --i) {
             dvmMethodTraceAdd(thread, newStackTrace[i], METHOD_TRACE_ENTER,
-                              cpuClockDiff, wallClockDiff, NULL);
+                              cpuClockDiff, wallClockDiff);
         }
     } else {
         /*
@@ -260,12 +260,12 @@ static void getSample(Thread* thread)
         /* Iterate top-down over old trace until diff, emitting exit events. */
         for (int i = 0; i <= diffIndexOld; ++i) {
             dvmMethodTraceAdd(thread, oldStackTrace[i], METHOD_TRACE_EXIT,
-                              cpuClockDiff, wallClockDiff, NULL);
+                              cpuClockDiff, wallClockDiff);
         }
         /* Iterate bottom-up over new trace from diff, emitting entry events. */
         for (int i = diffIndexNew; i >= 0; --i) {
             dvmMethodTraceAdd(thread, newStackTrace[i], METHOD_TRACE_ENTER,
-                              cpuClockDiff, wallClockDiff, NULL);
+                              cpuClockDiff, wallClockDiff);
         }
     }
 
@@ -951,6 +951,53 @@ char *convertDescriptor(const char *descriptor) {
     return class_descriptor;
 }
 
+char *objectToString(Thread *self, Object *object) {
+    char *str = (char *) malloc(128 * sizeof(char));
+    if (str == NULL) {
+      return NULL;
+    }
+
+    if (!gDvm.tostring) {
+        sprintf(str,"%p",object);
+        return str;
+    }
+
+    if (object == 0)               return strcpy(str,"null\0");
+    if (!(object != NULL && ((uintptr_t)object & (8-1)) == 0)) return strcpy(str,"invalid\0");
+    if (dvmCheckException(self))   return strcpy(str,"except\0"); /* exception pending */
+
+    /* Get the toString() method */
+    Method *toString = object->clazz->vtable[gDvm.voffJavaLangObject_toString];
+    assert(dvmCompareNameDescriptorAndMethod("toString", "()Ljava/lang/String", toString) == 0);
+
+    /* Execute the toString() method */
+    JValue result;
+    dvmCallMethod(self, toString, object, &result);
+    ALOGD("TRACE AFTER EXECUTING THE TO STRING METHOD");
+
+    /* This may result in an exception being thrown by buggy .toString() implementations, which we have to clear */
+    if (dvmCheckException(self)) {
+        dvmClearException(self);
+        return strcpy(str,"toString failed\0"); /* toString() failed */
+    }
+
+    /* <result.l> now contains a StringObject containing the toString() value of <object>. Convert it to a C string. */
+    if (result.l == 0) return strcpy(str,"l==0\0");
+    const StringObject* resultz = (StringObject*) result.l;
+    char *string2 = (char*) dvmCreateCstrFromString(resultz);
+
+    /* convert newlines and quotes */
+    char *p;
+    for (p = string2; *p; p++) {
+        if (*p == '\n' || *p == '\r') *p = ' ';
+        if (*p == '"')                *p = '\'';
+    }
+
+    /* Free our temporary result-string, as we should have a proper one by now */
+    free(str);
+    return string2;
+}
+
 char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
     char *result = (char *) malloc(sizeof(char) * 128);
     if (result == NULL) return NULL;
@@ -1019,15 +1066,25 @@ char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
         case 'L': {
                     /* free the temporary result string, as we may need a larger buffer */
                     free(result);
+
                     /* convert descriptor string to its usual format */
                     char *descriptorClass = convertDescriptor(descriptor);
+
+                    /* get a string representation of the object */
+                    char *string2 = objectToString(self, (Object *) low);
+
                     /* allocate enough memory to store this string plus some extras */
-                    result = (char *) malloc(sizeof(char) * (strlen(descriptorClass) + 32));
+                    result = (char *) malloc(sizeof(char) * (strlen(descriptorClass) + strlen(string2)) + 32);
+
                     /* setup the parameter string */
-                    sprintf(result, "case L: %s ", descriptorClass);
+                    sprintf(result, "(%s) \"%s\"", descriptorClass, string2);
+
                     /* free the descriptor string */
                     free(descriptorClass);
+
                     /* free the string representation, as we copied it into the result string */
+                    free(string2);
+
                     break;
                   }
     }
@@ -1067,6 +1124,7 @@ char **getParameters(Thread *self, const Method *method, int parameterCount) {
 
 char *getParameterString(Thread *self, const Method *method, char **parameters, int parameterCount) {
     int i;
+    ALOGD("TRACE ENTERING getParameterString");
     /* concatenate the parameters */
     int len = 0;
     for (i = 0; i < parameterCount; i++) len += strlen(parameters[i]);
@@ -1123,7 +1181,6 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     int parameterCount = dexProtoGetParameterCount(&method->prototype);
     if (!gDvm.parameters)    parameterCount = 0;
 
-    /* initializing parameters and string representation of parameters */
     char **parameters = NULL;
     char *parameterString = NULL;
     
@@ -1131,14 +1188,11 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     char *modifiers          = getModifiers(method);
     char *return_type        = convertDescriptor(dexProtoGetReturnType(&method->prototype));
     char *classDescriptor    = convertDescriptor(method->clazz->descriptor);
-
-    /* getting the parameters and its string representation only if there are any */
     if (parameterCount != 0) {
       parameters        = (char**) getParameters(self, method, parameterCount);
       parameterString    = (char*) getParameterString(self, method, parameters, parameterCount);
     }
 
-    /* printing the computed tracing objects */
     if (isConstructor) {
       ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s", whitespace, classDescriptor);
     } else if (parameterCount != 0) {
@@ -1146,8 +1200,7 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     } else {
       ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s.", whitespace, classDescriptor, modifiers, return_type, method->name);
     }
-
-    /* freeing tracing objects memory */
+    
     free(whitespace);
     free(modifiers);
     free(return_type);
@@ -1160,29 +1213,17 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     
 }
 
-void handle_return(Thread *self, const Method *method, MethodTraceState *state, JValue *retval) {
+void handle_return(Thread *self, const Method *method, MethodTraceState *state) {
     char *whitespace = getWhitespace(self->depth);
-    /* parameterToString() expects two u4 parameters. We will have to split retval in half. */
-    u4 low  = (retval == 0) ? 0 : (u4)  *((u8*)retval);
-    u4 high = (retval == 0) ? 0 : (u4) (*((u8*)retval) >> 32);
-    char *returnString = parameterToString(self, dexProtoGetReturnType(&method->prototype), low, high);
-    ALOGD("handle_return whitespace: |%s| returnString: %s", whitespace, returnString);
+
+    ALOGD("handle_return whitespace: |%s|", whitespace);
     free(whitespace);
-    free(returnString);
 }
 
-void handle_throws(Thread *self, const Method *method, MethodTraceState *state, int action, JValue *retval) {
+void handle_throws(Thread *self, const Method *method, MethodTraceState *state, int action) {
     char *whitespace = getWhitespace(self->depth);
-    char *classDescriptor;
-    /* when action == METHOD_TRACE_UNROLL, retval will be an Object* exception */
-    if (action == METHOD_TRACE_EXIT) {
-      classDescriptor = convertDescriptor(dvmGetException(self)->clazz->descriptor);
-    } else {
-      classDescriptor = convertDescriptor(  ((Object*) retval )->clazz->descriptor);
-    }
-    ALOGD("handle_throws whitespace: |%s| classDescriptor: %s", whitespace, classDescriptor);
+    ALOGD("handle_throws whitespace: |%s|", whitespace);
     free(whitespace);
-    free(classDescriptor);
 }
 
 
@@ -1215,8 +1256,15 @@ void dvmMethodTraceReadClocks(Thread* self, u4* cpuClockDiff,
  * rather than mutexes for speed.
  */
 void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
-                       u4 cpuClockDiff, u4 wallClockDiff, void* options)
+                       u4 cpuClockDiff, u4 wallClockDiff)
 {
+
+    if (self->inMethodTraceAdd) {
+      return;
+    }
+
+    /* We are now in dvmMethodTraceAdd() */
+    self->inMethodTraceAdd = true;
   
     MethodTraceState* state = &gDvm.methodTrace;
     u4 methodVal;
@@ -1267,13 +1315,13 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     } else if  (action == METHOD_TRACE_EXIT && !dvmCheckException(self)) {
       /* We are returning from a method... */
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      handle_return(self, method, state, (JValue *) options);
+      handle_return(self, method, state);
 
     } else if ((action == METHOD_TRACE_EXIT &&  dvmCheckException(self)) ||
                (action == METHOD_TRACE_UNROLL)) {
       /* We are unrolling... */
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      handle_throws(self, method, state, action, (JValue *) options);
+      handle_throws(self, method, state, action);
     }
     
     /*
@@ -1316,7 +1364,7 @@ void dvmFastMethodTraceEnter(const Method* method, Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, method, METHOD_TRACE_ENTER, cpuClockDiff,
-                          wallClockDiff, NULL);
+                          wallClockDiff);
     }
 }
 
@@ -1332,7 +1380,7 @@ void dvmFastMethodTraceExit(Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, self->interpSave.method,
-                          METHOD_TRACE_EXIT, cpuClockDiff, wallClockDiff, NULL);
+                          METHOD_TRACE_EXIT, cpuClockDiff, wallClockDiff);
     }
 }
 
@@ -1348,7 +1396,7 @@ void dvmFastNativeMethodTraceExit(const Method* method, Thread* self)
         u4 wallClockDiff = 0;
         dvmMethodTraceReadClocks(self, &cpuClockDiff, &wallClockDiff);
         dvmMethodTraceAdd(self, method, METHOD_TRACE_EXIT, cpuClockDiff,
-                          wallClockDiff, NULL);
+                          wallClockDiff);
     }
 }
 
@@ -1428,7 +1476,7 @@ void dvmMethodTraceGCBegin()
 }
 void dvmMethodTraceGCEnd()
 {
-  TRACE_METHOD_EXIT(dvmThreadSelf(), gDvm.methodTraceGcMethod, NULL);
+    TRACE_METHOD_EXIT(dvmThreadSelf(), gDvm.methodTraceGcMethod);
 }
 
 /*
@@ -1440,7 +1488,7 @@ void dvmMethodTraceClassPrepBegin()
 }
 void dvmMethodTraceClassPrepEnd()
 {
-  TRACE_METHOD_EXIT(dvmThreadSelf(), gDvm.methodTraceClassPrepMethod, NULL);
+    TRACE_METHOD_EXIT(dvmThreadSelf(), gDvm.methodTraceClassPrepMethod);
 }
 
 

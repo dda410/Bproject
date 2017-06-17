@@ -716,6 +716,7 @@ int dvmFindCatchBlock(Thread* self, int relPc, Object* exception,
     bool scanOnly, void** newFrame)
 {
     u4* fp = self->interpSave.curFrame;
+    u4* old_curFrame;
     int catchAddr = -1;
 
     assert(!dvmCheckException(self));
@@ -735,7 +736,10 @@ int dvmFindCatchBlock(Thread* self, int relPc, Object* exception,
 
         /* output method profiling info */
         if (!scanOnly) {
-            TRACE_METHOD_UNROLL(self, saveArea->method);
+	  old_curFrame = self->interpSave.curFrame;
+	  self->interpSave.curFrame = fp;
+	  TRACE_METHOD_UNROLL(self, saveArea->method, (JValue*) exception);
+	  self->interpSave.curFrame = old_curFrame;
         }
 
         /*

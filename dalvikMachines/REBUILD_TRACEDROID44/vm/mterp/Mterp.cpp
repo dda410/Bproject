@@ -98,7 +98,7 @@ void dvmMterpStd(Thread* self)
      * Handle any ongoing profiling and prep for debugging
      */
     if (self->interpBreak.ctl.subMode != 0) {
-        TRACE_METHOD_ENTER(self, self->interpSave.method);
+      TRACE_METHOD_ENTER(self, self->interpSave.method);
         self->debugIsMethodEntry = true;   // Always true on startup
     }
 

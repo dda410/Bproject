@@ -644,7 +644,7 @@ void dvmReportExceptionThrow(Thread* self, Object* exception)
  */
 void dvmReportInvoke(Thread* self, const Method* methodToCall)
 {
-    TRACE_METHOD_ENTER(self, methodToCall);
+  TRACE_METHOD_ENTER(self, methodToCall);
 }
 
 /*
@@ -695,7 +695,8 @@ void dvmReportPostNativeInvoke(const Method* methodToCall, Thread* self, u4* fp)
  */
 void dvmReportReturn(Thread* self)
 {
-    TRACE_METHOD_EXIT(self, self->interpSave.method);
+    JValue retval = self->interpSave.retval;
+    TRACE_METHOD_EXIT(self, self->interpSave.method, &retval);
 #if defined(WITH_JIT)
     if (dvmIsBreakFrame(self->interpSave.curFrame) &&
         (self->interpBreak.ctl.subMode & kSubModeJitTraceBuild)) {
