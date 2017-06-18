@@ -26,6 +26,14 @@
 
 struct Thread;      // extern
 
+/* Used to print traces to dump.<tid> files in sdcard/ */
+#define ALOGD_TRACE(...)                                            \
+    do {                                                            \
+        dvmLockMutex(&state->fwriteLock);                           \
+        if (self->dump)          fprintf(self->dump, __VA_ARGS__);  \
+        else if (prep_log(self)) fprintf(self->dump, __VA_ARGS__);  \
+        dvmUnlockMutex(&state->fwriteLock);                         \
+    } while (0);                                                    \
 
 /* boot init */
 bool dvmProfilingStartup(void);

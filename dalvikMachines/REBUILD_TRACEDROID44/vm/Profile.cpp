@@ -901,6 +901,28 @@ void dvmMethodTraceStop()
     }
 }
 
+/*
+ * Open a dump.<TID> file for dumping the method trace into.
+ */
+bool prep_log(Thread *self) {
+    if (!gDvm.methodTrace.traceEnabled) return false;
+
+    char filename[64];
+    if (gDvm.tracepath == 0) {
+      sprintf(filename,"%s.%d.%d","/sdcard/dump"    ,getpid(),self->systemTid);
+    } else {
+      sprintf(filename,"%s.%d.%d","/data/trace/dump",getpid(),self->systemTid);
+    }
+    self->dump = fopen(filename,"a");
+    if (self->dump == NULL) {
+        int err = errno;
+        ALOGD("Could not open method trace output for %s: %s\n", filename, strerror(err));
+        return false;
+    }
+    ALOGD("Method trace output file %s is open @ %p\n",filename,self->dump);
+    return true;
+}
+
 char *convertDescriptor(const char *descriptor) {
     int len = strlen(descriptor);
 
@@ -1024,7 +1046,7 @@ char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
                     /* allocate enough memory to store this string plus some extras */
                     result = (char *) malloc(sizeof(char) * (strlen(descriptorClass) + 32));
                     /* setup the parameter string */
-                    sprintf(result, "case L: %s ", descriptorClass);
+                    sprintf(result, "(%s) \"Object\"", descriptorClass);
                     /* free the descriptor string */
                     free(descriptorClass);
                     /* free the string representation, as we copied it into the result string */
@@ -1140,11 +1162,11 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
 
     /* printing the computed tracing objects */
     if (isConstructor) {
-      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s", whitespace, classDescriptor);
+      ALOGD_TRACE("%snew %s(%s)\n", whitespace, classDescriptor, parameterString);
     } else if (parameterCount != 0) {
-      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s. parameterString: %s", whitespace, classDescriptor, modifiers, return_type, method->name, parameterString);
+      ALOGD_TRACE("%s%s%s %s.%s(%s)\n", whitespace, modifiers, return_type, classDescriptor, method->name, parameterString);
     } else {
-      ALOGD ("handle_method whitespace: |%s|. classDescriptor: %s. modifiers: %s. return_type: %s. method->name: %s.", whitespace, classDescriptor, modifiers, return_type, method->name);
+      ALOGD_TRACE("%s%s%s %s.%s()\n", whitespace, modifiers, return_type, classDescriptor, method->name);
     }
 
     /* freeing tracing objects memory */
@@ -1162,11 +1184,12 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
 
 void handle_return(Thread *self, const Method *method, MethodTraceState *state, JValue *retval) {
     char *whitespace = getWhitespace(self->depth);
+    
     /* parameterToString() expects two u4 parameters. We will have to split retval in half. */
     u4 low  = (retval == 0) ? 0 : (u4)  *((u8*)retval);
     u4 high = (retval == 0) ? 0 : (u4) (*((u8*)retval) >> 32);
     char *returnString = parameterToString(self, dexProtoGetReturnType(&method->prototype), low, high);
-    ALOGD("handle_return whitespace: |%s| returnString: %s", whitespace, returnString);
+    ALOGD_TRACE("%sreturn %s\n", whitespace, returnString);
     free(whitespace);
     free(returnString);
 }
@@ -1180,7 +1203,7 @@ void handle_throws(Thread *self, const Method *method, MethodTraceState *state, 
     } else {
       classDescriptor = convertDescriptor(  ((Object*) retval )->clazz->descriptor);
     }
-    ALOGD("handle_throws whitespace: |%s| classDescriptor: %s", whitespace, classDescriptor);
+    ALOGD_TRACE("%sthrows %s\n", whitespace, classDescriptor);
     free(whitespace);
     free(classDescriptor);
 }

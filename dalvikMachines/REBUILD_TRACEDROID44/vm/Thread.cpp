@@ -859,10 +859,10 @@ static Thread* allocThread(int interpStackSize)
     thread->interpStackStart = stackBottom + interpStackSize;
     thread->interpStackEnd = stackBottom + STACK_OVERFLOW_RESERVE;
 
-        /* we are definitely not in dvmMethodTraceAdd() */
+    /* we are definitely not in dvmMethodTraceAdd() */
     thread->inMethodTraceAdd = false;
     thread->depth = 0;
-
+    
 #ifndef DVM_NO_ASM_INTERP
     thread->mainHandlerTable = dvmAsmInstructionStart;
     thread->altHandlerTable = dvmAsmAltInstructionStart;
@@ -977,6 +977,15 @@ static void freeThread(Thread* thread)
     if (thread == NULL)
         return;
 
+    MethodTraceState* state = &gDvm.methodTrace;
+    dvmLockMutex(&state->fwriteLock);
+    if (thread->dump) {
+        ALOGD("closing method trace output @ %p via freeThread()\n",thread->dump); 
+        fclose(thread->dump);
+        thread->dump = NULL;
+    }
+    dvmUnlockMutex(&state->fwriteLock);
+    
     /* thread->threadId is zero at this point */
     LOGVV("threadid=%d: freeing", thread->threadId);
 
@@ -1574,6 +1583,18 @@ static void threadExitUncaughtException(Thread* self, Object* group)
     Object* handlerObj;
     Method* uncaughtHandler;
 
+    MethodTraceState* state = &gDvm.methodTrace;
+    dvmLockMutex(&state->fwriteLock);
+    Thread *thread;
+    for (thread = gDvm.threadList; thread != NULL; thread = thread->next) {
+        if (thread->dump) {
+            ALOGD("closing method trace output @ %p via threadExitUncaughtException()\n", thread->dump);
+            fclose(thread->dump);
+            thread->dump = NULL;
+        }
+    }
+    dvmUnlockMutex(&state->fwriteLock);
+    
     ALOGW("threadid=%d: thread exiting with uncaught exception (group=%p)",
         self->threadId, group);
     assert(group != NULL);
