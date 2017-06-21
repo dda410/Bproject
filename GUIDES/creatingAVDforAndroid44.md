@@ -22,6 +22,12 @@ After this we need to create the avd:
 "system-images;android-19;default;armeabi-v7a" --abi armeabi-v7a
 --sdcard 256M --force`
 
+The command line will prompt whether creating a custom hardware
+profile or not. In this case will type yes and leave everything as
+default except from size of ram and size of heap. For the size of ram
+we input 2048 and for the size of heap 512. The sizes are meant to be
+interpreted as megabytes.
+
 Now we can check that the avd has been created by running:
 
 `avdmanager list avd`
