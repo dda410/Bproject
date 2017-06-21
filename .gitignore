@@ -1,5 +1,5 @@
 *~
-*.img
+*.img*
 Android_4.4/tracedroid44/LOGS
 Android_4.4/tracedroid44/OTHERS
 dalvikMachines/TESTING*
