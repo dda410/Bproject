@@ -2,24 +2,17 @@
 
 # USING TRACEDROID
 
-First androguard should be installed as shown in the previous
-guide. 
-
-Second create the avd and run the emulator as shown in the
+First create the avd and run the emulator as shown in the
 creatingAVDforTracedroidGuide.md.
 
-Now let's start the app we want to store the traces of:
-
-`adb shell am start -a android.intent.action.VIEW -n
-com.android.browser/.BrowserActivity -d about:blank`
-
-In this case is the android stock browser. After this let's get the
-uid of the started app:
+Now let's grep the uid of the android stock browser. After this let's
+get the uid of the started app:
 
 `adb shell dumpsys package com.android.browser | grep userId=`
 
-Every app started by android it is started with its own user id. Now
-that we know the uid we can kill the app process with:
+Every app started by android it is started with its own user id. In
+the case the app we want to trace is already started we need to kill
+it in order to trace it:
 
 `adb shell ps | grep com.android.browser | awk '{print $2}' | xargs
 adb shell kill`
@@ -32,7 +25,7 @@ store traces next time it will be launched:
 
 `adb push uid /sdcard/`
 
-We can now restart the app with:
+We can now (re)start the app with:
 
 `adb shell am start -a android.intent.action.VIEW -n
 com.android.browser/.BrowserActivity -d about:blank`
