@@ -1,0 +1,1562 @@
+1498079474965017: new java.lang.Thread((java.lang.ThreadGroup) "Object", (java.lang.String) "Object", (int) "5", (boolean) "false")
+1498079474981766:  new java.util.ArrayList((null))
+1498079474981863:   new java.util.AbstractList((null))
+1498079474981942:    new java.util.AbstractCollection((null))
+1498079474982017:    return (void)
+1498079474982085:   return (void)
+1498079474982152:  return (void)
+1498079474982245:  final void java.lang.ThreadGroup.addThread((java.lang.Thread) "Object")
+1498079474982352:   new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1498079474982439:    new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079474982540:    return (void)
+1498079474982602:   return (void)
+1498079474982667:   public boolean java.util.ArrayList.add((java.lang.Object) "Object")
+1498079474982754:   return (boolean) "true"
+1498079474982817:  return (void)
+1498079474982878: return (void)
+1498079475117215: private boolean android.os.Binder.execTransact((int) "13", (int) "-2115990404", (int) "-2115990356", (int) "17")
+1498079475117471:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "-1784337520")
+1498079475117602:   new android.os.Parcel((int) "-1781540440")
+1498079475117711:    public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475117811:     new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475117904:      new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475117997:      return (void)
+1498079475118076:     return (void)
+1498079475118150:    return (void)
+1498079475118220:    private void android.os.Parcel.init((int) "-2117038192")
+1498079475118316:    return (void)
+1498079475118380:   return (void)
+1498079475118445:  return (android.os.Parcel) "Object"
+1498079475118517:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "-1784337520")
+1498079475118620:   new android.os.Parcel((int) "-1781540376")
+1498079475118715:    public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475118806:     new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475118897:      new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475118986:      return (void)
+1498079475119058:     return (void)
+1498079475119129:    return (void)
+1498079475119195:    private void android.os.Parcel.init((int) "-2117038192")
+1498079475119289:    return (void)
+1498079475119353:   return (void)
+1498079475119417:  return (android.os.Parcel) "Object"
+1498079475119524:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1498079475119693:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1498079475119784:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2115990404", (java.lang.String) "Object")
+1498079475119958:    return (void)
+1498079475120025:   return (void)
+1498079475120126:   final public java.lang.String android.os.Parcel.readString()
+1498079475120248:    native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475120410:    return (java.lang.String) "Object"
+1498079475120495:   return (java.lang.String) "Object"
+1498079475120641:   public java.lang.Object android.content.pm.ApplicationInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079475120824:    public android.content.pm.ApplicationInfo android.content.pm.ApplicationInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079475120974:     new android.content.pm.ApplicationInfo((android.os.Parcel) "Object", (android.content.pm.ApplicationInfo$1) "Object")
+1498079475121075:      new android.content.pm.ApplicationInfo((android.os.Parcel) "Object")
+1498079475121158:       new android.content.pm.PackageItemInfo((android.os.Parcel) "Object")
+1498079475121844:        final public java.lang.String android.os.Parcel.readString()
+1498079475121927:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475122030:         return (java.lang.String) "Object"
+1498079475122115:        return (java.lang.String) "Object"
+1498079475122186:        final public java.lang.String android.os.Parcel.readString()
+1498079475122257:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475122374:         return (java.lang.String) "Object"
+1498079475122444:        return (java.lang.String) "Object"
+1498079475122513:        final public int android.os.Parcel.readInt()
+1498079475122584:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475122785:         return (int) "0"
+1498079475122859:        return (int) "2131623936"
+1498079475122986:        public java.lang.Object android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079475123112:         public java.lang.CharSequence android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079475123202:          final public int android.os.Parcel.readInt()
+1498079475123275:           native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475123403:           return (int) "0"
+1498079475123532:          return (int) "1"
+1498079475123652:          final public java.lang.String android.os.Parcel.readString()
+1498079475123772:           native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475123877:           return (java.lang.String) "Object"
+1498079475123959:          return (java.lang.String) "Object"
+1498079475124030:         return (java.lang.CharSequence) "Object"
+1498079475125428:        return (java.lang.Object) "Object"
+1498079475125523:        final public int android.os.Parcel.readInt()
+1498079475125610:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475125725:         return (int) "0"
+1498079475125799:        return (int) "2130903040"
+1498079475125891:        final public int android.os.Parcel.readInt()
+1498079475125964:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475126075:         return (int) "0"
+1498079475126150:        return (int) "2130903040"
+1498079475126316:        final public android.os.Bundle android.os.Parcel.readBundle()
+1498079475126461:         final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079475126550:          final public int android.os.Parcel.readInt()
+1498079475126623:           native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475126748:           return (int) "0"
+1498079475126826:          return (int) "-1"
+1498079475126903:         return (android.os.Bundle) "Object"
+1498079475126975:        return (android.os.Bundle) "Object"
+1498079475127067:       return (void)
+1498079475127160:       final public java.lang.String android.os.Parcel.readString()
+1498079475127248:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475127418:        return (java.lang.String) "Object"
+1498079475127499:       return (java.lang.String) "Object"
+1498079475127585:       final public java.lang.String android.os.Parcel.readString()
+1498079475127667:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475127782:        return (java.lang.String) "Object"
+1498079475127853:       return (java.lang.String) "Object"
+1498079475127926:       final public java.lang.String android.os.Parcel.readString()
+1498079475127999:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475128181:        return (java.lang.String) "Object"
+1498079475128255:       return (java.lang.String) "Object"
+1498079475129425:       final public java.lang.String android.os.Parcel.readString()
+1498079475129539:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475129727:        return (java.lang.String) "Object"
+1498079475129812:       return (java.lang.String) "Object"
+1498079475129903:       final public int android.os.Parcel.readInt()
+1498079475129992:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475130118:        return (int) "0"
+1498079475130194:       return (int) "2131755009"
+1498079475130280:       final public int android.os.Parcel.readInt()
+1498079475130361:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475130472:        return (int) "0"
+1498079475130546:       return (int) "10009669"
+1498079475130630:       final public int android.os.Parcel.readInt()
+1498079475130712:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475130824:        return (int) "0"
+1498079475130905:       return (int) "0"
+1498079475130976:       final public int android.os.Parcel.readInt()
+1498079475131061:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475131167:        return (int) "0"
+1498079475131238:       return (int) "0"
+1498079475131309:       final public int android.os.Parcel.readInt()
+1498079475131385:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475131485:        return (int) "0"
+1498079475131551:       return (int) "0"
+1498079475131617:       final public java.lang.String android.os.Parcel.readString()
+1498079475131688:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475131809:        return (java.lang.String) "Object"
+1498079475131881:       return (java.lang.String) "Object"
+1498079475131961:       final public java.lang.String android.os.Parcel.readString()
+1498079475132053:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475132172:        return (java.lang.String) "Object"
+1498079475132243:       return (java.lang.String) "Object"
+1498079475132312:       final public java.lang.String android.os.Parcel.readString()
+1498079475132382:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475132491:        return (java.lang.String) "Object"
+1498079475132561:       return (java.lang.String) "Object"
+1498079475132671:       final public java.lang.String[] android.os.Parcel.readStringArray()
+1498079475132751:        final public int android.os.Parcel.readInt()
+1498079475132822:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475132916:         return (int) "0"
+1498079475132983:        return (int) "-1"
+1498079475133058:       return (java.lang.String[]) "Object"
+1498079475133132:       final public java.lang.String android.os.Parcel.readString()
+1498079475133203:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475133313:        return (java.lang.String) "Object"
+1498079475133384:       return (java.lang.String) "Object"
+1498079475133453:       final public java.lang.String[] android.os.Parcel.readStringArray()
+1498079475133526:        final public int android.os.Parcel.readInt()
+1498079475133596:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475133689:         return (int) "0"
+1498079475133755:        return (int) "-1"
+1498079475133820:       return (java.lang.String[]) "Object"
+1498079475133892:       final public java.lang.String android.os.Parcel.readString()
+1498079475133963:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475238594:        return (java.lang.String) "Object"
+1498079475238735:       return (java.lang.String) "Object"
+1498079475238823:       final public int android.os.Parcel.readInt()
+1498079475274239:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475274522:        return (int) "0"
+1498079475274640:       return (int) "10021"
+1498079475274741:       final public int android.os.Parcel.readInt()
+1498079475274852:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475275047:        return (int) "0"
+1498079475275148:       return (int) "17"
+1498079475275222:       final public int android.os.Parcel.readInt()
+1498079475275299:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475275415:        return (int) "0"
+1498079475275494:       return (int) "1"
+1498079475275563:       final public int android.os.Parcel.readInt()
+1498079475275636:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475275732:        return (int) "0"
+1498079475275799:       return (int) "0"
+1498079475275866:       final public int android.os.Parcel.readInt()
+1498079475275950:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475276047:        return (int) "0"
+1498079475276120:       return (int) "-1"
+1498079475276188:       final public java.lang.String android.os.Parcel.readString()
+1498079475276261:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475276359:        return (java.lang.String) "Object"
+1498079475276432:       return (java.lang.String) "Object"
+1498079475276503:       final public java.lang.String android.os.Parcel.readString()
+1498079475276575:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475276680:        return (java.lang.String) "Object"
+1498079475276750:       return (java.lang.String) "Object"
+1498079475276830:       final public int android.os.Parcel.readInt()
+1498079475276953:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475277053:        return (int) "0"
+1498079475277121:       return (int) "0"
+1498079475277203:       final public int android.os.Parcel.readInt()
+1498079475277287:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475277397:        return (int) "0"
+1498079475277468:       return (int) "0"
+1498079475277536:      return (void)
+1498079475277601:     return (void)
+1498079475277681:    return (android.content.pm.ApplicationInfo) "Object"
+1498079475277766:   return (java.lang.Object) "Object"
+1498079475277866:   final public java.util.ArrayList android.os.Parcel.createTypedArrayList((android.os.Parcelable$Creator) "Object")
+1498079475277981:    final public int android.os.Parcel.readInt()
+1498079475278053:     native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475278166:     return (int) "0"
+1498079475278245:    return (int) "-1"
+1498079475278321:   return (java.util.ArrayList) "Object"
+1498079475278396:   final public int android.os.Parcel.readInt()
+1498079475278468:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475278567:    return (int) "0"
+1498079475278636:   return (int) "0"
+1498079475278709:   final public java.lang.String android.os.Parcel.readString()
+1498079475278782:    native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475278880:    return (java.lang.String) "Object"
+1498079475278962:   return (java.lang.String) "Object"
+1498079475279032:   final public int android.os.Parcel.readInt()
+1498079475279130:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475279227:    return (int) "0"
+1498079475279293:   return (int) "0"
+1498079475279360:   final public int android.os.Parcel.readInt()
+1498079475279431:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475279526:    return (int) "0"
+1498079475279593:   return (int) "0"
+1498079475279661:   final public android.os.Bundle android.os.Parcel.readBundle()
+1498079475282805:    final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079475282930:     final public int android.os.Parcel.readInt()
+1498079475283010:      native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475283125:      return (int) "0"
+1498079475283204:     return (int) "-1"
+1498079475283272:    return (android.os.Bundle) "Object"
+1498079475283342:   return (android.os.Bundle) "Object"
+1498079475283413:   final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079475283484:    native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079475283598:    return (android.os.IBinder) "Object"
+1498079475283668:   return (android.os.IBinder) "Object"
+1498079475283812:   public static android.app.IInstrumentationWatcher android.app.IInstrumentationWatcher$Stub.asInterface((android.os.IBinder) "Object")
+1498079475369099:   return (android.app.IInstrumentationWatcher) "Object"
+1498079475369272:   final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079475369375:    native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079475369532:    return (android.os.IBinder) "Object"
+1498079475369612:   return (android.os.IBinder) "Object"
+1498079475369746:   public static android.app.IUiAutomationConnection android.app.IUiAutomationConnection$Stub.asInterface((android.os.IBinder) "Object")
+1498079475388643:   return (android.app.IUiAutomationConnection) "Object"
+1498079475388759:   final public int android.os.Parcel.readInt()
+1498079475395022:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475395176:    return (int) "0"
+1498079475395259:   return (int) "0"
+1498079475395338:   final public int android.os.Parcel.readInt()
+1498079475395417:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475395523:    return (int) "0"
+1498079475395595:   return (int) "0"
+1498079475395667:   final public int android.os.Parcel.readInt()
+1498079475395741:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475395848:    return (int) "0"
+1498079475395916:   return (int) "0"
+1498079475395988:   final public int android.os.Parcel.readInt()
+1498079475396069:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475396169:    return (int) "0"
+1498079475396237:   return (int) "0"
+1498079475396364:   public java.lang.Object android.content.res.Configuration$1.createFromParcel((android.os.Parcel) "Object")
+1498079475396497:    public android.content.res.Configuration android.content.res.Configuration$1.createFromParcel((android.os.Parcel) "Object")
+1498079475396656:     new android.content.res.Configuration((android.os.Parcel) "Object", (android.content.res.Configuration$1) "Object")
+1498079475396759:      new android.content.res.Configuration((android.os.Parcel) "Object")
+1498079475397252:       public void android.content.res.Configuration.readFromParcel((android.os.Parcel) "Object")
+1498079475397351:        final public float android.os.Parcel.readFloat()
+1498079475397513:         native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079475397636:         return (float) "0.000000"
+1498079475397733:        return (float) "1065353216.000000"
+1498079475397842:        final public int android.os.Parcel.readInt()
+1498079475397917:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475398015:         return (int) "0"
+1498079475398083:        return (int) "310"
+1498079475398153:        final public int android.os.Parcel.readInt()
+1498079475398226:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475398323:         return (int) "0"
+1498079475398391:        return (int) "260"
+1498079475398460:        final public int android.os.Parcel.readInt()
+1498079475399519:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475399659:         return (int) "0"
+1498079475399737:        return (int) "1"
+1498079475399842:        final public java.lang.String android.os.Parcel.readString()
+1498079475399924:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475400075:         return (java.lang.String) "Object"
+1498079475400170:        return (java.lang.String) "Object"
+1498079475400246:        final public java.lang.String android.os.Parcel.readString()
+1498079475400335:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475400464:         return (java.lang.String) "Object"
+1498079475400538:        return (java.lang.String) "Object"
+1498079475400609:        final public java.lang.String android.os.Parcel.readString()
+1498079475400682:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475400817:         return (java.lang.String) "Object"
+1498079475400891:        return (java.lang.String) "Object"
+1498079475401043:        new java.util.Locale((java.lang.String) "Object", (java.lang.String) "Object", (java.lang.String) "Object")
+1498079475401206:         public boolean java.lang.String.isEmpty()
+1498079475401289:         return (boolean) "false"
+1498079475401364:         public java.lang.String java.lang.String.toLowerCase((java.util.Locale) "Object")
+1498079475401455:          public static java.lang.String java.lang.CaseMapper.toLowerCase((java.util.Locale) "Object", (java.lang.String) "Object", (char[]) "Object", (int) "-1781538688", (int) "-1781538656")
+1498079475401660:           public java.lang.String java.util.Locale.getLanguage()
+1498079475401738:           return (java.lang.String) "Object"
+1498079475401854:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475401951:           return (boolean) "false"
+1498079475402045:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475402135:           return (boolean) "false"
+1498079475402226:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475402316:           return (boolean) "false"
+1498079475402418:           public static boolean java.lang.Character.isHighSurrogate((char) "")
+1498079475402548:           return (boolean) "false"
+1498079475402619:           public static char java.lang.Character.toLowerCase((char) "")
+1498079475402707:            public static int java.lang.Character.toLowerCase((int) "101")
+1498079475402813:            return (int) "101"
+1498079475402884:           return (char) "e"
+1498079475402959:           public static boolean java.lang.Character.isHighSurrogate((char) "")
+1498079475403044:           return (boolean) "false"
+1498079475403111:           public static char java.lang.Character.toLowerCase((char) "")
+1498079475403198:            public static int java.lang.Character.toLowerCase((int) "110")
+1498079475403283:            return (int) "110"
+1498079475403354:           return (char) "n"
+1498079475403424:          return (java.lang.String) "Object"
+1498079475403498:         return (java.lang.String) "Object"
+1498079475403603:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475403698:         return (boolean) "false"
+1498079475403778:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475403867:         return (boolean) "false"
+1498079475403934:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475404019:         return (boolean) "false"
+1498079475404108:         public java.lang.String java.lang.String.toUpperCase((java.util.Locale) "Object")
+1498079475404206:          public static java.lang.String java.lang.CaseMapper.toUpperCase((java.util.Locale) "Object", (java.lang.String) "Object", (char[]) "Object", (int) "0", (int) "1")
+1498079475404948:           public java.lang.String java.util.Locale.getLanguage()
+1498079475405033:           return (java.lang.String) "Object"
+1498079475405110:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475405201:           return (boolean) "false"
+1498079475405269:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475405355:           return (boolean) "false"
+1498079475405422:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079475405506:           return (boolean) "false"
+1498079475405575:           public static boolean java.lang.Character.isHighSurrogate((char) "n")
+1498079475405663:           return (boolean) "false"
+1498079475405730:           private static int java.lang.CaseMapper.upperIndex((int) "0")
+1498079475405826:           return (int) "-1"
+1498079475405938:           public static char java.lang.Character.toUpperCase((char) "n")
+1498079475406084:            public static int java.lang.Character.toUpperCase((int) "85")
+1498079475406192:            return (int) "85"
+1498079475406270:           return (char) "U"
+1498079475406350:           public static boolean java.lang.Character.isHighSurrogate((char) "n")
+1498079475406440:           return (boolean) "false"
+1498079475406509:           private static int java.lang.CaseMapper.upperIndex((int) "0")
+1498079475406596:           return (int) "-1"
+1498079475406668:           public static char java.lang.Character.toUpperCase((char) "n")
+1498079475406775:            public static int java.lang.Character.toUpperCase((int) "83")
+1498079475406860:            return (int) "83"
+1498079475406996:           return (char) "S"
+1498079475407157:          return (java.lang.String) "Object"
+1498079475407266:         return (java.lang.String) "Object"
+1498079475407391:        return (void)
+1498079475407466:        final public int android.os.Parcel.readInt()
+1498079475407546:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475407657:         return (int) "0"
+1498079475407728:        return (int) "1"
+1498079475407816:        final public int android.os.Parcel.readInt()
+1498079475407893:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475407997:         return (int) "0"
+1498079475408074:        return (int) "1"
+1498079475408148:        final public int android.os.Parcel.readInt()
+1498079475408251:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475408392:         return (int) "0"
+1498079475408459:        return (int) "1"
+1498079475408525:        final public int android.os.Parcel.readInt()
+1498079475408596:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475408689:         return (int) "0"
+1498079475408754:        return (int) "1"
+1498079475408834:        final public int android.os.Parcel.readInt()
+1498079475408904:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475408997:         return (int) "0"
+1498079475409063:        return (int) "2"
+1498079475409129:        final public int android.os.Parcel.readInt()
+1498079475409199:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475409292:         return (int) "0"
+1498079475409357:        return (int) "3"
+1498079475409450:        final public int android.os.Parcel.readInt()
+1498079475409521:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475409613:         return (int) "0"
+1498079475409678:        return (int) "1"
+1498079475409744:        final public int android.os.Parcel.readInt()
+1498079475409823:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475409915:         return (int) "0"
+1498079475409981:        return (int) "1"
+1498079475410046:        final public int android.os.Parcel.readInt()
+1498079475410116:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475410837:         return (int) "0"
+1498079475410915:        return (int) "82"
+1498079475410987:        final public int android.os.Parcel.readInt()
+1498079475411061:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475411157:         return (int) "0"
+1498079475411224:        return (int) "17"
+1498079475411292:        final public int android.os.Parcel.readInt()
+1498079475411362:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475411455:         return (int) "0"
+1498079475411521:        return (int) "320"
+1498079475411589:        final public int android.os.Parcel.readInt()
+1498079475411658:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475411751:         return (int) "0"
+1498079475411827:        return (int) "455"
+1498079475411895:        final public int android.os.Parcel.readInt()
+1498079475411965:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475412059:         return (int) "0"
+1498079475412195:        return (int) "320"
+1498079475412265:        final public int android.os.Parcel.readInt()
+1498079475412336:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475412429:         return (int) "0"
+1498079475412494:        return (int) "160"
+1498079475412562:        final public int android.os.Parcel.readInt()
+1498079475412632:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475412741:         return (int) "0"
+1498079475412845:        return (int) "320"
+1498079475412949:        final public int android.os.Parcel.readInt()
+1498079475413047:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475413169:         return (int) "0"
+1498079475413235:        return (int) "455"
+1498079475413303:        final public int android.os.Parcel.readInt()
+1498079475413373:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475413465:         return (int) "0"
+1498079475413530:        return (int) "320"
+1498079475413600:        final public int android.os.Parcel.readInt()
+1498079475413670:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475413773:         return (int) "0"
+1498079475413840:        return (int) "5"
+1498079475413906:       return (void)
+1498079475413970:      return (void)
+1498079475414032:     return (void)
+1498079475414096:    return (android.content.res.Configuration) "Object"
+1498079475414169:   return (java.lang.Object) "Object"
+1498079475414316:   public java.lang.Object android.content.res.CompatibilityInfo$2.createFromParcel((android.os.Parcel) "Object")
+1498079475414405:    public android.content.res.CompatibilityInfo android.content.res.CompatibilityInfo$2.createFromParcel((android.os.Parcel) "Object")
+1498079475414514:     new android.content.res.CompatibilityInfo((android.os.Parcel) "Object", (android.content.res.CompatibilityInfo$1) "Object")
+1498079475414606:      new android.content.res.CompatibilityInfo((android.os.Parcel) "Object")
+1498079475414689:       final public int android.os.Parcel.readInt()
+1498079475481278:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475481481:        return (int) "0"
+1498079475481568:       return (int) "4"
+1498079475481650:       final public int android.os.Parcel.readInt()
+1498079475484952:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475485078:        return (int) "0"
+1498079475485154:       return (int) "160"
+1498079475485229:       final public float android.os.Parcel.readFloat()
+1498079475485307:        native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079475485408:        return (float) "0.000000"
+1498079475485490:       return (float) "1065353216.000000"
+1498079475485575:       final public float android.os.Parcel.readFloat()
+1498079475486520:        native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079475486640:        return (float) "0.000000"
+1498079475486743:       return (float) "1065353216.000000"
+1498079475486825:      return (void)
+1498079475486891:     return (void)
+1498079475486954:    return (android.content.res.CompatibilityInfo) "Object"
+1498079475487025:   return (java.lang.Object) "Object"
+1498079475487098:   final public java.util.HashMap android.os.Parcel.readHashMap((java.lang.ClassLoader) "Object")
+1498079475487238:    final public int android.os.Parcel.readInt()
+1498079475487311:     native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475487407:     return (int) "0"
+1498079475487474:    return (int) "3"
+1498079475487570:    new java.util.HashMap((int) "-2016371514")
+1498079475487662:     new java.util.AbstractMap((null))
+1498079475488087:     return (void)
+1498079475488163:     private java.util.HashMap$HashMapEntry[] java.util.HashMap.makeTable((int) "-1781537984")
+1498079475488274:     return (java.util.HashMap$HashMapEntry[]) "Object"
+1498079475488350:    return (void)
+1498079475488416:    void android.os.Parcel.readMapInternal((java.util.Map) "Object", (int) "-2117038192", (java.lang.ClassLoader) "Object")
+1498079475488568:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475488653:      final public int android.os.Parcel.readInt()
+1498079475488736:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475488833:       return (int) "0"
+1498079475488900:      return (int) "0"
+1498079475488967:      final public java.lang.String android.os.Parcel.readString()
+1498079475489038:       native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475489161:       return (java.lang.String) "Object"
+1498079475489232:      return (java.lang.String) "Object"
+1498079475489323:     return (java.lang.Object) "Object"
+1498079475489444:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475489540:      final public int android.os.Parcel.readInt()
+1498079475489617:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475489734:       return (int) "0"
+1498079475489805:      return (int) "15"
+1498079475489877:      final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079475489952:       native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079475490232:        new android.os.BinderProxy((null))
+1498079475490358:         public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475490491:          new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475490715:           new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475490857:           return (void)
+1498079475490933:          return (void)
+1498079475491064:         return (void)
+1498079475491190:         new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1498079475491280:          new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475491375:          return (void)
+1498079475491441:         return (void)
+1498079475491520:        return (void)
+1498079475491963:       return (android.os.IBinder) "Object"
+1498079475492123:      return (android.os.IBinder) "Object"
+1498079475492214:     return (java.lang.Object) "Object"
+1498079475492333:     public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475492465:      static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475492577:       public int java.lang.String.hashCode()
+1498079475492710:       return (int) "-787751952"
+1498079475504916:      return (int) "-575363148"
+1498079475505028:      void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1781537984")
+1498079475505169:       new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1781537984", (java.util.HashMap$HashMapEntry) "Object")
+1498079475505288:       return (void)
+1498079475505357:      return (void)
+1498079475505423:     return (java.lang.Object) "Object"
+1498079475505497:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475505586:      final public int android.os.Parcel.readInt()
+1498079475505660:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475506131:       return (int) "0"
+1498079475506211:      return (int) "0"
+1498079475506287:      final public java.lang.String android.os.Parcel.readString()
+1498079475506365:       native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475506516:       return (java.lang.String) "Object"
+1498079475506590:      return (java.lang.String) "Object"
+1498079475506686:     return (java.lang.Object) "Object"
+1498079475506765:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475506860:      final public int android.os.Parcel.readInt()
+1498079475506969:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475507075:       return (int) "0"
+1498079475507200:      return (int) "15"
+1498079475507364:      final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079475507488:       native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079475508418:        new android.os.BinderProxy((null))
+1498079475508614:         public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475508912:          new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475509067:           new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475509196:           return (void)
+1498079475509275:          return (void)
+1498079475509401:         return (void)
+1498079475509542:         new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1498079475509655:          new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475509814:          return (void)
+1498079475509900:         return (void)
+1498079475509982:        return (void)
+1498079475510422:       return (android.os.IBinder) "Object"
+1498079475510523:      return (android.os.IBinder) "Object"
+1498079475510600:     return (java.lang.Object) "Object"
+1498079475510721:     public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475510890:      static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475511034:       public int java.lang.String.hashCode()
+1498079475511152:       return (int) "-807062458"
+1498079475511267:      return (int) "-1031239416"
+1498079475511395:      void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1781537984")
+1498079475511622:       new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1781537984", (java.util.HashMap$HashMapEntry) "Object")
+1498079475511834:       return (void)
+1498079475511943:      return (void)
+1498079475512040:     return (java.lang.Object) "Object"
+1498079475512208:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475512344:      final public int android.os.Parcel.readInt()
+1498079475512460:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475512621:       return (int) "0"
+1498079475512756:      return (int) "0"
+1498079475513564:      final public java.lang.String android.os.Parcel.readString()
+1498079475513665:       native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079475513828:       return (java.lang.String) "Object"
+1498079475513904:      return (java.lang.String) "Object"
+1498079475513975:     return (java.lang.Object) "Object"
+1498079475514046:     final public java.lang.Object android.os.Parcel.readValue((java.lang.ClassLoader) "Object")
+1498079475514132:      final public int android.os.Parcel.readInt()
+1498079475514206:       native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475514302:       return (int) "0"
+1498079475514370:      return (int) "15"
+1498079475514440:      final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079475514513:       native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079475533341:        new android.os.BinderProxy((null))
+1498079475533427:         public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475533525:          new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475533613:           new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475538924:           return (void)
+1498079475539004:          return (void)
+1498079475539077:         return (void)
+1498079475539156:         new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1498079475539238:          new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475539358:          return (void)
+1498079475539465:         return (void)
+1498079475539533:        return (void)
+1498079475554936:       return (android.os.IBinder) "Object"
+1498079475555035:      return (android.os.IBinder) "Object"
+1498079475555110:     return (java.lang.Object) "Object"
+1498079475555184:     public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475555279:      static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475555363:       public int java.lang.String.hashCode()
+1498079475555434:       return (int) "92895825"
+1498079475555509:      return (int) "98214642"
+1498079475555587:      void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1781537984")
+1498079475555739:       new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1781537984", (java.util.HashMap$HashMapEntry) "Object")
+1498079475555851:       return (void)
+1498079475555918:      return (void)
+1498079475556014:     return (java.lang.Object) "Object"
+1498079475556132:    return (void)
+1498079475556200:   return (java.util.HashMap) "Object"
+1498079475556278:   final public android.os.Bundle android.os.Parcel.readBundle()
+1498079475556354:    final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079475556443:     final public int android.os.Parcel.readInt()
+1498079475556518:      native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475556635:      return (int) "0"
+1498079475556719:     return (int) "60"
+1498079475556851:     new android.os.Bundle((android.os.Parcel) "Object", (int) "-2117038680")
+1498079475556992:      void android.os.Bundle.readFromParcelInner((android.os.Parcel) "Object", (int) "-2014113544")
+1498079475557242:       final public int android.os.Parcel.readInt()
+1498079475557324:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079475557470:        return (int) "0"
+1498079475557544:       return (int) "1279544898"
+1498079475557707:       final public int android.os.Parcel.dataPosition()
+1498079475557798:        native private static int android.os.Parcel.nativeDataPosition((int) "-2115990404")
+1498079475557905:        return (int) "0"
+1498079475559728:       return (int) "1004"
+1498079475559922:       final public void android.os.Parcel.setDataPosition((int) "-2000911584")
+1498079475560114:        native private static void android.os.Parcel.nativeSetDataPosition((int) "-2115990404", (int) "-1781540440")
+1498079475560303:        return (void)
+1498079475560406:       return (void)
+1498079475560484:       public static android.os.Parcel android.os.Parcel.obtain()
+1498079475560596:        new android.os.Parcel((int) "-1781536728")
+1498079475560763:         public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079475560939:          new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475561083:           new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079475561213:           return (void)
+1498079475561303:          return (void)
+1498079475561421:         return (void)
+1498079475561530:         private void android.os.Parcel.init((int) "-2117038840")
+1498079475561696:          native private static int android.os.Parcel.nativeCreate()
+1498079475561829:          return (int) "0"
+1498079475561920:         return (void)
+1498079475562006:        return (void)
+1498079475562089:       return (android.os.Parcel) "Object"
+1498079475562189:       final public void android.os.Parcel.setDataPosition((int) "-1781536728")
+1498079475562335:        native private static void android.os.Parcel.nativeSetDataPosition((int) "-1214184328", (int) "-1781536728")
+1498079475562499:        return (void)
+1498079475562591:       return (void)
+1498079475562906:       final public void android.os.Parcel.appendFrom((android.os.Parcel) "Object", (int) "0", (int) "0")
+1498079475563038:        native private static void android.os.Parcel.nativeAppendFrom((int) "-1214184328", (int) "-2115990404", (int) "-1781536728", (int) "-1781540440")
+1498079475563199:        return (void)
+1498079475563266:       return (void)
+1498079475563332:       final public void android.os.Parcel.setDataPosition((int) "-1781536728")
+1498079475563423:        native private static void android.os.Parcel.nativeSetDataPosition((int) "-1214184328", (int) "-1781536728")
+1498079475563532:        return (void)
+1498079475563597:       return (void)
+1498079475563672:       final public boolean android.os.Parcel.hasFileDescriptors()
+1498079475563746:        native private static boolean android.os.Parcel.nativeHasFileDescriptors((int) "-1214184328")
+1498079475563841:        return (boolean) "false"
+1498079475563905:       return (boolean) "false"
+1498079475563968:      return (void)
+1498079475564030:     return (void)
+1498079475564097:    return (android.os.Bundle) "Object"
+1498079475564166:   return (android.os.Bundle) "Object"
+1498079475564239:   final public void android.app.ActivityThread$ApplicationThread.bindApplication((java.lang.String) "Object", (android.content.pm.ApplicationInfo) "Object", (java.util.List) "Object", (android.content.ComponentName) "Object", (java.lang.String) "Object", (android.os.ParcelFileDescriptor) "Object", (boolean) "true", (android.os.Bundle) "Object", (android.app.IInstrumentationWatcher) "Object", (android.app.IUiAutomationConnection) "Object", (int) "0", (boolean) "false", (boolean) "false", (boolean) "false", (android.content.res.Configuration) "Object", (android.content.res.CompatibilityInfo) "Object", (java.util.Map) "Object", (android.os.Bundle) "Object")
+1498079475564554:    public static void android.os.ServiceManager.initServiceCache((java.util.Map) "Object")
+1498079475615738:     public int java.util.HashMap.size()
+1498079475615870:     return (int) "0"
+1498079475615960:     public void java.util.HashMap.putAll((java.util.Map) "Object")
+1498079475616059:      public int java.util.HashMap.size()
+1498079475616139:      return (int) "3"
+1498079475616209:      private void java.util.HashMap.ensureCapacity((int) "-2016215572")
+1498079475616304:       static int java.util.HashMap.capacityForInitSize((int) "-2117038872")
+1498079475631335:       return (int) "4"
+1498079475631470:       public static int java.util.Collections.roundUpToPowerOfTwo((int) "0")
+1498079475634950:       return (int) "4"
+1498079475635061:       private java.util.HashMap$HashMapEntry[] java.util.HashMap.doubleCapacity()
+1498079475635156:        private java.util.HashMap$HashMapEntry[] java.util.HashMap.makeTable((int) "-2117038928")
+1498079475635357:        return (java.util.HashMap$HashMapEntry[]) "Object"
+1498079475635439:       return (java.util.HashMap$HashMapEntry[]) "Object"
+1498079475635514:      return (void)
+1498079475635595:      public void java.util.AbstractMap.putAll((java.util.Map) "Object")
+1498079475635686:       public java.util.Set java.util.HashMap.entrySet()
+1498079475635805:        new java.util.HashMap$EntrySet((java.util.HashMap) "Object", (java.util.HashMap$1) "Object")
+1498079475635898:         new java.util.HashMap$EntrySet((java.util.HashMap) "Object")
+1498079475635980:          new java.util.AbstractSet((null))
+1498079475636092:           new java.util.AbstractCollection((null))
+1498079475636164:           return (void)
+1498079475636228:          return (void)
+1498079475636290:         return (void)
+1498079475636352:        return (void)
+1498079475636415:       return (java.util.Set) "Object"
+1498079475636509:       public java.util.Iterator java.util.HashMap$EntrySet.iterator()
+1498079475636591:        java.util.Iterator java.util.HashMap.newEntryIterator()
+1498079475636667:         new java.util.HashMap$EntryIterator((java.util.HashMap) "Object", (java.util.HashMap$1) "Object")
+1498079475636755:          new java.util.HashMap$EntryIterator((java.util.HashMap) "Object")
+1498079475636863:           new java.util.HashMap$HashIterator((java.util.HashMap) "Object")
+1498079475636948:           return (void)
+1498079475637013:          return (void)
+1498079475637075:         return (void)
+1498079475637137:        return (java.util.Iterator) "Object"
+1498079475637205:       return (java.util.Iterator) "Object"
+1498079475637275:       public boolean java.util.HashMap$HashIterator.hasNext()
+1498079475637347:       return (boolean) "true"
+1498079475637412:       public java.lang.Object java.util.HashMap$EntryIterator.next()
+1498079475637482:        public java.util.Map$Entry java.util.HashMap$EntryIterator.next()
+1498079475637559:         java.util.HashMap$HashMapEntry java.util.HashMap$HashIterator.nextEntry()
+1498079475637629:         return (java.util.HashMap$HashMapEntry) "Object"
+1498079475637698:        return (java.util.Map$Entry) "Object"
+1498079475637766:       return (java.lang.Object) "Object"
+1498079475637837:       final public java.lang.Object java.util.HashMap$HashMapEntry.getKey()
+1498079475637908:       return (java.lang.Object) "Object"
+1498079475637977:       final public java.lang.Object java.util.HashMap$HashMapEntry.getValue()
+1498079475638046:       return (java.lang.Object) "Object"
+1498079475638121:       public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475638224:        static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475638318:         public int java.lang.String.hashCode()
+1498079475638388:         return (int) "-807062458"
+1498079475638464:        return (int) "-1031239416"
+1498079475638551:        void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1783363552")
+1498079475638669:         new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1783363552", (java.util.HashMap$HashMapEntry) "Object")
+1498079475638782:         return (void)
+1498079475638849:        return (void)
+1498079475638912:       return (java.lang.Object) "Object"
+1498079475638982:       public boolean java.util.HashMap$HashIterator.hasNext()
+1498079475639052:       return (boolean) "true"
+1498079475639117:       public java.lang.Object java.util.HashMap$EntryIterator.next()
+1498079475639186:        public java.util.Map$Entry java.util.HashMap$EntryIterator.next()
+1498079475640143:         java.util.HashMap$HashMapEntry java.util.HashMap$HashIterator.nextEntry()
+1498079475640253:         return (java.util.HashMap$HashMapEntry) "Object"
+1498079475640338:        return (java.util.Map$Entry) "Object"
+1498079475640418:       return (java.lang.Object) "Object"
+1498079475640566:       final public java.lang.Object java.util.HashMap$HashMapEntry.getKey()
+1498079475640737:       return (java.lang.Object) "Object"
+1498079475640820:       final public java.lang.Object java.util.HashMap$HashMapEntry.getValue()
+1498079475640911:       return (java.lang.Object) "Object"
+1498079475641038:       public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475641160:        static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475641254:         public int java.lang.String.hashCode()
+1498079475641332:         return (int) "-787751952"
+1498079475641433:        return (int) "-575363148"
+1498079475641523:        void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1783363552")
+1498079475641723:         new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1783363552", (java.util.HashMap$HashMapEntry) "Object")
+1498079475641873:         return (void)
+1498079475641964:        return (void)
+1498079475642044:       return (java.lang.Object) "Object"
+1498079475642129:       public boolean java.util.HashMap$HashIterator.hasNext()
+1498079475642236:       return (boolean) "true"
+1498079475642331:       public java.lang.Object java.util.HashMap$EntryIterator.next()
+1498079475642426:        public java.util.Map$Entry java.util.HashMap$EntryIterator.next()
+1498079475642512:         java.util.HashMap$HashMapEntry java.util.HashMap$HashIterator.nextEntry()
+1498079475642633:         return (java.util.HashMap$HashMapEntry) "Object"
+1498079475642723:        return (java.util.Map$Entry) "Object"
+1498079475642810:       return (java.lang.Object) "Object"
+1498079475642904:       final public java.lang.Object java.util.HashMap$HashMapEntry.getKey()
+1498079475643000:       return (java.lang.Object) "Object"
+1498079475643093:       final public java.lang.Object java.util.HashMap$HashMapEntry.getValue()
+1498079475643184:       return (java.lang.Object) "Object"
+1498079475643267:       public java.lang.Object java.util.HashMap.put((java.lang.Object) "Object", (java.lang.Object) "Object")
+1498079475643383:        static int java.util.HashMap.secondaryHash((java.lang.Object) "Object")
+1498079475643493:         public int java.lang.String.hashCode()
+1498079475643611:         return (int) "92895825"
+1498079475643701:        return (int) "98214642"
+1498079475643785:        void java.util.HashMap.addNewEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "3", (int) "-1783363552")
+1498079475643941:         new java.util.HashMap$HashMapEntry((java.lang.Object) "Object", (java.lang.Object) "Object", (int) "-1783363552", (java.util.HashMap$HashMapEntry) "Object")
+1498079475644119:         return (void)
+1498079475644221:        return (void)
+1498079475644304:       return (java.lang.Object) "Object"
+1498079475644410:       public boolean java.util.HashMap$HashIterator.hasNext()
+1498079475674785:       return (boolean) "false"
+1498079475699324:      return (void)
+1498079475699410:     return (void)
+1498079475704390:    return (void)
+1498079475737200:    public void android.app.ActivityThread$ApplicationThread.setCoreSettings((android.os.Bundle) "Object")
+1498079475737337:     static void android.app.ActivityThread.access$400((android.app.ActivityThread) "Object", (int) "138", (java.lang.Object) "Object")
+1498079475745127:      private void android.app.ActivityThread.queueOrSendMessage((int) "-1781536768", (java.lang.Object) "Object")
+1498079475745378:       private void android.app.ActivityThread.queueOrSendMessage((int) "-1781536768", (java.lang.Object) "Object", (int) "-2016202016", (int) "-2000217696")
+1498079476008347:        public static android.os.Message android.os.Message.obtain()
+1498079476009289:         new android.os.Message((null))
+1498079476009399:         return (void)
+1498079476009478:        return (android.os.Message) "Object"
+1498079476009604:        final public boolean android.os.Handler.sendMessage((android.os.Message) "Object")
+1498079476009711:         final public boolean android.os.Handler.sendMessageDelayed((android.os.Message) "Object", (long) "-8659416174145008432")
+1498079476009852:          native public static long android.os.SystemClock.uptimeMillis()
+1498079476009962:          return (long) "0"
+1498079476010039:          public boolean android.os.Handler.sendMessageAtTime((android.os.Message) "Object", (long) "-8659415813367755616")
+1498079476010262:           private boolean android.os.Handler.enqueueMessage((android.os.MessageQueue) "Object", (android.os.Message) "Object", (long) "-7651633356575091680")
+1498079476010412:            boolean android.os.MessageQueue.enqueueMessage((android.os.Message) "Object", (long) "2278768290")
+1498079476010522:             boolean android.os.Message.isInUse()
+1498079476010598:             return (boolean) "false"
+1498079476010671:             native private static void android.os.MessageQueue.nativeWake((int) "0")
+1498079476010845:             return (void)
+1498079476010918:            return (boolean) "true"
+1498079476010987:           return (boolean) "true"
+1498079476011054:          return (boolean) "true"
+1498079476011119:         return (boolean) "true"
+1498079476011197:        return (boolean) "true"
+1498079476011265:       return (void)
+1498079476011330:      return (void)
+1498079476011395:     return (void)
+1498079476011460:    return (void)
+1498079476011537:    new android.app.ActivityThread$AppBindData((null))
+1498079476011625:    return (void)
+1498079476011717:    static void android.app.ActivityThread.access$400((android.app.ActivityThread) "Object", (int) "-1781534656", (java.lang.Object) "Object")
+1498079476011837:     private void android.app.ActivityThread.queueOrSendMessage((int) "-1781534656", (java.lang.Object) "Object")
+1498079476011947:      private void android.app.ActivityThread.queueOrSendMessage((int) "-1781534656", (java.lang.Object) "Object", (int) "-2016204252", (int) "-2000217696")
+1498079476012093:       public static android.os.Message android.os.Message.obtain()
+1498079476012191:        new android.os.Message((null))
+1498079476012265:        return (void)
+1498079476012331:       return (android.os.Message) "Object"
+1498079476012407:       final public boolean android.os.Handler.sendMessage((android.os.Message) "Object")
+1498079476012496:        final public boolean android.os.Handler.sendMessageDelayed((android.os.Message) "Object", (long) "-8659416174145008396")
+1498079476012629:         native public static long android.os.SystemClock.uptimeMillis()
+1498079476012731:         return (long) "0"
+1498079476012804:         public boolean android.os.Handler.sendMessageAtTime((android.os.Message) "Object", (long) "-8659415813367755580")
+1498079476012932:          private boolean android.os.Handler.enqueueMessage((android.os.MessageQueue) "Object", (android.os.Message) "Object", (long) "-7651632738099801056")
+1498079476013072:           boolean android.os.MessageQueue.enqueueMessage((android.os.Message) "Object", (long) "2278768290")
+1498079476013188:            boolean android.os.Message.isInUse()
+1498079476013263:            return (boolean) "false"
+1498079476013338:           return (boolean) "true"
+1498079476013406:          return (boolean) "true"
+1498079476013471:         return (boolean) "true"
+1498079476013535:        return (boolean) "true"
+1498079476013599:       return (boolean) "true"
+1498079476013664:      return (void)
+1498079476013732:     return (void)
+1498079476013797:    return (void)
+1498079476013863:   return (void)
+1498079476013929:  return (boolean) "true"
+1498079476014002:  final public void android.os.Parcel.recycle()
+1498079476014088:   private void android.os.Parcel.freeBuffer()
+1498079476033865:   return (void)
+1498079476034012:  return (void)
+1498079476095110:  final public void android.os.Parcel.recycle()
+1498079476116658:   private void android.os.Parcel.freeBuffer()
+1498079476116772:   return (void)
+1498079476116860:  return (void)
+1498079476116933: return (boolean) "true"
+1498079476136605: private boolean android.os.Binder.execTransact((int) "50", (int) "-2115990404", (int) "-2115990356", (int) "17")
+1498079476145347:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1498079476145476:   private void android.os.Parcel.init((int) "-1784231176")
+1498079476145583:   return (void)
+1498079476145656:  return (android.os.Parcel) "Object"
+1498079476145730:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1498079476145820:   private void android.os.Parcel.init((int) "-1784231176")
+1498079476145915:   return (void)
+1498079476145981:  return (android.os.Parcel) "Object"
+1498079476146069:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1498079476146185:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1498079476146275:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2115990404", (java.lang.String) "Object")
+1498079476146446:    return (void)
+1498079476146515:   return (void)
+1498079476146583:   final public int android.os.Parcel.readInt()
+1498079476146658:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476146755:    return (int) "0"
+1498079476146824:   return (int) "2"
+1498079476146897:   public void android.app.ActivityThread$ApplicationThread.setProcessState((int) "0")
+1498079476146986:    public void android.app.ActivityThread$ApplicationThread.updateProcessState((int) "2", (boolean) "true")
+1498079476147093:    return (void)
+1498079476147159:   return (void)
+1498079476147224:   final public void android.os.Parcel.writeNoException()
+1498079476147298:    static boolean android.os.StrictMode.hasGatheredViolations()
+1498079476147372:     public java.lang.Object java.lang.ThreadLocal.get()
+1498079476147459:      public static java.lang.Thread java.lang.Thread.currentThread()
+1498079476147545:       native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079476147618:       return (java.lang.Thread) "Object"
+1498079476147688:      return (java.lang.Thread) "Object"
+1498079476147761:      java.lang.ThreadLocal$Values java.lang.ThreadLocal.values((java.lang.Thread) "Object")
+1498079476147844:      return (java.lang.ThreadLocal$Values) "Object"
+1498079476147915:      java.lang.ThreadLocal$Values java.lang.ThreadLocal.initializeValues((java.lang.Thread) "Object")
+1498079476148010:       new java.lang.ThreadLocal$Values((null))
+1498079476148101:        private void java.lang.ThreadLocal$Values.initializeTable((int) "-1781533656")
+1498079476148207:        return (void)
+1498079476148272:       return (void)
+1498079476148336:      return (java.lang.ThreadLocal$Values) "Object"
+1498079476148410:      java.lang.Object java.lang.ThreadLocal$Values.getAfterMiss((java.lang.ThreadLocal) "Object")
+1498079476148493:       static int java.lang.ThreadLocal.access$200((java.lang.ThreadLocal) "Object")
+1498079476148576:       return (int) "0"
+1498079476148646:       protected java.lang.Object android.os.StrictMode$1.initialValue()
+1498079476148718:        protected java.util.ArrayList android.os.StrictMode$1.initialValue()
+1498079476148789:        return (java.util.ArrayList) "Object"
+1498079476148857:       return (java.lang.Object) "Object"
+1498079476148928:       static java.lang.ref.Reference java.lang.ThreadLocal.access$300((java.lang.ThreadLocal) "Object")
+1498079476149011:       return (java.lang.ref.Reference) "Object"
+1498079476149097:       private void java.lang.ThreadLocal$Values.cleanUp()
+1498079476149170:        private boolean java.lang.ThreadLocal$Values.rehash()
+1498079476149241:        return (boolean) "false"
+1498079476149311:        public java.lang.Object java.lang.ref.Reference.get()
+1498079476150015:        return (java.lang.Object) "Object"
+1498079476150116:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476150220:        return (int) "2"
+1498079476150293:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476150384:        return (int) "4"
+1498079476150453:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476150544:        return (int) "6"
+1498079476150612:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476150702:        return (int) "8"
+1498079476150770:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476150859:        return (int) "10"
+1498079476150942:        private int java.lang.ThreadLocal$Values.next((int) "-1784231984")
+1498079476151057:        return (int) "12"
+1498079476151128:       return (void)
+1498079476151194:      return (java.lang.Object) "Object"
+1498079476151264:     return (java.lang.Object) "Object"
+1498079476151334:    return (boolean) "false"
+1498079476151404:    final public void android.os.Parcel.writeInt((int) "0")
+1498079476151488:     native private static void android.os.Parcel.nativeWriteInt((int) "-2115990356", (int) "-1781540440")
+1498079476151608:     return (void)
+1498079476151674:    return (void)
+1498079476151737:   return (void)
+1498079476151801:  return (boolean) "true"
+1498079476151867:  final public void android.os.Parcel.recycle()
+1498079476151938:   private void android.os.Parcel.freeBuffer()
+1498079476152009:   return (void)
+1498079476152092:  return (void)
+1498079476152158:  final public void android.os.Parcel.recycle()
+1498079476152228:   private void android.os.Parcel.freeBuffer()
+1498079476152297:   return (void)
+1498079476152366:  return (void)
+1498079476152429: return (boolean) "true"
+1498079476152784: private boolean android.os.Binder.execTransact((int) "7", (int) "-2115990404", (int) "-2115990356", (int) "17")
+1498079476152918:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1498079476153008:   private void android.os.Parcel.init((int) "-1784231176")
+1498079476153113:   return (void)
+1498079476153179:  return (android.os.Parcel) "Object"
+1498079476153251:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1498079476153336:   private void android.os.Parcel.init((int) "-1784231176")
+1498079476153427:   return (void)
+1498079476153492:  return (android.os.Parcel) "Object"
+1498079476153563:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1498079476153671:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1498079476153758:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2115990404", (java.lang.String) "Object")
+1498079476153910:    return (void)
+1498079476153978:   return (void)
+1498079476160272:   public java.lang.Object android.content.Intent$1.createFromParcel((android.os.Parcel) "Object")
+1498079476160466:    public android.content.Intent android.content.Intent$1.createFromParcel((android.os.Parcel) "Object")
+1498079476160619:     new android.content.Intent((android.os.Parcel) "Object")
+1498079476160737:      public void android.content.Intent.readFromParcel((android.os.Parcel) "Object")
+1498079476160865:       final public java.lang.String android.os.Parcel.readString()
+1498079476160946:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476161127:        return (java.lang.String) "Object"
+1498079476161218:       return (java.lang.String) "Object"
+1498079476161292:       public android.content.Intent android.content.Intent.setAction((java.lang.String) "Object")
+1498079476161404:        native public java.lang.String java.lang.String.intern()
+1498079476161601:        return (java.lang.String) "Object"
+1498079476161679:       return (android.content.Intent) "Object"
+1498079476161794:       public java.lang.Object android.net.Uri$1.createFromParcel((android.os.Parcel) "Object")
+1498079476165327:        public android.net.Uri android.net.Uri$1.createFromParcel((android.os.Parcel) "Object")
+1498079476165452:         final public int android.os.Parcel.readInt()
+1498079476165541:          native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476165668:          return (int) "0"
+1498079476165749:         return (int) "0"
+1498079476165826:        return (android.net.Uri) "Object"
+1498079476165903:       return (java.lang.Object) "Object"
+1498079476165983:       final public java.lang.String android.os.Parcel.readString()
+1498079476181750:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476181895:        return (java.lang.String) "Object"
+1498079476181978:       return (java.lang.String) "Object"
+1498079476182072:       final public int android.os.Parcel.readInt()
+1498079476182152:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476182256:        return (int) "0"
+1498079476182336:       return (int) "268435456"
+1498079476182415:       final public java.lang.String android.os.Parcel.readString()
+1498079476182487:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476182581:        return (java.lang.String) "Object"
+1498079476182651:       return (java.lang.String) "Object"
+1498079476182790:       public static android.content.ComponentName android.content.ComponentName.readFromParcel((android.os.Parcel) "Object")
+1498079476182912:        final public java.lang.String android.os.Parcel.readString()
+1498079476186420:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476186593:         return (java.lang.String) "Object"
+1498079476186674:        return (java.lang.String) "Object"
+1498079476186756:        new android.content.ComponentName((java.lang.String) "Object", (android.os.Parcel) "Object")
+1498079476186891:         final public java.lang.String android.os.Parcel.readString()
+1498079476186966:          native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476187092:          return (java.lang.String) "Object"
+1498079476187165:         return (java.lang.String) "Object"
+1498079476187235:        return (void)
+1498079476187300:       return (android.content.ComponentName) "Object"
+1498079476187372:       final public int android.os.Parcel.readInt()
+1498079476187445:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476187540:        return (int) "0"
+1498079476187607:       return (int) "0"
+1498079476187675:       final public int android.os.Parcel.readInt()
+1498079476187746:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476187838:        return (int) "0"
+1498079476187905:       return (int) "0"
+1498079476187973:       final public int android.os.Parcel.readInt()
+1498079476188670:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476188815:        return (int) "0"
+1498079476188887:       return (int) "0"
+1498079476188957:       final public int android.os.Parcel.readInt()
+1498079476189042:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476189137:        return (int) "0"
+1498079476189204:       return (int) "0"
+1498079476189281:       final public android.os.Bundle android.os.Parcel.readBundle()
+1498079476189401:        final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079476189494:         final public int android.os.Parcel.readInt()
+1498079476189568:          native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476189669:          return (int) "0"
+1498079476189740:         return (int) "-1"
+1498079476189810:        return (android.os.Bundle) "Object"
+1498079476189882:       return (android.os.Bundle) "Object"
+1498079476191369:      return (void)
+1498079476191472:     return (void)
+1498079476191566:    return (android.content.Intent) "Object"
+1498079476191681:   return (java.lang.Object) "Object"
+1498079476191815:   final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1498079476191943:    native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2115990404")
+1498079476192575:     new android.os.BinderProxy((null))
+1498079476192755:      public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079476192961:       new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079476198882:        new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079476201597:        return (void)
+1498079476201703:       return (void)
+1498079476201781:      return (void)
+1498079476201863:      new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1498079476201951:       new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079476202050:       return (void)
+1498079476202115:      return (void)
+1498079476202178:     return (void)
+1498079476202339:    return (android.os.IBinder) "Object"
+1498079476202413:   return (android.os.IBinder) "Object"
+1498079476202487:   final public int android.os.Parcel.readInt()
+1498079476202562:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476202662:    return (int) "0"
+1498079476202729:   return (int) "-1778004384"
+1498079476202811:   public java.lang.Object android.content.pm.ActivityInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079476202895:    public android.content.pm.ActivityInfo android.content.pm.ActivityInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079476202996:     new android.content.pm.ActivityInfo((android.os.Parcel) "Object", (android.content.pm.ActivityInfo$1) "Object")
+1498079476203087:      new android.content.pm.ActivityInfo((android.os.Parcel) "Object")
+1498079476203168:       new android.content.pm.ComponentInfo((android.os.Parcel) "Object")
+1498079476203250:        new android.content.pm.PackageItemInfo((android.os.Parcel) "Object")
+1498079476203332:         final public java.lang.String android.os.Parcel.readString()
+1498079476203403:          native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476203522:          return (java.lang.String) "Object"
+1498079476203594:         return (java.lang.String) "Object"
+1498079476203663:         final public java.lang.String android.os.Parcel.readString()
+1498079476203745:          native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476203866:          return (java.lang.String) "Object"
+1498079476203937:         return (java.lang.String) "Object"
+1498079476264169:         final public int android.os.Parcel.readInt()
+1498079476264289:          native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476264414:          return (int) "0"
+1498079476264492:         return (int) "2131623936"
+1498079476264587:         public java.lang.Object android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079476264674:          public java.lang.CharSequence android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079476264758:           final public int android.os.Parcel.readInt()
+1498079476264829:            native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476274252:            return (int) "0"
+1498079476274432:           return (int) "1"
+1498079476274554:           final public java.lang.String android.os.Parcel.readString()
+1498079476274686:            native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476274830:            return (java.lang.String) "Object"
+1498079476274932:           return (java.lang.String) "Object"
+1498079476277631:          return (java.lang.CharSequence) "Object"
+1498079476277794:         return (java.lang.Object) "Object"
+1498079476277980:         final public int android.os.Parcel.readInt()
+1498079476278133:          native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476278377:          return (int) "0"
+1498079476278515:         return (int) "2130903040"
+1498079476278652:         final public int android.os.Parcel.readInt()
+1498079476278782:          native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476278973:          return (int) "0"
+1498079476279079:         return (int) "2130903041"
+1498079476279199:         final public android.os.Bundle android.os.Parcel.readBundle()
+1498079476279303:          final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079476279434:           final public int android.os.Parcel.readInt()
+1498079476279549:            native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476279711:            return (int) "0"
+1498079476279806:           return (int) "-1"
+1498079476279920:          return (android.os.Bundle) "Object"
+1498079476279991:         return (android.os.Bundle) "Object"
+1498079476280068:        return (void)
+1498079476280145:        public java.lang.Object android.content.pm.ApplicationInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079476280232:         public android.content.pm.ApplicationInfo android.content.pm.ApplicationInfo$1.createFromParcel((android.os.Parcel) "Object")
+1498079476280331:          new android.content.pm.ApplicationInfo((android.os.Parcel) "Object", (android.content.pm.ApplicationInfo$1) "Object")
+1498079476280423:           new android.content.pm.ApplicationInfo((android.os.Parcel) "Object")
+1498079476280504:            new android.content.pm.PackageItemInfo((android.os.Parcel) "Object")
+1498079476280585:             final public java.lang.String android.os.Parcel.readString()
+1498079476280656:              native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476280753:              return (java.lang.String) "Object"
+1498079476280823:             return (java.lang.String) "Object"
+1498079476280902:             final public java.lang.String android.os.Parcel.readString()
+1498079476280975:              native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476281105:              return (java.lang.String) "Object"
+1498079476281177:             return (java.lang.String) "Object"
+1498079476281247:             final public int android.os.Parcel.readInt()
+1498079476281319:              native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476281413:              return (int) "0"
+1498079476281479:             return (int) "2131623936"
+1498079476281559:             public java.lang.Object android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079476281644:              public java.lang.CharSequence android.text.TextUtils$1.createFromParcel((android.os.Parcel) "Object")
+1498079476281727:               final public int android.os.Parcel.readInt()
+1498079476281798:                native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476281898:                return (int) "0"
+1498079476281967:               return (int) "1"
+1498079476282035:               final public java.lang.String android.os.Parcel.readString()
+1498079476282105:                native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476282199:                return (java.lang.String) "Object"
+1498079476282268:               return (java.lang.String) "Object"
+1498079476282337:              return (java.lang.CharSequence) "Object"
+1498079476282405:             return (java.lang.Object) "Object"
+1498079476282475:             final public int android.os.Parcel.readInt()
+1498079476282545:              native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476283297:              return (int) "0"
+1498079476283376:             return (int) "2130903040"
+1498079476283458:             final public int android.os.Parcel.readInt()
+1498079476283533:              native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476283629:              return (int) "0"
+1498079476283696:             return (int) "2130903040"
+1498079476283774:             final public android.os.Bundle android.os.Parcel.readBundle()
+1498079476283845:              final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079476305443:               final public int android.os.Parcel.readInt()
+1498079476305604:                native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476305740:                return (int) "0"
+1498079476305813:               return (int) "-1"
+1498079476327645:              return (android.os.Bundle) "Object"
+1498079476351810:             return (android.os.Bundle) "Object"
+1498079476351900:            return (void)
+1498079476351969:            final public java.lang.String android.os.Parcel.readString()
+1498079476352044:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476352181:             return (java.lang.String) "Object"
+1498079476352253:            return (java.lang.String) "Object"
+1498079476352323:            final public java.lang.String android.os.Parcel.readString()
+1498079476352394:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476352488:             return (java.lang.String) "Object"
+1498079476352556:            return (java.lang.String) "Object"
+1498079476352625:            final public java.lang.String android.os.Parcel.readString()
+1498079476352695:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476352806:             return (java.lang.String) "Object"
+1498079476352885:            return (java.lang.String) "Object"
+1498079476352955:            final public java.lang.String android.os.Parcel.readString()
+1498079476353025:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476353135:             return (java.lang.String) "Object"
+1498079476353205:            return (java.lang.String) "Object"
+1498079476353275:            final public int android.os.Parcel.readInt()
+1498079476353345:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476353438:             return (int) "0"
+1498079476353504:            return (int) "2131755009"
+1498079476353581:            final public int android.os.Parcel.readInt()
+1498079476353651:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476353742:             return (int) "0"
+1498079476353808:            return (int) "10009669"
+1498079476379132:            final public int android.os.Parcel.readInt()
+1498079476379258:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476379402:             return (int) "0"
+1498079476379483:            return (int) "0"
+1498079476379562:            final public int android.os.Parcel.readInt()
+1498079476379643:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476379751:             return (int) "0"
+1498079476398988:            return (int) "0"
+1498079476399111:            final public int android.os.Parcel.readInt()
+1498079476399210:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476399334:             return (int) "0"
+1498079476399409:            return (int) "0"
+1498079476399486:            final public java.lang.String android.os.Parcel.readString()
+1498079476399576:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476422214:             return (java.lang.String) "Object"
+1498079476431487:            return (java.lang.String) "Object"
+1498079476431592:            final public java.lang.String android.os.Parcel.readString()
+1498079476431679:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476455858:             return (java.lang.String) "Object"
+1498079476455964:            return (java.lang.String) "Object"
+1498079476456129:            final public java.lang.String android.os.Parcel.readString()
+1498079476456226:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476456369:             return (java.lang.String) "Object"
+1498079476456445:            return (java.lang.String) "Object"
+1498079476456521:            final public java.lang.String[] android.os.Parcel.readStringArray()
+1498079476456602:             final public int android.os.Parcel.readInt()
+1498079476456692:              native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476456965:              return (int) "0"
+1498079476457117:             return (int) "-1"
+1498079476457206:            return (java.lang.String[]) "Object"
+1498079476457340:            final public java.lang.String android.os.Parcel.readString()
+1498079476457430:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476457568:             return (java.lang.String) "Object"
+1498079476457643:            return (java.lang.String) "Object"
+1498079476457731:            final public java.lang.String[] android.os.Parcel.readStringArray()
+1498079476457830:             final public int android.os.Parcel.readInt()
+1498079476457907:              native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476458021:              return (int) "0"
+1498079476458104:             return (int) "-1"
+1498079476458175:            return (java.lang.String[]) "Object"
+1498079476458264:            final public java.lang.String android.os.Parcel.readString()
+1498079476458354:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476458479:             return (java.lang.String) "Object"
+1498079476458552:            return (java.lang.String) "Object"
+1498079476458624:            final public int android.os.Parcel.readInt()
+1498079476458697:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476458822:             return (int) "0"
+1498079476458894:            return (int) "10021"
+1498079476458982:            final public int android.os.Parcel.readInt()
+1498079476459055:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476459162:             return (int) "0"
+1498079476459228:            return (int) "17"
+1498079476459296:            final public int android.os.Parcel.readInt()
+1498079476459366:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476459458:             return (int) "0"
+1498079476459524:            return (int) "1"
+1498079476459591:            final public int android.os.Parcel.readInt()
+1498079476459661:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476459761:             return (int) "0"
+1498079476459830:            return (int) "0"
+1498079476459902:            final public int android.os.Parcel.readInt()
+1498079476459972:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476460094:             return (int) "0"
+1498079476460166:            return (int) "-1"
+1498079476460236:            final public java.lang.String android.os.Parcel.readString()
+1498079476460319:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476460428:             return (java.lang.String) "Object"
+1498079476462100:            return (java.lang.String) "Object"
+1498079476462211:            final public java.lang.String android.os.Parcel.readString()
+1498079476462299:             native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476462414:             return (java.lang.String) "Object"
+1498079476462493:            return (java.lang.String) "Object"
+1498079476462568:            final public int android.os.Parcel.readInt()
+1498079476462645:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476462829:             return (int) "0"
+1498079476462904:            return (int) "0"
+1498079476462987:            final public int android.os.Parcel.readInt()
+1498079476463059:             native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476463157:             return (int) "0"
+1498079476463227:            return (int) "0"
+1498079476463296:           return (void)
+1498079476463362:          return (void)
+1498079476463427:         return (android.content.pm.ApplicationInfo) "Object"
+1498079476463499:        return (java.lang.Object) "Object"
+1498079476463575:        final public java.lang.String android.os.Parcel.readString()
+1498079476463650:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476463987:         return (java.lang.String) "Object"
+1498079476464108:        return (java.lang.String) "Object"
+1498079476464199:        final public int android.os.Parcel.readInt()
+1498079476464275:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476464379:         return (int) "0"
+1498079476464448:        return (int) "0"
+1498079476464518:        final public int android.os.Parcel.readInt()
+1498079476464591:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476464688:         return (int) "0"
+1498079476496183:        return (int) "1"
+1498079476496312:        final public int android.os.Parcel.readInt()
+1498079476496428:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476496561:         return (int) "0"
+1498079476496641:        return (int) "1"
+1498079476500173:       return (void)
+1498079476500263:       final public int android.os.Parcel.readInt()
+1498079476500349:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476500458:        return (int) "0"
+1498079476500527:       return (int) "2131755009"
+1498079476500605:       final public int android.os.Parcel.readInt()
+1498079476500688:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476500785:        return (int) "0"
+1498079476500852:       return (int) "0"
+1498079476500919:       final public java.lang.String android.os.Parcel.readString()
+1498079476500992:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476501087:        return (java.lang.String) "Object"
+1498079476501187:       return (java.lang.String) "Object"
+1498079476501284:       final public java.lang.String android.os.Parcel.readString()
+1498079476501354:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476501484:        return (java.lang.String) "Object"
+1498079476501555:       return (java.lang.String) "Object"
+1498079476501625:       final public java.lang.String android.os.Parcel.readString()
+1498079476504352:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476504492:        return (java.lang.String) "Object"
+1498079476504571:       return (java.lang.String) "Object"
+1498079476504647:       final public int android.os.Parcel.readInt()
+1498079476564872:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476564987:        return (int) "0"
+1498079476565060:       return (int) "516"
+1498079476565676:       final public int android.os.Parcel.readInt()
+1498079476565766:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476565875:        return (int) "0"
+1498079476565946:       return (int) "-1"
+1498079476566016:       final public int android.os.Parcel.readInt()
+1498079476566090:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476566188:        return (int) "0"
+1498079476566256:       return (int) "1184"
+1498079476566328:       final public int android.os.Parcel.readInt()
+1498079476566400:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476566496:        return (int) "0"
+1498079476566564:       return (int) "35"
+1498079476566642:       final public int android.os.Parcel.readInt()
+1498079476566715:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476566811:        return (int) "0"
+1498079476566878:       return (int) "0"
+1498079476566947:       final public java.lang.String android.os.Parcel.readString()
+1498079476567019:        native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476567118:        return (java.lang.String) "Object"
+1498079476567190:       return (java.lang.String) "Object"
+1498079476567261:      return (void)
+1498079476567327:     return (void)
+1498079476567391:    return (android.content.pm.ActivityInfo) "Object"
+1498079476567463:   return (java.lang.Object) "Object"
+1498079476567540:   public java.lang.Object android.content.res.Configuration$1.createFromParcel((android.os.Parcel) "Object")
+1498079476567634:    public android.content.res.Configuration android.content.res.Configuration$1.createFromParcel((android.os.Parcel) "Object")
+1498079476567731:     new android.content.res.Configuration((android.os.Parcel) "Object", (android.content.res.Configuration$1) "Object")
+1498079476567825:      new android.content.res.Configuration((android.os.Parcel) "Object")
+1498079476567908:       public void android.content.res.Configuration.readFromParcel((android.os.Parcel) "Object")
+1498079476567993:        final public float android.os.Parcel.readFloat()
+1498079476568073:         native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079476568173:         return (float) "0.000000"
+1498079476568255:        return (float) "1065353216.000000"
+1498079476568338:        final public int android.os.Parcel.readInt()
+1498079476568412:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476568508:         return (int) "0"
+1498079476568576:        return (int) "310"
+1498079476568655:        final public int android.os.Parcel.readInt()
+1498079476568727:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476568822:         return (int) "0"
+1498079476568890:        return (int) "260"
+1498079476568960:        final public int android.os.Parcel.readInt()
+1498079476569031:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476569126:         return (int) "0"
+1498079476569194:        return (int) "1"
+1498079476569270:        final public java.lang.String android.os.Parcel.readString()
+1498079476569342:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476569474:         return (java.lang.String) "Object"
+1498079476569547:        return (java.lang.String) "Object"
+1498079476569629:        final public java.lang.String android.os.Parcel.readString()
+1498079476569703:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476569820:         return (java.lang.String) "Object"
+1498079476569893:        return (java.lang.String) "Object"
+1498079476569964:        final public java.lang.String android.os.Parcel.readString()
+1498079476570036:         native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476570699:         return (java.lang.String) "Object"
+1498079476570782:        return (java.lang.String) "Object"
+1498079476570860:        new java.util.Locale((java.lang.String) "Object", (java.lang.String) "Object", (java.lang.String) "Object")
+1498079476570967:         public boolean java.lang.String.isEmpty()
+1498079476571042:         return (boolean) "false"
+1498079476571112:         public java.lang.String java.lang.String.toLowerCase((java.util.Locale) "Object")
+1498079476571199:          public static java.lang.String java.lang.CaseMapper.toLowerCase((java.util.Locale) "Object", (java.lang.String) "Object", (char[]) "Object", (int) "-1781529128", (int) "-1781529096")
+1498079476571340:           public java.lang.String java.util.Locale.getLanguage()
+1498079476571414:           return (java.lang.String) "Object"
+1498079476571488:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476571576:           return (boolean) "false"
+1498079476571654:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476571740:           return (boolean) "false"
+1498079476571807:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476571903:           return (boolean) "false"
+1498079476571972:           public static boolean java.lang.Character.isHighSurrogate((char) "")
+1498079476572058:           return (boolean) "false"
+1498079476572130:           public static char java.lang.Character.toLowerCase((char) "")
+1498079476572212:            public static int java.lang.Character.toLowerCase((int) "101")
+1498079476572294:            return (int) "101"
+1498079476572362:           return (char) "e"
+1498079476572432:           public static boolean java.lang.Character.isHighSurrogate((char) "")
+1498079476572513:           return (boolean) "false"
+1498079476572579:           public static char java.lang.Character.toLowerCase((char) "")
+1498079476572723:            public static int java.lang.Character.toLowerCase((int) "110")
+1498079476572827:            return (int) "110"
+1498079476572897:           return (char) "n"
+1498079476572968:          return (java.lang.String) "Object"
+1498079476573039:         return (java.lang.String) "Object"
+1498079476573111:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476573196:         return (boolean) "false"
+1498079476573264:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476573395:         return (boolean) "false"
+1498079476573548:         native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476573714:         return (boolean) "false"
+1498079476573834:         public java.lang.String java.lang.String.toUpperCase((java.util.Locale) "Object")
+1498079476573926:          public static java.lang.String java.lang.CaseMapper.toUpperCase((java.util.Locale) "Object", (java.lang.String) "Object", (char[]) "Object", (int) "0", (int) "1")
+1498079476574059:           public java.lang.String java.util.Locale.getLanguage()
+1498079476574132:           return (java.lang.String) "Object"
+1498079476574204:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476574307:           return (boolean) "false"
+1498079476574387:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476574472:           return (boolean) "false"
+1498079476574552:           native public boolean java.lang.String.equals((java.lang.Object) "Object")
+1498079476652709:           return (boolean) "false"
+1498079476652885:           public static boolean java.lang.Character.isHighSurrogate((char) "n")
+1498079476653020:           return (boolean) "false"
+1498079476653102:           private static int java.lang.CaseMapper.upperIndex((int) "0")
+1498079476653198:           return (int) "-1"
+1498079476653272:           public static char java.lang.Character.toUpperCase((char) "n")
+1498079476653363:            public static int java.lang.Character.toUpperCase((int) "85")
+1498079476654994:            return (int) "85"
+1498079476655083:           return (char) "U"
+1498079476655163:           public static boolean java.lang.Character.isHighSurrogate((char) "n")
+1498079476655260:           return (boolean) "false"
+1498079476655328:           private static int java.lang.CaseMapper.upperIndex((int) "0")
+1498079476655409:           return (int) "-1"
+1498079476655478:           public static char java.lang.Character.toUpperCase((char) "n")
+1498079476655571:            public static int java.lang.Character.toUpperCase((int) "83")
+1498079476655652:            return (int) "83"
+1498079476655719:           return (char) "S"
+1498079476655787:          return (java.lang.String) "Object"
+1498079476655857:         return (java.lang.String) "Object"
+1498079476655930:        return (void)
+1498079476656032:        final public int android.os.Parcel.readInt()
+1498079476656156:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476656263:         return (int) "0"
+1498079476656333:        return (int) "1"
+1498079476656403:        final public int android.os.Parcel.readInt()
+1498079476656476:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476656585:         return (int) "0"
+1498079476656654:        return (int) "1"
+1498079476656759:        final public int android.os.Parcel.readInt()
+1498079476656942:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476657086:         return (int) "0"
+1498079476657198:        return (int) "1"
+1498079476657302:        final public int android.os.Parcel.readInt()
+1498079476657419:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476657570:         return (int) "0"
+1498079476657652:        return (int) "1"
+1498079476657723:        final public int android.os.Parcel.readInt()
+1498079476657799:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476657901:         return (int) "0"
+1498079476657971:        return (int) "2"
+1498079476658041:        final public int android.os.Parcel.readInt()
+1498079476658115:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476658214:         return (int) "0"
+1498079476658290:        return (int) "3"
+1498079476658371:        final public int android.os.Parcel.readInt()
+1498079476658446:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476658557:         return (int) "0"
+1498079476658638:        return (int) "1"
+1498079476658704:        final public int android.os.Parcel.readInt()
+1498079476658774:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476658865:         return (int) "0"
+1498079476658931:        return (int) "1"
+1498079476658996:        final public int android.os.Parcel.readInt()
+1498079476659065:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476659156:         return (int) "0"
+1498079476659222:        return (int) "82"
+1498079476659288:        final public int android.os.Parcel.readInt()
+1498079476659358:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476659449:         return (int) "0"
+1498079476659522:        return (int) "17"
+1498079476659590:        final public int android.os.Parcel.readInt()
+1498079476659660:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476659751:         return (int) "0"
+1498079476659817:        return (int) "320"
+1498079476659884:        final public int android.os.Parcel.readInt()
+1498079476659954:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476660044:         return (int) "0"
+1498079476660163:        return (int) "455"
+1498079476660230:        final public int android.os.Parcel.readInt()
+1498079476660300:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476660986:         return (int) "0"
+1498079476661066:        return (int) "320"
+1498079476661139:        final public int android.os.Parcel.readInt()
+1498079476661213:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476661307:         return (int) "0"
+1498079476661373:        return (int) "160"
+1498079476661441:        final public int android.os.Parcel.readInt()
+1498079476661520:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476661614:         return (int) "0"
+1498079476661681:        return (int) "320"
+1498079476661748:        final public int android.os.Parcel.readInt()
+1498079476661818:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476661910:         return (int) "0"
+1498079476661976:        return (int) "455"
+1498079476662045:        final public int android.os.Parcel.readInt()
+1498079476662115:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476662209:         return (int) "0"
+1498079476662276:        return (int) "320"
+1498079476662365:        final public int android.os.Parcel.readInt()
+1498079476662447:         native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476662546:         return (int) "0"
+1498079476662612:        return (int) "5"
+1498079476662678:       return (void)
+1498079476662746:      return (void)
+1498079476662809:     return (void)
+1498079476662874:    return (android.content.res.Configuration) "Object"
+1498079476662947:   return (java.lang.Object) "Object"
+1498079476663027:   public java.lang.Object android.content.res.CompatibilityInfo$2.createFromParcel((android.os.Parcel) "Object")
+1498079476663112:    public android.content.res.CompatibilityInfo android.content.res.CompatibilityInfo$2.createFromParcel((android.os.Parcel) "Object")
+1498079476663213:     new android.content.res.CompatibilityInfo((android.os.Parcel) "Object", (android.content.res.CompatibilityInfo$1) "Object")
+1498079476663307:      new android.content.res.CompatibilityInfo((android.os.Parcel) "Object")
+1498079476663392:       final public int android.os.Parcel.readInt()
+1498079476663463:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476663569:        return (int) "0"
+1498079476663637:       return (int) "4"
+1498079476663705:       final public int android.os.Parcel.readInt()
+1498079476663775:        native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476663866:        return (int) "0"
+1498079476663933:       return (int) "160"
+1498079476664003:       final public float android.os.Parcel.readFloat()
+1498079476664085:        native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079476664184:        return (float) "0.000000"
+1498079476664270:       return (float) "1065353216.000000"
+1498079476664356:       final public float android.os.Parcel.readFloat()
+1498079476664429:        native private static float android.os.Parcel.nativeReadFloat((int) "-2115990404")
+1498079476687829:        return (float) "0.000000"
+1498079476687972:       return (float) "1065353216.000000"
+1498079476688089:      return (void)
+1498079476688171:     return (void)
+1498079476688237:    return (android.content.res.CompatibilityInfo) "Object"
+1498079476688311:   return (java.lang.Object) "Object"
+1498079476688385:   final public int android.os.Parcel.readInt()
+1498079476688465:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476694791:    return (int) "0"
+1498079476694881:   return (int) "2"
+1498079476694974:   final public android.os.Bundle android.os.Parcel.readBundle()
+1498079476695066:    final public android.os.Bundle android.os.Parcel.readBundle((java.lang.ClassLoader) "Object")
+1498079476695160:     final public int android.os.Parcel.readInt()
+1498079476695239:      native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476696047:      return (int) "0"
+1498079476696175:     return (int) "-1"
+1498079476696251:    return (android.os.Bundle) "Object"
+1498079476696325:   return (android.os.Bundle) "Object"
+1498079476696404:   final public java.util.ArrayList android.os.Parcel.createTypedArrayList((android.os.Parcelable$Creator) "Object")
+1498079476696906:    final public int android.os.Parcel.readInt()
+1498079476697021:     native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476697129:     return (int) "0"
+1498079476697200:    return (int) "-1"
+1498079476697271:   return (java.util.ArrayList) "Object"
+1498079476697346:   final public java.util.ArrayList android.os.Parcel.createTypedArrayList((android.os.Parcelable$Creator) "Object")
+1498079476697438:    final public int android.os.Parcel.readInt()
+1498079476697530:     native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476697629:     return (int) "0"
+1498079476697697:    return (int) "-1"
+1498079476697763:   return (java.util.ArrayList) "Object"
+1498079476697835:   final public int android.os.Parcel.readInt()
+1498079476697908:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476698003:    return (int) "0"
+1498079476698071:   return (int) "0"
+1498079476698141:   final public int android.os.Parcel.readInt()
+1498079476698213:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476698311:    return (int) "0"
+1498079476698378:   return (int) "1"
+1498079476698461:   final public java.lang.String android.os.Parcel.readString()
+1498079476698909:    native private static java.lang.String android.os.Parcel.nativeReadString((int) "-2115990404")
+1498079476699024:    return (java.lang.String) "Object"
+1498079476699100:   return (java.lang.String) "Object"
+1498079476699170:   final public int android.os.Parcel.readInt()
+1498079476699243:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476699341:    return (int) "0"
+1498079476699409:   return (int) "0"
+1498079476699486:   final public int android.os.Parcel.readInt()
+1498079476699560:    native private static int android.os.Parcel.nativeReadInt((int) "-2115990404")
+1498079476699655:    return (int) "0"
+1498079476699721:   return (int) "0"
+1498079476699791:   final public void android.app.ActivityThread$ApplicationThread.scheduleLaunchActivity((android.content.Intent) "Object", (android.os.IBinder) "Object", (int) "-1781532880", (android.content.pm.ActivityInfo) "Object", (android.content.res.Configuration) "Object", (android.content.res.CompatibilityInfo) "Object", (int) "-1781528096", (android.os.Bundle) "Object", (java.util.List) "Object", (java.util.List) "Object", (boolean) "false", (boolean) "false", (java.lang.String) "Object", (android.os.ParcelFileDescriptor) "Object", (boolean) "false")
+1498079476700034:    public void android.app.ActivityThread$ApplicationThread.updateProcessState((int) "0", (boolean) "true")
+1498079476700144:    return (void)
+1498079476700229:    new android.app.ActivityThread$ActivityClientRecord((null))
+1498079476700303:    return (void)
+1498079476700373:    private void android.app.ActivityThread$ApplicationThread.updatePendingConfiguration((android.content.res.Configuration) "Object")
+1498079476700463:     static android.app.ResourcesManager android.app.ActivityThread.access$200((android.app.ActivityThread) "Object")
+1498079476700561:     return (android.app.ResourcesManager) "Object"
+1498079476700635:    return (void)
+1498079476700702:    static void android.app.ActivityThread.access$400((android.app.ActivityThread) "Object", (int) "-1781527952", (java.lang.Object) "Object")
+1498079476700814:     private void android.app.ActivityThread.queueOrSendMessage((int) "-1781527952", (java.lang.Object) "Object")
+1498079476700916:      private void android.app.ActivityThread.queueOrSendMessage((int) "-1781527952", (java.lang.Object) "Object", (int) "-2016202864", (int) "-2000217696")
+1498079476701050:       public static android.os.Message android.os.Message.obtain()
+1498079476701753:       return (android.os.Message) "Object"
+1498079476701878:       final public boolean android.os.Handler.sendMessage((android.os.Message) "Object")
+1498079476701976:        final public boolean android.os.Handler.sendMessageDelayed((android.os.Message) "Object", (long) "-8659416174145008384")
+1498079476702108:         native public static long android.os.SystemClock.uptimeMillis()
+1498079476702212:         return (long) "0"
+1498079476702284:         public boolean android.os.Handler.sendMessageAtTime((android.os.Message) "Object", (long) "-8659415813367755568")
+1498079476702410:          private boolean android.os.Handler.enqueueMessage((android.os.MessageQueue) "Object", (android.os.Message) "Object", (long) "-7651633356575091680")
+1498079476702562:           boolean android.os.MessageQueue.enqueueMessage((android.os.Message) "Object", (long) "2278768290")
+1498079476702668:            boolean android.os.Message.isInUse()
+1498079476702742:            return (boolean) "false"
+1498079476702812:           return (boolean) "true"
+1498079476702877:          return (boolean) "true"
+1498079476702941:         return (boolean) "true"
+1498079476703003:        return (boolean) "true"
+1498079476703066:       return (boolean) "true"
+1498079476703130:      return (void)
+1498079476703194:     return (void)
+1498079476703257:    return (void)
+1498079476703320:   return (void)
+1498079476703384:  return (boolean) "true"
+1498079476703451:  final public void android.os.Parcel.recycle()
+1498079476703540:   private void android.os.Parcel.freeBuffer()
+1498079476703610:   return (void)
+1498079476703681:  return (void)
+1498079476703746:  final public void android.os.Parcel.recycle()
+1498079476703816:   private void android.os.Parcel.freeBuffer()
+1498079476703887:   return (void)
+1498079476703954:  return (void)
+1498079476704017: return (boolean) "true"

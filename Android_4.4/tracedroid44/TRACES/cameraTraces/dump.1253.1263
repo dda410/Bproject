@@ -1,0 +1,29 @@
+1498079493802127: public void java.lang.Thread.run()
+1498079493866315:  public void java.lang.Daemons$FinalizerWatchdogDaemon.run()
+1498079493866461:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1498079493874805:   return (boolean) "true"
+1498079493874918:   private java.lang.Object java.lang.Daemons$FinalizerWatchdogDaemon.waitForObject()
+1498079493875007:    static java.lang.Daemons$FinalizerDaemon java.lang.Daemons$FinalizerDaemon.access$100()
+1498079493875084:    return (java.lang.Daemons$FinalizerDaemon) "Object"
+1498079493875157:    static java.lang.Object java.lang.Daemons$FinalizerDaemon.access$400((java.lang.Daemons$FinalizerDaemon) "Object")
+1498079493875251:    return (java.lang.Object) "Object"
+1498079493875336:    final public void java.lang.Object.wait()
+1498079493875413:     final native public void java.lang.Object.wait((long) "0", (int) "-1784294656")
+1498079499514871:     return (void)
+1498079499514958:    return (void)
+1498079499515041:    static java.lang.Daemons$FinalizerDaemon java.lang.Daemons$FinalizerDaemon.access$100()
+1498079499515113:    return (java.lang.Daemons$FinalizerDaemon) "Object"
+1498079499515182:    static java.lang.Object java.lang.Daemons$FinalizerDaemon.access$400((java.lang.Daemons$FinalizerDaemon) "Object")
+1498079499515264:    return (java.lang.Object) "Object"
+1498079499515330:   return (java.lang.Object) "Object"
+1498079499515425:   private boolean java.lang.Daemons$FinalizerWatchdogDaemon.waitForFinalization((java.lang.Object) "Object")
+1498079499515507:    static java.lang.Daemons$FinalizerDaemon java.lang.Daemons$FinalizerDaemon.access$100()
+1498079499515576:    return (java.lang.Daemons$FinalizerDaemon) "Object"
+1498079499515654:    static long java.lang.Daemons$FinalizerDaemon.access$500((java.lang.Daemons$FinalizerDaemon) "Object")
+1498079499515739:    return (long) "634761233505"
+1498079499515823:    private void java.lang.Daemons$FinalizerWatchdogDaemon.sleepFor((long) "0", (long) "6808600632")
+1498079499515922:     native public static long java.lang.System.nanoTime()
+1498079499516013:     return (long) "0"
+1498079499516094:     public static void java.lang.Thread.sleep((long) "10936939")
+1498079499516182:      public static void java.lang.Thread.sleep((long) "42902428319744", (int) "0")
+1498079499516286:       native static void java.lang.VMThread.sleep((long) "9989", (int) "0")

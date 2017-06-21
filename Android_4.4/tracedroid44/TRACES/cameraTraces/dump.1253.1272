@@ -1,0 +1,150 @@
+1498079506554323: public void android.os.HandlerThread.run()
+1498079506558796:  final public static int android.os.Process.myTid()
+1498079506558980:   public int libcore.io.ForwardingOs.gettid()
+1498079506559068:    native public int libcore.io.Posix.gettid()
+1498079506559163:    return (int) "0"
+1498079506559237:   return (int) "1272"
+1498079506559304:  return (int) "1272"
+1498079506559374:  public static void android.os.Looper.prepare()
+1498079506559448:   private static void android.os.Looper.prepare((boolean) "false")
+1498079506559530:    public java.lang.Object java.lang.ThreadLocal.get()
+1498079506559614:     public static java.lang.Thread java.lang.Thread.currentThread()
+1498079506559684:      native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079506559755:      return (java.lang.Thread) "Object"
+1498079506559822:     return (java.lang.Thread) "Object"
+1498079506559890:     java.lang.ThreadLocal$Values java.lang.ThreadLocal.values((java.lang.Thread) "Object")
+1498079506559970:     return (java.lang.ThreadLocal$Values) "Object"
+1498079506560039:     java.lang.ThreadLocal$Values java.lang.ThreadLocal.initializeValues((java.lang.Thread) "Object")
+1498079506560137:      new java.lang.ThreadLocal$Values((null))
+1498079506560207:       private void java.lang.ThreadLocal$Values.initializeTable((int) "-1780652960")
+1498079506560307:       return (void)
+1498079506560370:      return (void)
+1498079506560430:     return (java.lang.ThreadLocal$Values) "Object"
+1498079506560498:     java.lang.Object java.lang.ThreadLocal$Values.getAfterMiss((java.lang.ThreadLocal) "Object")
+1498079506560577:      static int java.lang.ThreadLocal.access$200((java.lang.ThreadLocal) "Object")
+1498079506560668:      return (int) "-535203586"
+1498079506560745:      protected java.lang.Object java.lang.ThreadLocal.initialValue()
+1498079506560814:      return (java.lang.Object) "Object"
+1498079506560883:      static java.lang.ref.Reference java.lang.ThreadLocal.access$300((java.lang.ThreadLocal) "Object")
+1498079506560961:      return (java.lang.ref.Reference) "Object"
+1498079506561033:      private void java.lang.ThreadLocal$Values.cleanUp()
+1498079506561102:       private boolean java.lang.ThreadLocal$Values.rehash()
+1498079506561172:       return (boolean) "false"
+1498079506561237:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506561325:       return (int) "2"
+1498079506561393:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506561478:       return (int) "4"
+1498079506561543:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506561637:       return (int) "6"
+1498079506561704:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506561788:       return (int) "8"
+1498079506561853:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506561938:       return (int) "10"
+1498079506562003:       private int java.lang.ThreadLocal$Values.next((int) "-2000778192")
+1498079506562088:       return (int) "12"
+1498079506562153:      return (void)
+1498079506562214:     return (java.lang.Object) "Object"
+1498079506562279:    return (java.lang.Object) "Object"
+1498079506562355:    new android.os.Looper((boolean) "true")
+1498079506562454:     new android.os.MessageQueue((boolean) "true")
+1498079506562552:      public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1498079506562651:       new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079506562738:        new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1498079506562822:        return (void)
+1498079506562884:       return (void)
+1498079506562965:      return (void)
+1498079506563045:      new java.util.ArrayList((null))
+1498079506563118:       new java.util.AbstractList((null))
+1498079506563185:        new java.util.AbstractCollection((null))
+1498079506563253:        return (void)
+1498079506563313:       return (void)
+1498079506564051:      return (void)
+1498079506564143:      native private static int android.os.MessageQueue.nativeInit()
+1498079506564791:      return (int) "0"
+1498079506564898:     return (void)
+1498079506564974:     public static java.lang.Thread java.lang.Thread.currentThread()
+1498079506565051:      native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079506565126:      return (java.lang.Thread) "Object"
+1498079506565195:     return (java.lang.Thread) "Object"
+1498079506565263:    return (void)
+1498079506565329:    public void java.lang.ThreadLocal.set((java.lang.Object) "Object")
+1498079506565418:     public static java.lang.Thread java.lang.Thread.currentThread()
+1498079506565487:      native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079506565556:      return (java.lang.Thread) "Object"
+1498079506565637:     return (java.lang.Thread) "Object"
+1498079506565704:     java.lang.ThreadLocal$Values java.lang.ThreadLocal.values((java.lang.Thread) "Object")
+1498079506565783:     return (java.lang.ThreadLocal$Values) "Object"
+1498079506565854:     void java.lang.ThreadLocal$Values.put((java.lang.ThreadLocal) "Object", (java.lang.Object) "Object")
+1498079506565945:      private void java.lang.ThreadLocal$Values.cleanUp()
+1498079506566015:       private boolean java.lang.ThreadLocal$Values.rehash()
+1498079506566085:       return (boolean) "false"
+1498079506566168:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506566271:       return (int) "14"
+1498079506566340:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506566427:       return (int) "16"
+1498079506566495:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506566589:       return (int) "18"
+1498079506566658:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506566745:       return (int) "20"
+1498079506566812:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506566898:       return (int) "22"
+1498079506566965:       private int java.lang.ThreadLocal$Values.next((int) "-2003436696")
+1498079506567051:       return (int) "24"
+1498079506567118:      return (void)
+1498079506567181:      static int java.lang.ThreadLocal.access$200((java.lang.ThreadLocal) "Object")
+1498079506567261:      return (int) "-535203586"
+1498079506567336:      static java.lang.ref.Reference java.lang.ThreadLocal.access$300((java.lang.ThreadLocal) "Object")
+1498079506567416:      return (java.lang.ref.Reference) "Object"
+1498079506567488:     return (void)
+1498079506567550:    return (void)
+1498079506567621:   return (void)
+1498079506567683:  return (void)
+1498079506567752:  public static android.os.Looper android.os.Looper.myLooper()
+1498079506567825:   public java.lang.Object java.lang.ThreadLocal.get()
+1498079506567897:    public static java.lang.Thread java.lang.Thread.currentThread()
+1498079506567965:     native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079506568037:     return (java.lang.Thread) "Object"
+1498079506568116:    return (java.lang.Thread) "Object"
+1498079506568184:    java.lang.ThreadLocal$Values java.lang.ThreadLocal.values((java.lang.Thread) "Object")
+1498079506568262:    return (java.lang.ThreadLocal$Values) "Object"
+1498079506568330:    static java.lang.Object[] java.lang.ThreadLocal$Values.access$000((java.lang.ThreadLocal$Values) "Object")
+1498079506568415:    return (java.lang.Object[]) "Object"
+1498079506568487:    static int java.lang.ThreadLocal$Values.access$100((java.lang.ThreadLocal$Values) "Object")
+1498079506568569:    return (int) "31"
+1498079506568645:   return (java.lang.Object) "Object"
+1498079506568716:  return (android.os.Looper) "Object"
+1498079506568786:  final native public void java.lang.Object.notifyAll()
+1498079506569080:  return (void)
+1498079506574795:  final native public static void android.os.Process.setThreadPriority((int) "0")
+1498079506575025:  return (void)
+1498079506575098:  protected void android.os.HandlerThread.onLooperPrepared()
+1498079506575666:  return (void)
+1498079506575744:  public static void android.os.Looper.loop()
+1498079506575820:   public static android.os.Looper android.os.Looper.myLooper()
+1498079506575891:    public java.lang.Object java.lang.ThreadLocal.get()
+1498079506575960:     public static java.lang.Thread java.lang.Thread.currentThread()
+1498079506576028:      native static java.lang.Thread java.lang.VMThread.currentThread()
+1498079506576103:      return (java.lang.Thread) "Object"
+1498079506576172:     return (java.lang.Thread) "Object"
+1498079506576239:     java.lang.ThreadLocal$Values java.lang.ThreadLocal.values((java.lang.Thread) "Object")
+1498079506576318:     return (java.lang.ThreadLocal$Values) "Object"
+1498079506576387:     static java.lang.Object[] java.lang.ThreadLocal$Values.access$000((java.lang.ThreadLocal$Values) "Object")
+1498079506576471:     return (java.lang.Object[]) "Object"
+1498079506576542:     static int java.lang.ThreadLocal$Values.access$100((java.lang.ThreadLocal$Values) "Object")
+1498079506576635:     return (int) "31"
+1498079506576705:    return (java.lang.Object) "Object"
+1498079506576772:   return (android.os.Looper) "Object"
+1498079506576840:   final native public static long android.os.Binder.clearCallingIdentity()
+1498079506576983:   return (long) "0"
+1498079506577052:   final native public static long android.os.Binder.clearCallingIdentity()
+1498079506577142:   return (long) "0"
+1498079506577209:   android.os.Message android.os.MessageQueue.next()
+1498079506577279:    native private static void android.os.MessageQueue.nativePollOnce((int) "-2003945104", (int) "0")
+1498079506577401:    return (void)
+1498079506577469:    native public static long android.os.SystemClock.uptimeMillis()
+1498079506577560:    return (long) "0"
+1498079506577639:    public int java.util.ArrayList.size()
+1498079506577723:    return (int) "0"
+1498079506577806:    final native public static void android.os.Binder.flushPendingCommands()
+1498079506577885:    return (void)
+1498079506577949:    native private static void android.os.MessageQueue.nativePollOnce((int) "-2003945104", (int) "0")
