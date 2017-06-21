@@ -1,0 +1,165 @@
+1497793317147012: new java.lang.Thread((java.lang.ThreadGroup) "Object", (java.lang.String) "Object", (int) "5", (boolean) "false")
+1497793317149589:  new java.util.ArrayList((null))
+1497793317149682:   new java.util.AbstractList((null))
+1497793317149761:    new java.util.AbstractCollection((null))
+1497793317149829:    return (void)
+1497793317149892:   return (void)
+1497793317149952:  return (void)
+1497793317150021:  final void java.lang.ThreadGroup.addThread((java.lang.Thread) "Object")
+1497793317150109:   new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1497793317150186:    new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1497793317150267:    return (void)
+1497793317150327:   return (void)
+1497793317150389:   public boolean java.util.ArrayList.add((java.lang.Object) "Object")
+1497793317150469:   return (boolean) "true"
+1497793317150530:  return (void)
+1497793317150589: return (void)
+1497793323435468: private boolean android.os.Binder.execTransact((int) "1", (int) "-2116256644", (int) "-2116256596", (int) "17")
+1497793323435650:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "-1783538800")
+1497793323435771:   private void android.os.Parcel.init((int) "-1783432456")
+1497793323435894:   return (void)
+1497793323435961:  return (android.os.Parcel) "Object"
+1497793323436058:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "-1783538800")
+1497793323436147:   private void android.os.Parcel.init((int) "-1783432456")
+1497793323436233:   return (void)
+1497793323436294:  return (android.os.Parcel) "Object"
+1497793323436362:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1497793323436522:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1497793323436616:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2116256644", (java.lang.String) "Object")
+1497793323436767:    return (void)
+1497793323436836:   return (void)
+1497793323436902:   final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1497793323436975:    native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2116256644")
+1497793323437268:     public java.lang.Object java.lang.ref.Reference.get()
+1497793323437348:     return (java.lang.Object) "Object"
+1497793323437456:    return (android.os.IBinder) "Object"
+1497793323437530:   return (android.os.IBinder) "Object"
+1497793323437609:   final public int android.os.Parcel.readInt()
+1497793323437677:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793323437769:    return (int) "0"
+1497793323437831:   return (int) "1"
+1497793323437894:   final public int android.os.Parcel.readInt()
+1497793323437961:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793323438048:    return (int) "0"
+1497793323438110:   return (int) "0"
+1497793323438173:   final public int android.os.Parcel.readInt()
+1497793323438239:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793323438326:    return (int) "0"
+1497793323438388:   return (int) "0"
+1497793323438461:   final public void android.app.ActivityThread$ApplicationThread.schedulePauseActivity((android.os.IBinder) "Object", (boolean) "false", (boolean) "false", (int) "-1780728776")
+1497793323438568:    static void android.app.ActivityThread.access$300((android.app.ActivityThread) "Object", (int) "102", (java.lang.Object) "Object", (int) "-1780743728", (int) "-1780728776")
+1497793323438693:     private void android.app.ActivityThread.queueOrSendMessage((int) "0", (java.lang.Object) "Object", (int) "-2117304920", (int) "-2015418682")
+1497793323438805:      public static android.os.Message android.os.Message.obtain()
+1497793323438876:      return (android.os.Message) "Object"
+1497793323438957:      final public boolean android.os.Handler.sendMessage((android.os.Message) "Object")
+1497793323439098:       final public boolean android.os.Handler.sendMessageDelayed((android.os.Message) "Object", (long) "-8656053240522310324")
+1497793323440796:        native public static long android.os.SystemClock.uptimeMillis()
+1497793323440904:        return (long) "0"
+1497793323440975:        public boolean android.os.Handler.sendMessageAtTime((android.os.Message) "Object", (long) "-8655985337089360612")
+1497793323441099:         private boolean android.os.Handler.enqueueMessage((android.os.MessageQueue) "Object", (android.os.Message) "Object", (long) "-7648177969485315560")
+1497793323441228:          boolean android.os.MessageQueue.enqueueMessage((android.os.Message) "Object", (long) "2279567010")
+1497793323441324:           boolean android.os.Message.isInUse()
+1497793323441395:           return (boolean) "false"
+1497793323461527:          return (boolean) "true"
+1497793323461821:         return (boolean) "true"
+1497793323461890:        return (boolean) "true"
+1497793323461951:       return (boolean) "true"
+1497793323462011:      return (boolean) "true"
+1497793323462071:     return (void)
+1497793323462131:    return (void)
+1497793323462190:   return (void)
+1497793323462251:  return (boolean) "true"
+1497793323462313:  final public void android.os.Parcel.recycle()
+1497793323462381:   private void android.os.Parcel.freeBuffer()
+1497793323462458:   return (void)
+1497793323462523:  return (void)
+1497793323462584:  final public void android.os.Parcel.recycle()
+1497793323462651:   private void android.os.Parcel.freeBuffer()
+1497793323462716:   return (void)
+1497793323462780:  return (void)
+1497793323462839: return (boolean) "true"
+1497793324192069: private boolean android.os.Binder.execTransact((int) "42", (int) "-2116256644", (int) "-2116256596", (int) "17")
+1497793324192237:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1497793324192328:   private void android.os.Parcel.init((int) "-1783432456")
+1497793324192421:   return (void)
+1497793324192488:  return (android.os.Parcel) "Object"
+1497793324192557:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1497793324192636:   private void android.os.Parcel.init((int) "-1783432456")
+1497793324192734:   return (void)
+1497793324192797:  return (android.os.Parcel) "Object"
+1497793324192867:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1497793324192969:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1497793324193050:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2116256644", (java.lang.String) "Object")
+1497793324193194:    return (void)
+1497793324193260:   return (void)
+1497793324193322:   final public int android.os.Parcel.readInt()
+1497793324193391:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793324193481:    return (int) "0"
+1497793324193545:   return (int) "20"
+1497793324193610:   public void android.app.ActivityThread$ApplicationThread.scheduleTrimMemory((int) "0")
+1497793324193698:    static void android.app.ActivityThread.access$500((android.app.ActivityThread) "Object", (int) "140", (java.lang.Object) "Object", (int) "-1780743728")
+1497793324193813:     private void android.app.ActivityThread.queueOrSendMessage((int) "0", (java.lang.Object) "Object", (int) "-2117304920")
+1497793324193924:      private void android.app.ActivityThread.queueOrSendMessage((int) "0", (java.lang.Object) "Object", (int) "-2117304960", (int) "-2015403426")
+1497793324194121:       public static android.os.Message android.os.Message.obtain()
+1497793324194223:       return (android.os.Message) "Object"
+1497793324194306:       final public boolean android.os.Handler.sendMessage((android.os.Message) "Object")
+1497793324194385:        final public boolean android.os.Handler.sendMessageDelayed((android.os.Message) "Object", (long) "-8655985577607529164")
+1497793324194505:         native public static long android.os.SystemClock.uptimeMillis()
+1497793324195247:         return (long) "0"
+1497793324195325:         public boolean android.os.Handler.sendMessageAtTime((android.os.Message) "Object", (long) "-8655985337089360636")
+1497793324195451:          private boolean android.os.Handler.enqueueMessage((android.os.MessageQueue) "Object", (android.os.Message) "Object", (long) "-7648177969485315560")
+1497793324195581:           boolean android.os.MessageQueue.enqueueMessage((android.os.Message) "Object", (long) "2279567010")
+1497793324195679:            boolean android.os.Message.isInUse()
+1497793324195761:            return (boolean) "false"
+1497793324195831:            native private static void android.os.MessageQueue.nativeWake((int) "-1780730200")
+1497793324196004:            return (void)
+1497793324196073:           return (boolean) "true"
+1497793324196135:          return (boolean) "true"
+1497793324196195:         return (boolean) "true"
+1497793324196255:        return (boolean) "true"
+1497793324196314:       return (boolean) "true"
+1497793324196374:      return (void)
+1497793324196433:     return (void)
+1497793324196493:    return (void)
+1497793324196552:   return (void)
+1497793324196612:  return (boolean) "true"
+1497793324196674:  final public void android.os.Parcel.recycle()
+1497793324196755:   private void android.os.Parcel.freeBuffer()
+1497793324196821:   return (void)
+1497793324196886:  return (void)
+1497793324196947:  final public void android.os.Parcel.recycle()
+1497793324197013:   private void android.os.Parcel.freeBuffer()
+1497793324197078:   return (void)
+1497793324197141:  return (void)
+1497793324197201: return (boolean) "true"
+1497793324197504: private boolean android.os.Binder.execTransact((int) "9", (int) "-2116256644", (int) "-2116256596", (int) "17")
+1497793324197624:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1497793324197716:   private void android.os.Parcel.init((int) "-1783432456")
+1497793324197805:   return (void)
+1497793324197869:  return (android.os.Parcel) "Object"
+1497793324197935:  final protected static android.os.Parcel android.os.Parcel.obtain((int) "1")
+1497793324198013:   private void android.os.Parcel.init((int) "-1783432456")
+1497793324198098:   return (void)
+1497793324198160:  return (android.os.Parcel) "Object"
+1497793324198227:  public boolean android.app.ApplicationThreadNative.onTransact((int) "0", (android.os.Parcel) "Object", (android.os.Parcel) "Object", (int) "0")
+1497793324198325:   final public void android.os.Parcel.enforceInterface((java.lang.String) "Object")
+1497793324198404:    native private static void android.os.Parcel.nativeEnforceInterface((int) "-2116256644", (java.lang.String) "Object")
+1497793324198537:    return (void)
+1497793324198602:   return (void)
+1497793324198665:   final public android.os.IBinder android.os.Parcel.readStrongBinder()
+1497793324198742:    native private static android.os.IBinder android.os.Parcel.nativeReadStrongBinder((int) "-2116256644")
+1497793324198885:     public java.lang.Object java.lang.ref.Reference.get()
+1497793324198956:     return (java.lang.Object) "Object"
+1497793324199049:    return (android.os.IBinder) "Object"
+1497793324199115:   return (android.os.IBinder) "Object"
+1497793324199180:   final public int android.os.Parcel.readInt()
+1497793324199247:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793324199337:    return (int) "0"
+1497793324199400:   return (int) "1"
+1497793324199463:   final public int android.os.Parcel.readInt()
+1497793324199530:    native private static int android.os.Parcel.nativeReadInt((int) "-2116256644")
+1497793324199616:    return (int) "0"
+1497793324199686:   return (int) "0"
+1497793324199751:   final public void android.app.ActivityThread$ApplicationThread.scheduleDestroyActivity((android.os.IBinder) "Object", (boolean) "true", (int) "0")
+1497793324199842:    static void android.app.ActivityThread.access$300((android.app.ActivityThread) "Object", (int) "-1780743912", (java.lang.Object) "Object", (int) "-1780743728", (int) "-1780728776")
+1497793324199974:     priva

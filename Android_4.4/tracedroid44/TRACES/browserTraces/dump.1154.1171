@@ -1,0 +1,192 @@
+1497793323012119: public void java.lang.Thread.run()
+1497793323014724:  public void java.util.concurrent.ThreadPoolExecutor$Worker.run()
+1497793323014807:   final void java.util.concurrent.ThreadPoolExecutor.runWorker((java.util.concurrent.ThreadPoolExecutor$Worker) "Object")
+1497793323014914:    public static java.lang.Thread java.lang.Thread.currentThread()
+1497793323014985:     native static java.lang.Thread java.lang.VMThread.currentThread()
+1497793323015053:     return (java.lang.Thread) "Object"
+1497793323015119:    return (java.lang.Thread) "Object"
+1497793323015208:    public void java.util.concurrent.ThreadPoolExecutor$Worker.unlock()
+1497793323015300:     final public boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.release((int) "-2002347076")
+1497793323015388:      protected boolean java.util.concurrent.ThreadPoolExecutor$Worker.tryRelease((int) "-1780583744")
+1497793323015475:       final protected void java.util.concurrent.locks.AbstractOwnableSynchronizer.setExclusiveOwnerThread((java.lang.Thread) "Object")
+1497793323015553:       return (void)
+1497793323015623:       final protected void java.util.concurrent.locks.AbstractQueuedSynchronizer.setState((int) "-1780583744")
+1497793323015714:       return (void)
+1497793323015777:      return (boolean) "true"
+1497793323015840:     return (boolean) "true"
+1497793323015912:    return (void)
+1497793323015975:    public void java.util.concurrent.ThreadPoolExecutor$Worker.lock()
+1497793323016053:     final public void java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire((int) "-2125312056")
+1497793323016145:      protected boolean java.util.concurrent.ThreadPoolExecutor$Worker.tryAcquire((int) "-2002357254")
+1497793323016237:       final protected boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.compareAndSetState((int) "-1997121512", (int) "-2002421716")
+1497793323016346:        native public boolean sun.misc.Unsafe.compareAndSwapInt((java.lang.Object) "Object", (long) "20", (int) "0", (int) "1")
+1497793323016447:        return (boolean) "false"
+1497793323016512:       return (boolean) "true"
+1497793323016576:       public static java.lang.Thread java.lang.Thread.currentThread()
+1497793323016652:        native static java.lang.Thread java.lang.VMThread.currentThread()
+1497793323016718:        return (java.lang.Thread) "Object"
+1497793323016782:       return (java.lang.Thread) "Object"
+1497793323016846:       final protected void java.util.concurrent.locks.AbstractOwnableSynchronizer.setExclusiveOwnerThread((java.lang.Thread) "Object")
+1497793323016933:       return (void)
+1497793323016992:      return (boolean) "true"
+1497793323017051:     return (void)
+1497793323017109:    return (void)
+1497793323017170:    final public int java.util.concurrent.atomic.AtomicInteger.get()
+1497793323017236:    return (int) "-536870911"
+1497793323017309:    private static boolean java.util.concurrent.ThreadPoolExecutor.runStateAtLeast((int) "-1780585296", (int) "0")
+1497793323017399:    return (boolean) "false"
+1497793323017460:    public static boolean java.lang.Thread.interrupted()
+1497793323017527:     native static boolean java.lang.VMThread.interrupted()
+1497793323017593:     return (boolean) "false"
+1497793323017652:    return (boolean) "false"
+1497793323017712:    protected void java.util.concurrent.ThreadPoolExecutor.beforeExecute((java.lang.Thread) "Object", (java.lang.Runnable) "Object")
+1497793323017795:    return (void)
+1497793323017857:    public void android.app.SharedPreferencesImpl$2.run()
+1497793323017933:     static java.lang.Object android.app.SharedPreferencesImpl.access$700((android.app.SharedPreferencesImpl) "Object")
+1497793323018010:     return (java.lang.Object) "Object"
+1497793323018076:     static void android.app.SharedPreferencesImpl.access$800((android.app.SharedPreferencesImpl) "Object", (android.app.SharedPreferencesImpl$MemoryCommitResult) "Object")
+1497793323018162:      private void android.app.SharedPreferencesImpl.writeToFile((android.app.SharedPreferencesImpl$MemoryCommitResult) "Object")
+1497793323018242:       public boolean java.io.File.exists()
+1497793323018718:        private boolean java.io.File.doAccess((int) "-1998845504")
+1497793323018820:         public boolean libcore.io.ForwardingOs.access((java.lang.String) "Object", (int) "-1780656128")
+1497793323018932:          native public boolean libcore.io.Posix.access((java.lang.String) "Object", (int) "-1780655544")
+1497793323019121:          return (boolean) "false"
+1497793323019187:         return (boolean) "true"
+1497793323019247:        return (boolean) "true"
+1497793323019306:       return (boolean) "true"
+1497793323019370:       public void android.app.SharedPreferencesImpl$MemoryCommitResult.setDiskWriteResult((boolean) "true")
+1497793323019446:        public void java.util.concurrent.CountDownLatch.countDown()
+1497793323019514:         final public boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.releaseShared((int) "-1780587096")
+1497793323019600:          protected boolean java.util.concurrent.CountDownLatch$Sync.tryReleaseShared((int) "-1998771408")
+1497793323019686:           final protected int java.util.concurrent.locks.AbstractQueuedSynchronizer.getState()
+1497793323019754:           return (int) "1"
+1497793323019817:           final protected boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.compareAndSetState((int) "-2002419430", (int) "-1997120112")
+1497793323019931:            native public boolean sun.misc.Unsafe.compareAndSwapInt((java.lang.Object) "Object", (long) "20", (int) "1", (int) "0")
+1497793323020031:            return (boolean) "false"
+1497793323020092:           return (boolean) "true"
+1497793323020152:          return (boolean) "true"
+1497793323020213:          private void java.util.concurrent.locks.AbstractQueuedSynchronizer.doReleaseShared()
+1497793323020280:          return (void)
+1497793323020339:         return (boolean) "true"
+1497793323020397:        return (void)
+1497793323020455:       return (void)
+1497793323020514:      return (void)
+1497793323020571:     return (void)
+1497793323020634:     static int android.app.SharedPreferencesImpl.access$310((android.app.SharedPreferencesImpl) "Object")
+1497793323020714:     return (int) "1"
+1497793323020779:     public void android.app.SharedPreferencesImpl$EditorImpl$2.run()
+1497793323020847:      public void android.app.SharedPreferencesImpl$EditorImpl$1.run()
+1497793323020922:       public void java.util.concurrent.CountDownLatch.await()
+1497793323020989:        final public void java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly((int) "-1780587096")
+1497793323021075:         public static boolean java.lang.Thread.interrupted()
+1497793323021142:          native static boolean java.lang.VMThread.interrupted()
+1497793323021208:          return (boolean) "false"
+1497793323021267:         return (boolean) "false"
+1497793323021327:         protected int java.util.concurrent.CountDownLatch$Sync.tryAcquireShared((int) "1")
+1497793323021401:          final protected int java.util.concurrent.locks.AbstractQueuedSynchronizer.getState()
+1497793323021467:          return (int) "0"
+1497793323021529:         return (int) "1"
+1497793323021590:        return (void)
+1497793323021648:       return (void)
+1497793323021706:      return (void)
+1497793323021767:      public static void android.app.QueuedWork.remove((java.lang.Runnable) "Object")
+1497793323021846:       public boolean java.util.concurrent.ConcurrentLinkedQueue.remove((java.lang.Object) "Object")
+1497793323042301:        java.util.concurrent.ConcurrentLinkedQueue$Node java.util.concurrent.ConcurrentLinkedQueue.first()
+1497793323042382:         final void java.util.concurrent.ConcurrentLinkedQueue.updateHead((java.util.concurrent.ConcurrentLinkedQueue$Node) "Object", (java.util.concurrent.ConcurrentLinkedQueue$Node) "Object")
+1497793323042475:          private boolean java.util.concurrent.ConcurrentLinkedQueue.casHead((java.util.concurrent.ConcurrentLinkedQueue$Node) "Object", (java.util.concurrent.ConcurrentLinkedQueue$Node) "Object")
+1497793323042567:           native public boolean sun.misc.Unsafe.compareAndSwapObject((java.lang.Object) "Object", (long) "8", (java.lang.Object) "Object", (java.lang.Object) "Object")
+1497793323043101:           return (boolean) "false"
+1497793323043174:          return (boolean) "true"
+1497793323043240:          void java.util.concurrent.ConcurrentLinkedQueue$Node.lazySetNext((java.util.concurrent.ConcurrentLinkedQueue$Node) "Object")
+1497793323043324:           native public void sun.misc.Unsafe.putOrderedObject((java.lang.Object) "Object", (long) "-7658817258826760192", (java.lang.Object) "Object")
+1497793323043469:           return (void)
+1497793323043533:          return (void)
+1497793323043594:         return (void)
+1497793323043653:        return (java.util.concurrent.ConcurrentLinkedQueue$Node) "Object"
+1497793323043721:        public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1497793323043798:        return (boolean) "true"
+1497793323043870:        boolean java.util.concurrent.ConcurrentLinkedQueue$Node.casItem((java.lang.Object) "Object", (java.lang.Object) "Object")
+1497793323043956:         native public boolean sun.misc.Unsafe.compareAndSwapObject((java.lang.Object) "Object", (long) "8", (java.lang.Object) "Object", (java.lang.Object) "Object")
+1497793323044057:         return (boolean) "false"
+1497793323044118:        return (boolean) "true"
+1497793323044179:        final java.util.concurrent.ConcurrentLinkedQueue$Node java.util.concurrent.ConcurrentLinkedQueue.succ((java.util.concurrent.ConcurrentLinkedQueue$Node) "Object")
+1497793323044258:        return (java.util.concurrent.ConcurrentLinkedQueue$Node) "Object"
+1497793323044324:       return (boolean) "true"
+1497793323044384:      return (void)
+1497793323044443:     return (void)
+1497793323044503:    return (void)
+1497793323044563:    protected void java.util.concurrent.ThreadPoolExecutor.afterExecute((java.lang.Runnable) "Object", (java.lang.Throwable) "Object")
+1497793323044647:    return (void)
+1497793323044712:    public void java.util.concurrent.ThreadPoolExecutor$Worker.unlock()
+1497793323044780:     final public boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.release((int) "-2002347076")
+1497793323044877:      protected boolean java.util.concurrent.ThreadPoolExecutor$Worker.tryRelease((int) "-1780583744")
+1497793323044965:       final protected void java.util.concurrent.locks.AbstractOwnableSynchronizer.setExclusiveOwnerThread((java.lang.Thread) "Object")
+1497793323045043:       return (void)
+1497793323045105:       final protected void java.util.concurrent.locks.AbstractQueuedSynchronizer.setState((int) "-1780583744")
+1497793323045189:       return (void)
+1497793323045249:      return (boolean) "true"
+1497793323045309:     return (boolean) "true"
+1497793323045367:    return (void)
+1497793323045427:    private java.lang.Runnable java.util.concurrent.ThreadPoolExecutor.getTask()
+1497793323045495:     final public int java.util.concurrent.atomic.AtomicInteger.get()
+1497793323045562:     return (int) "-536870911"
+1497793323045634:     private static int java.util.concurrent.ThreadPoolExecutor.runStateOf((int) "-2002420384")
+1497793323045720:     return (int) "-536870912"
+1497793323045793:     private static int java.util.concurrent.ThreadPoolExecutor.workerCountOf((int) "-2002420384")
+1497793323045885:     return (int) "1"
+1497793323045953:     public java.lang.Object java.util.concurrent.LinkedBlockingQueue.take()
+1497793323046079:      public void java.util.concurrent.locks.ReentrantLock.lockInterruptibly()
+1497793323046172:       final public void java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireInterruptibly((int) "-1780585120")
+1497793323046259:        public static boolean java.lang.Thread.interrupted()
+1497793323046326:         native static boolean java.lang.VMThread.interrupted()
+1497793323046393:         return (boolean) "false"
+1497793323046453:        return (boolean) "false"
+1497793323046513:        final protected boolean java.util.concurrent.locks.ReentrantLock$NonfairSync.tryAcquire((int) "1")
+1497793323046590:         final boolean java.util.concurrent.locks.ReentrantLock$Sync.nonfairTryAcquire((int) "0")
+1497793323047028:          public static java.lang.Thread java.lang.Thread.currentThread()
+1497793323047107:           native static java.lang.Thread java.lang.VMThread.currentThread()
+1497793323047177:           return (java.lang.Thread) "Object"
+1497793323047244:          return (java.lang.Thread) "Object"
+1497793323047310:          final protected int java.util.concurrent.locks.AbstractQueuedSynchronizer.getState()
+1497793323047378:          return (int) "0"
+1497793323047443:          final protected boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.compareAndSetState((int) "1", (int) "-2125312308")
+1497793323047537:           native public boolean sun.misc.Unsafe.compareAndSwapInt((java.lang.Object) "Object", (long) "20", (int) "0", (int) "1")
+1497793323047630:           return (boolean) "false"
+1497793323047692:          return (boolean) "true"
+1497793323047753:          final protected void java.util.concurrent.locks.AbstractOwnableSynchronizer.setExclusiveOwnerThread((java.lang.Thread) "Object")
+1497793323047841:          return (void)
+1497793323047903:         return (boolean) "true"
+1497793323047962:        return (boolean) "true"
+1497793323048026:       return (void)
+1497793323048085:      return (void)
+1497793323048145:      final public int java.util.concurrent.atomic.AtomicInteger.get()
+1497793323048212:      return (int) "0"
+1497793323048277:      final public void java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await()
+1497793323048345:       public static boolean java.lang.Thread.interrupted()
+1497793323048411:        native static boolean java.lang.VMThread.interrupted()
+1497793323048477:        return (boolean) "false"
+1497793323048536:       return (boolean) "false"
+1497793323048597:       private java.util.concurrent.locks.AbstractQueuedSynchronizer$Node java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.addConditionWaiter()
+1497793323048672:        public static java.lang.Thread java.lang.Thread.currentThread()
+1497793323048738:         native static java.lang.Thread java.lang.VMThread.currentThread()
+1497793323048803:         return (java.lang.Thread) "Object"
+1497793323048876:        return (java.lang.Thread) "Object"
+1497793323048941:        new java.util.concurrent.locks.AbstractQueuedSynchronizer$Node((java.lang.Thread) "Object", (int) "-1780583688")
+1497793323049033:        return (void)
+1497793323049094:       return (java.util.concurrent.locks.AbstractQueuedSynchronizer$Node) "Object"
+1497793323049161:       final int java.util.concurrent.locks.AbstractQueuedSynchronizer.fullyRelease((java.util.concurrent.locks.AbstractQueuedSynchronizer$Node) "Object")
+1497793323049242:        final protected int java.util.concurrent.locks.AbstractQueuedSynchronizer.getState()
+1497793323049309:        return (int) "1"
+1497793323049371:        final public boolean java.util.concurrent.locks.AbstractQueuedSynchronizer.release((int) "1")
+1497793323049446:         final protected boolean java.util.concurrent.locks.ReentrantLock$Sync.tryRelease((int) "-2002326160")
+1497793323049532:          final protected int java.util.concurrent.locks.AbstractQueuedSynchronizer.getState()
+1497793323049599:          return (int) "1"
+1497793323049661:          public static java.lang.Thread java.lang.Thread.currentThread()
+1497793323049727:           native static java.lang.Thread java.lang.VMThread.currentThread()
+1497793323049793:           return (java.lang.Thread) "Object"
+1497793323049866:          return (java.lang.Thread) "Object"
+1497793323049932:          final protected java.lang.Thread java.util.concurrent.locks.AbstractOwnableSynchronizer.getExclusiveOwnerThread()
+1497793323049998:          return (java.lang.Thread) "Object"
+1497793323050063:          final protected void java.util.concurrent.locks.AbstractOwnableSynchronizer.setExclusiveOwnerThread((java.lang.Thread) "Object")
+1497793323050141:          return (void)
+1497793323050202:          final protected void java.util.concurrent.locks.AbstractQu
