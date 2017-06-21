@@ -737,6 +737,16 @@ void dvmMethodTraceStop()
     /* compute elapsed time */
     elapsed = getWallTimeInUsec() - state->startWhen;
 
+    dvmLockMutex(&state->fwriteLock);
+    Thread *thread;
+    for (thread = gDvm.threadList; thread != NULL; thread = thread->next) {
+      if (thread->dump != NULL) {
+	ALOGD("closing method trace output @ %p via dvmMethodTraceStop()\n", thread->dump);
+	fclose(thread->dump);
+	thread->dump = NULL;
+      }
+    }
+    
     /*
      * Globally disable it, and allow other threads to notice.  We want
      * to stall here for at least as long as dvmMethodTraceAdd needs
@@ -745,6 +755,7 @@ void dvmMethodTraceStop()
      * after that completes.
      */
     state->traceEnabled = false;
+    dvmUnlockMutex(&state->fwriteLock);
     ANDROID_MEMBAR_FULL();
     sched_yield();
     usleep(250 * 1000);
@@ -923,6 +934,9 @@ bool prep_log(Thread *self) {
     return true;
 }
 
+/*
+ * Convert a class descriptor into its usual format. Caller must free the result.
+ */
 char *convertDescriptor(const char *descriptor) {
     int len = strlen(descriptor);
 
@@ -973,6 +987,10 @@ char *convertDescriptor(const char *descriptor) {
     return class_descriptor;
 }
 
+/*
+ * Given a parameter (low/high) and its descriptor, get its string
+ * representation ( "(<type>) <value>" ). Caller must free the result.
+ */
 char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
     char *result = (char *) malloc(sizeof(char) * 128);
     if (result == NULL) return NULL;
@@ -1056,6 +1074,10 @@ char *parameterToString(Thread *self, const char *descriptor, u4 low, u4 high) {
     return result;
 }
 
+/*
+ * Populate an string array of parameters by looping over the registers of the
+ * current frame. Caller must free the result.
+ */
 char **getParameters(Thread *self, const Method *method, int parameterCount) {
     /* string array that will contain the parameters */
   char **parameters = (char**) malloc(parameterCount * sizeof(char *));
@@ -1087,6 +1109,10 @@ char **getParameters(Thread *self, const Method *method, int parameterCount) {
     return parameters;
 }
 
+/*
+ * Combine the parameters from a provided string array into one printable
+ * string. Caller must free the result.
+ */
 char *getParameterString(Thread *self, const Method *method, char **parameters, int parameterCount) {
     int i;
     /* concatenate the parameters */
@@ -1107,6 +1133,9 @@ char *getParameterString(Thread *self, const Method *method, char **parameters, 
     return parameterString;
 }
 
+/*
+ * Given a method, get its modifiers. Caller must free the result.
+ */
 char *getModifiers(const Method* method) {
     char *modifiers = (char *) malloc(128 * sizeof(char));
     if (modifiers == NULL) return NULL;
@@ -1124,6 +1153,9 @@ char *getModifiers(const Method* method) {
     return modifiers;
 }
 
+/*
+ * Generate whitespace of <depth> characters long including timestamp (if necessary). Caller must free the result.
+ */
 char *getWhitespace(int depth) {
     /* gDvm.timestamp will be either 0 or the number of characters "%llu: " will occupy */
     char *whitespace = (char *) malloc((depth * sizeof(char)) + gDvm.timestamp + 1);
