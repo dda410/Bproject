@@ -15,3 +15,5 @@
 11. https://securelist.com/dvmap-the-first-android-malware-with-code-injection/78648/
     , Dvmap malware.
 12. https://github.com/androguard/androguard , Androguard
+13. Stefan Brahler. Analysis of the Android Architecture
+14. THE DALVIK VIRTUAL MACHINE ARCHITECTURE, David Ehringer 
