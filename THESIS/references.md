@@ -17,3 +17,13 @@
 12. https://github.com/androguard/androguard , Androguard
 13. Stefan Brahler. Analysis of the Android Architecture
 14. THE DALVIK VIRTUAL MACHINE ARCHITECTURE, David Ehringer 
+15. github page of this project.
+16. https://developer.android.com/about/dashboards/index.html
+17. https://developer.android.com/guide/topics/manifest/uses-sdk-element.html
+18. https://source.android.com/source/initializing
+19. https://source.android.com/source/downloading
+20. https://developer.android.com/studio/index.html
+21. https://developer.android.com/studio/command-line/index.html
+22. https://developer.android.com/studio/command-line/adb.html
+23. http://elinux.org/Android_Build_System
+24. 
