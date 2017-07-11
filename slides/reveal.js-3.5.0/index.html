@@ -108,8 +108,8 @@
 	  </section>
 
 	  <section>
-	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Background knowledge: Dalvik Virtual Machine</h1>
-	    <ul style = "font-size: 24pt;">
+	    <h1 style="margin-bottom: 40px; font-size: 28pt;">Background knowledge: Dalvik Virtual Machine</h1>
+	    <ul style="font-size: 24pt;">
               <li class="fragment">Google implementation of the JVM</li>
               <li class="fragment">Designed to run on mobile systems</li>
 	      <ul style="font-size: 24pt;">
@@ -142,7 +142,7 @@
 	  
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Design</h1>
-	    <ol class="fragment" style = "font-size: 24pt;">
+	    <ol style = "font-size: 24pt;">
               <li class="fragment">What to collect</li>
               <li class="fragment">Specifications</li>
               <li class="fragment">Interact with TRACEDROID</li>	
@@ -151,7 +151,7 @@
 
 	  <section>
 	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Design: What to collect</h1>
-	    <ul class="fragment" style = "font-size: 24pt;">
+	    <ul style = "font-size: 24pt;">
               <li class="fragment">The output should provide an overview of the app behavior and control flows</li>
 	      <li class="fragment">The interception should be performed at runtime</li>
 	      <ul style="font-size: 24pt;">
@@ -167,7 +167,7 @@
 
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Design: Specifications</h1>
-	    <ul class="fragment" style = "font-size: 24pt;">
+	    <ul style = "font-size: 24pt;">
               <li class="fragment">Common interface to specify which app to analyze</li>
 	      <li class="fragment">Common interface to store traces in output files</li>
 	      <ul style="font-size: 24pt;">
@@ -196,7 +196,107 @@
 
 	</section>
 	
+	<!-- Implementation slides -->
+	<section>
+	  
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Implementation</h1>
+	    <ol style = "font-size: 24pt;">
+              <li class="fragment">Porting process (reproducible)</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Target version</li>
+		<li class="fragment">Tools</li>
+		<li class="fragment">Workflow</li>
+		<li class="fragment">Steps</li>		
+	      </ul>
+              <li class="fragment">Limitations of the porting</li>
+            </ol>
+	  </section>
 
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Porting process: target version</h1>
+	    <ul style = "font-size: 24pt;">
+              <li class="fragment">Original version based on Android 2.3.4</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">0.8% market share &#8594; not supported by developers</li>
+	      </ul>
+	      <li class="fragment">Target version Android 4.4 (KitKat) with api level 19</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">DVM as default runtime environment</li>
+		<li class="fragment">18.1% market share, 3rd most used &#8594; supported by developers </li>
+	      </ul>
+            </ul>
+	  </section>
+
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Porting process: tools</h1>
+	    <ul style = "font-size: 24pt;">
+              <li class="fragment">Ubuntu 12.04 64-bit docker image</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Container for Android source code</li>
+		<li class="fragment">Compilation environment &#8594; avoid dependencies issues on client Linux machine</li>
+	      </ul>
+	      <li class="fragment">Android SDK</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Installed on client Linux machine</li>
+		<li class="fragment">Allows creation of Android Virtual Device (AVD) to hold properties</li>
+		<li class="fragment">Allows emulation of the custom TRACEDROID system image</li>
+	      </ul>
+            </ul>
+	  </section>
+
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Porting process: workflow</h1>
+	    <img class="stretch" src="images/flowDiagram.svg"></img>
+	  </section>
+
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Porting process: steps</h1>
+	    <ul style="font-size: 24pt; list-style-type: none;">
+	      <li class="fragment">The features of the system have been added and adapted with incremental steps:</li>
+	      <ul style="font-size: 24pt; list-style-type: disc;">
+		<li class="fragment">Enabling tracing for a specified app</li>
+		<li class="fragment">Entering method, exiting method and exception throwing capturing</li>
+		<li class="fragment">Getting method indentation and timestamps</li>
+		<li class="fragment">Getting method modifiers, return type and class descriptor</li>
+		<li class="fragment">Retrieving parameters type and values</li>
+		<li class="fragment">Retrieving exceptions and return values</li>
+		<li class="fragment">Printing the traces to dump files under /sdcard/</li>
+	      </ul>
+	    </ul>
+	  </section>
+	  
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Implementation: limitations of the porting</h1>
+	    <p class = "fragment" style ="font-size: 24pt; text-align: left;">Some features have not been ported due to bugs or unexpected behavior</p>
+	    <br>
+	    <table style="font-size: 50%;" class="fragment">
+	      <thead>
+		<tr>
+		  <th>Feature</th>
+		  <th>File</th>
+		  <th>Status</th>
+		  <th>Description</th>
+		</tr>
+	      </thead>
+	      <tbody >
+		<tr>
+		  <td style = "border: 0;">Compute string representation of Java object</td>
+		  <td style = "border: 0;">Profile.cpp</td>
+		  <td style = "border: 0;">NP</td>
+		  <td style = "border: 0;">Originally implemented by objectToString(). It calls the toString() method of a Java object to retrieve the value of a parameter or returning value.</td>
+		</tr>
+		<tr>
+		  <td style = "border: 0;">Filter calls executing bytecode from a system jar</td>
+		  <td style = "border: 0;">Profile.cpp</td>
+		  <td style = "border: 0;">NP</td>
+		  <td style = "border: 0;">Originally implemented by dvmMethodTraceAdd(). It avoids to profile calls that are assured not to contain malicious code</td>
+		</tr>		
+	      </tbody>
+	    </table>
+	  </section>
+	  
+	</section>
 
 
 
