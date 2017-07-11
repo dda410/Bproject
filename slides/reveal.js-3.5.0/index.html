@@ -85,7 +85,79 @@
 	  </section>	
 	</section>
 	
-	<section>Slide 2</section>
+
+	<section>
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Background knowledge</h1>
+	    <ul style="font-size: 24pt; list-style-type: none;">
+	      <li class="fragment"> <u>TRACEDROID</u>: sandbox profiling applications by modifying the DVM behavior </li>
+	      <br>
+	      <li class="fragment"> <u>Background</u>: </li>
+	      <ul style="font-size: 24pt; list-style-type: disc;">
+		<li class="fragment">Android system architecture</li>
+		<li class="fragment">Dalvik Virtual Machine implementation</li>
+	      </ul>
+	    </ul>
+	  </section>
+	  
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Background knowledge: Android architecture</h1>
+	    <img class="stretch" src="images/architecture.svg"></img>
+	  </section>
+
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Background knowledge: Dalvik Virtual Machine</h1>
+
+	    <ul style = "font-size: 24pt;">
+              <li class="fragment">Google implementation of the JVM</li>
+              <li class="fragment">Designed to run on mobile systems</li>
+	      <ul style="font-size: 24pt;">
+	  	<li class="fragment">Limited RAM size and processor speed</li>
+		<li class="fragment">No swap space</li>
+		<li class="fragment">Battery-powered devices</li>
+	      </ul>
+	      <li class="fragment">Based on modern OS principles</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Process isolation: each app runs in its own VM</li>
+	      </ul>
+              <li class="fragment">Bytecode level optimization</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">.dex files over .class files to save space</li>
+	      </ul>
+              <li class="fragment">Special Zygote process</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Parent of all the VM</li>
+	      </ul>
+	      <li class="fragment">Register based Virtual Machine</li>	
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Increases performance by circa 32%</li>
+	      </ul>
+            </ul>
+
+	  </section>
+
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Methodology: Limitations</h1>
+
+	    <ul class="fragment" style = "font-size: 24pt;">
+              <li>Time</li>
+              <ul class="fragment" style = "font-size: 24pt;">
+        	<li>Poor performance</li>
+              </ul>
+            </ul>
+
+	  </section>
+	</section>
+
+
+
+
+
+
+
+
+
+
 	<section data-markdown>
 	  <textarea data-template>
 	    ## Slide 3?
