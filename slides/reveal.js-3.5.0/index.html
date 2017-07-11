@@ -46,7 +46,8 @@
 	  <br>
 	  <br>
 	</section>
-
+	
+	<!-- Introduction slides -->
 	<section>
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Introduction</h1>
@@ -85,8 +86,9 @@
 	  </section>	
 	</section>
 	
-
+	<!-- Background knowledge slides -->
 	<section>
+	  
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Background knowledge</h1>
 	    <ul style="font-size: 24pt; list-style-type: none;">
@@ -107,7 +109,6 @@
 
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Background knowledge: Dalvik Virtual Machine</h1>
-
 	    <ul style = "font-size: 24pt;">
               <li class="fragment">Google implementation of the JVM</li>
               <li class="fragment">Designed to run on mobile systems</li>
@@ -133,24 +134,68 @@
 		<li class="fragment">Increases performance by circa 32%</li>
 	      </ul>
             </ul>
-
-	  </section>
-
-	  <section>
-	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Methodology: Limitations</h1>
-
-	    <ul class="fragment" style = "font-size: 24pt;">
-              <li>Time</li>
-              <ul class="fragment" style = "font-size: 24pt;">
-        	<li>Poor performance</li>
-              </ul>
-            </ul>
-
 	  </section>
 	</section>
 
+	<!-- Design slides -->
+	<section>
+	  
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Design</h1>
+	    <ol class="fragment" style = "font-size: 24pt;">
+              <li class="fragment">What to collect</li>
+              <li class="fragment">Specifications</li>
+              <li class="fragment">Interact with TRACEDROID</li>	
+            </ol>
+	  </section>
 
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Design: What to collect</h1>
+	    <ul class="fragment" style = "font-size: 24pt;">
+              <li class="fragment">The output should provide an overview of the app behavior and control flows</li>
+	      <li class="fragment">The interception should be performed at runtime</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">A modified version of the DVM captures the data</li>
+	      </ul>
+	      <li class="fragment">The output profile should be:</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">close to the original Java sources</li>
+		<li class="fragment">easy to understand</li>		
+	      </ul>
+            </ul>
+	  </section>
 
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Design: Specifications</h1>
+	    <ul class="fragment" style = "font-size: 24pt;">
+              <li class="fragment">Common interface to specify which app to analyze</li>
+	      <li class="fragment">Common interface to store traces in output files</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Information about the process ID and thread ID of the traces</li>
+	      </ul>
+	      <li class="fragment">Full automation of the system</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Integrate TRACEDROID with TAP</li>
+	      </ul>
+	      <li class="fragment">The traces should contain:</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Computations timestamps</li>
+		<li class="fragment">Called method name and class descriptor</li>
+		<li class="fragment">Called method return type and modifiers</li>
+		<li class="fragment">Values and types of parameters and return values</li>
+		<li class="fragment">Thrown exceptions unwinding</li>
+		<li class="fragment">Indentation of the calls</li>
+	      </ul>
+            </ul>
+	  </section>
+
+	  <section>
+	    <h1 style ="font-size: 28pt; margin-bottom: 50px;">Design: Interact with TRACEDROID</h1>
+	    <img class="stretch" src="images/sequenceDiagram.svg"></img>
+	  </section>
+
+	</section>
+	
 
 
 
