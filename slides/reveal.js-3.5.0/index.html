@@ -1,85 +1,145 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-				<section data-markdown>
-				  <textarea data-template>
-				    ## Slide 3?
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	
+	<section>
+	  <h1 style ="font-size: 35pt;">Porting tracedroid to Android 4.4</h1>
+	  <p style ="font-size: 28 pt;">Dimitri Diomaiuta</p>
+	  <p style ="font-size: 18pt; margin-top: -10px;">BSc in Computer Science</p>
+	  <p style ="font-size: 18pt; margin-top: -10px;">Advisor: Victor van der Veen</p>	  
+	  <p style ="font-size: 15pt; margin-top: -10px;"><em>13th July, 2017</em></p>
+	</section>
 
-				    I guess this is gonna be our third slide.
-				    
-				    ```
-				    public final static doSOmething (int time) {
-				    }
-				    ```
-				  </textarea>
-				</section>
-				<section data-markdown>
-				  <textarea data-template>
-				    ## Slide 4
+	<section id = "fragments">
+	  <h1 style ="margin-bottom: 40px; font-size: 28pt;">Outline</h1>
+	  <ul class="fragment" style="font-size: 90%">
+  	    <li>Introduction</li>
+  	    <li>Background knowledge</li>
+  	    <li>Design</li>
+  	    <li>Implementation</li>
+  	    <li>Evaluation</li>
+  	    <li>Conclusion</li>
+	  </ul>
+	  <br>
+	  <br>
+	</section>
 
-				    This is a bullet-point list:
+	<section>
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Introduction</h1>
+	    
+	    <ul style="font-size: 24pt;">
+	      <li class="fragment">Android is the most used mobile operating system</li>
+	      <ul style="font-size: 24pt;">
+	  	<li class="fragment">2 billion devices monthly active (May 2017)</li>
+		<li class="fragment">86% mobile OS market share</li>
+	      </ul>
+	      <br>
+	      <li class="fragment">Because of its growth it became a target for malwares</li>
+	      <ul style="font-size: 24pt;">
+	  	<li class="fragment">Kaspersky lab detected in 2016 over 8 million malicious installation packages</li>
+		<li class="fragment">"Judy" malware was discovered in circa 50 applications present in the play store. It has been downloaded more than 36 million times</li>
+	      </ul>
+	  </section>
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Introduction (Continued...) </h1>
 
-				    - Point one on something
-				    - Point two on something else
-				    - Point three on other stuffz
-				    
-				  </textarea>
-				</section>
-				<section>
-				  <section data-markdown>
-				    <textarea data-template>
-				      ## This is the first of a vertical slide
-				    </textarea>
-				  </section>
-				  <section data-markdown>
-				    <textarea data-template>
-				      ## This is the second of a vertical slide
-				    </textarea>
-				  </section>
-				</section>
-			</div>
-		</div>
+	    <ul style="font-size: 24pt;">
+	      <li class="fragment">The severity of the situation is known</li>
+	      <ul style="font-size: 24pt;">
+	  	<li class="fragment">Google created Play Protect to scan devices and uploaded apps</li>
+	  	<li class="fragment">The scientifc community developed different tools for static and dynamic analysis</li>
+	  	<ul style="font-size: 24pt;">
+	  	  <li class="fragment">TAP framework provides both types of analysis (ANDROGUARD + TRACEDROID)</li>
+	  	</ul>
+	      </ul>
+	      <br> 
+	      <li class="fragment">The purpose of this research is to update the dynamic analysis core, dubbed TRACEDROID</li>
+	      <ul style="font-size: 24pt;">
+	  	<li class="fragment">Porting from version 2.3.4 to version 4.4 to increase the app compatibility rate</li>
+	      </ul>
+	    </ul>
+	  </section>	
+	</section>
+	
+	<section>Slide 2</section>
+	<section data-markdown>
+	  <textarea data-template>
+	    ## Slide 3?
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	    I guess this is gonna be our third slide.
+	    
+	    ```
+	    public final static doSOmething (int time) {
+	    }
+	    ```
+	  </textarea>
+	</section>
+	<section data-markdown>
+	  <textarea data-template>
+	    ## Slide 4
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	    This is a bullet-point list:
+
+	    - Point one on something
+	    - Point two on something else
+	    - Point three on other stuffz
+	    
+	  </textarea>
+	</section>
+	<section>
+	  <section data-markdown>
+	    <textarea data-template>
+	      ## This is the first of a vertical slide
+	    </textarea>
+	  </section>
+	  <section data-markdown>
+	    <textarea data-template>
+	      ## This is the second of a vertical slide
+	    </textarea>
+	  </section>
+	</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+      dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+      });
+    </script>
+  </body>
 </html>
