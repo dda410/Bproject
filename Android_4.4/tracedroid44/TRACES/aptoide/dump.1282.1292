@@ -1,0 +1,774 @@
+1499899331745301: public void java.lang.Thread.run()
+1499899331748706:  public void java.lang.Daemons$FinalizerDaemon.run()
+1499899331748804:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899331748880:   return (boolean) "true"
+1499899331748986:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899331749073:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899331749173:     final public void java.lang.Object.wait((long) "0")
+1499899331749253:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")
+1499899341017400:      return (void)
+1499899341017480:     return (void)
+1499899341017545:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341017617:     return (java.lang.ref.Reference) "Object"
+1499899341017694:    return (java.lang.ref.Reference) "Object"
+1499899341017771:   return (java.lang.ref.Reference) "Object"
+1499899341017839:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341017922:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341018069:    return (void)
+1499899341018135:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341018203:    return (java.lang.Object) "Object"
+1499899341018270:    public void java.lang.ref.FinalizerReference.clear()
+1499899341018337:    return (void)
+1499899341018399:    native public static long java.lang.System.nanoTime()
+1499899341018486:    return (long) "0"
+1499899341018555:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341018624:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341018693:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341018769:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341018836:    final native public void java.lang.Object.notify()
+1499899341018928:    return (void)
+1499899341018993:    protected void android.net.LocalSocketImpl.finalize()
+1499899341019063:     public void android.net.LocalSocketImpl.close()
+1499899341019131:     return (void)
+1499899341019192:    return (void)
+1499899341019256:   return (void)
+1499899341019318:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341019387:   return (boolean) "true"
+1499899341019449:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341019515:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341019606:     final public void java.lang.Object.wait((long) "-8592540262759137280")
+1499899341019717:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")
+1499899341021097:      return (void)
+1499899341021174:     return (void)
+1499899341021240:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341021311:     return (java.lang.ref.Reference) "Object"
+1499899341021388:    return (java.lang.ref.Reference) "Object"
+1499899341021453:   return (java.lang.ref.Reference) "Object"
+1499899341021519:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341021600:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341021682:    return (void)
+1499899341021766:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341021848:    return (java.lang.Object) "Object"
+1499899341021932:    public void java.lang.ref.FinalizerReference.clear()
+1499899341021999:    return (void)
+1499899341022061:    native public static long java.lang.System.nanoTime()
+1499899341022142:    return (long) "0"
+1499899341022208:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341022275:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341022734:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341022814:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341022885:    final native public void java.lang.Object.notify()
+1499899341022975:    return (void)
+1499899341023040:    protected void java.nio.charset.CharsetDecoderICU.finalize()
+1499899341023111:     native public static void libcore.icu.NativeConverter.closeConverter((long) "3075087368")
+1499899341023269:     return (void)
+1499899341023335:     protected void java.lang.Object.finalize()
+1499899341023402:     return (void)
+1499899341023463:    return (void)
+1499899341023523:   return (void)
+1499899341023584:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341023652:   return (boolean) "true"
+1499899341023722:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341023791:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341023882:     final public void java.lang.Object.wait((long) "-8805927498369566232")
+1499899341023993:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")
+1499899341025406:      return (void)
+1499899341025483:     return (void)
+1499899341025548:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341025619:     return (java.lang.ref.Reference) "Object"
+1499899341025696:    return (java.lang.ref.Reference) "Object"
+1499899341025772:   return (java.lang.ref.Reference) "Object"
+1499899341025839:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341025919:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341026002:    return (void)
+1499899341026065:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341026132:    return (java.lang.Object) "Object"
+1499899341026198:    public void java.lang.ref.FinalizerReference.clear()
+1499899341026264:    return (void)
+1499899341026326:    native public static long java.lang.System.nanoTime()
+1499899341026406:    return (long) "0"
+1499899341026472:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341026540:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341026607:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341026674:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341028873:    final native public void java.lang.Object.notify()
+1499899341033840:    return (void)
+1499899341038360:    protected void com.android.internal.os.BinderInternal$GcWatcher.finalize()
+1499899341038449:     final native static void com.android.internal.os.BinderInternal.handleGc()
+1499899341038576:     return (void)
+1499899341038643:     native public static long android.os.SystemClock.uptimeMillis()
+1499899341038741:     return (long) "0"
+1499899341038880:     new com.android.internal.os.BinderInternal$GcWatcher((null))
+1499899341038956:      public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1499899341039044:       new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899341039130:        new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899341039213:        return (void)
+1499899341039280:       return (void)
+1499899341039346:      return (void)
+1499899341039411:     return (void)
+1499899341039474:     new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1499899341039551:      new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899341039633:      return (void)
+1499899341039694:     return (void)
+1499899341039765:    return (void)
+1499899341039825:   return (void)
+1499899341039887:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341040325:   return (boolean) "true"
+1499899341040399:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341040471:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341040565:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341040636:     return (java.lang.ref.Reference) "Object"
+1499899341040714:    return (java.lang.ref.Reference) "Object"
+1499899341040781:   return (java.lang.ref.Reference) "Object"
+1499899341040847:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341040928:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341041011:    return (void)
+1499899341041074:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341041141:    return (java.lang.Object) "Object"
+1499899341041222:    public void java.lang.ref.FinalizerReference.clear()
+1499899341041290:    return (void)
+1499899341041351:    native public static long java.lang.System.nanoTime()
+1499899341041431:    return (long) "0"
+1499899341041497:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341041564:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341041632:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341041707:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341041776:    final native public void java.lang.Object.notify()
+1499899341041844:    return (void)
+1499899341041906:    protected void java.util.regex.Pattern.finalize()
+1499899341041974:     native private static void java.util.regex.Pattern.closeImpl((long) "3075086048")
+1499899341042164:     return (void)
+1499899341042230:     protected void java.lang.Object.finalize()
+1499899341042297:     return (void)
+1499899341042357:    return (void)
+1499899341042417:   return (void)
+1499899341042478:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341042546:   return (boolean) "true"
+1499899341042608:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341042675:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341042775:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341042846:     return (java.lang.ref.Reference) "Object"
+1499899341042914:    return (java.lang.ref.Reference) "Object"
+1499899341042979:   return (java.lang.ref.Reference) "Object"
+1499899341043045:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341043125:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341043207:    return (void)
+1499899341043281:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341043350:    return (java.lang.Object) "Object"
+1499899341043416:    public void java.lang.ref.FinalizerReference.clear()
+1499899341043482:    return (void)
+1499899341043544:    native public static long java.lang.System.nanoTime()
+1499899341043624:    return (long) "0"
+1499899341043690:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341043767:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341043836:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341043903:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341043969:    final native public void java.lang.Object.notify()
+1499899341044036:    return (void)
+1499899341044099:    protected void java.util.regex.Matcher.finalize()
+1499899341044167:     native private static void java.util.regex.Matcher.closeImpl((long) "3076158528")
+1499899341044291:     return (void)
+1499899341044356:     protected void java.lang.Object.finalize()
+1499899341044857:     return (void)
+1499899341044942:    return (void)
+1499899341045017:   return (void)
+1499899341045080:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341045151:   return (boolean) "true"
+1499899341045215:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341045283:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341045374:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899341045445:     return (java.lang.ref.Reference) "Object"
+1499899341045513:    return (java.lang.ref.Reference) "Object"
+1499899341045578:   return (java.lang.ref.Reference) "Object"
+1499899341045645:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899341045734:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899341045818:    return (void)
+1499899341045881:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899341045947:    return (java.lang.Object) "Object"
+1499899341046013:    public void java.lang.ref.FinalizerReference.clear()
+1499899341046080:    return (void)
+1499899341046141:    native public static long java.lang.System.nanoTime()
+1499899341046221:    return (long) "0"
+1499899341046287:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341046355:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341046424:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899341046491:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899341046557:    final native public void java.lang.Object.notify()
+1499899341046624:    return (void)
+1499899341046687:    protected void java.io.RandomAccessFile.finalize()
+1499899341056823:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899341056896:     return (void)
+1499899341056959:     public void java.io.RandomAccessFile.close()
+1499899341057027:      public void dalvik.system.CloseGuard.close()
+1499899341057094:      return (void)
+1499899341057158:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899341057241:       public boolean java.io.FileDescriptor.valid()
+1499899341057310:       return (boolean) "false"
+1499899341057372:      return (void)
+1499899341057433:     return (void)
+1499899341057494:     protected void java.lang.Object.finalize()
+1499899341057560:     return (void)
+1499899341057620:    return (void)
+1499899341057689:   return (void)
+1499899341057753:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899341057822:   return (boolean) "true"
+1499899341057891:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899341057959:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899341058050:     final public void java.lang.Object.wait((long) "-7649421107333693440")
+1499899341058161:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")
+1499899351503153:      return (void)
+1499899351503264:     return (void)
+1499899351503361:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899351503435:     return (java.lang.ref.Reference) "Object"
+1499899351503505:    return (java.lang.ref.Reference) "Object"
+1499899351503570:   return (java.lang.ref.Reference) "Object"
+1499899351503638:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899351503721:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899351503808:    return (void)
+1499899351503873:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899351503941:    return (java.lang.Object) "Object"
+1499899351504008:    public void java.lang.ref.FinalizerReference.clear()
+1499899351504075:    return (void)
+1499899351504660:    native public static long java.lang.System.nanoTime()
+1499899351504760:    return (long) "0"
+1499899351504834:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899351504907:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899351504986:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899351505056:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899351505124:    final native public void java.lang.Object.notify()
+1499899351505214:    return (void)
+1499899351505292:    protected void com.android.internal.os.BinderInternal$GcWatcher.finalize()
+1499899351505363:     final native static void com.android.internal.os.BinderInternal.handleGc()
+1499899351505440:     return (void)
+1499899351505504:     native public static long android.os.SystemClock.uptimeMillis()
+1499899351505593:     return (long) "0"
+1499899351505676:     new com.android.internal.os.BinderInternal$GcWatcher((null))
+1499899351505752:      public static void java.lang.ref.FinalizerReference.add((java.lang.Object) "Object")
+1499899351505841:       new java.lang.ref.FinalizerReference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899351505927:        new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899351506011:        return (void)
+1499899351506074:       return (void)
+1499899351506140:      return (void)
+1499899351506205:     return (void)
+1499899351506278:     new java.lang.ref.WeakReference((java.lang.Object) "Object")
+1499899351506357:      new java.lang.ref.Reference((java.lang.Object) "Object", (java.lang.ref.ReferenceQueue) "Object")
+1499899351506441:      return (void)
+1499899351506503:     return (void)
+1499899351506565:    return (void)
+1499899351506625:   return (void)
+1499899351506687:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899351506757:   return (boolean) "true"
+1499899351506820:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899351506888:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899351506979:     final public void java.lang.Object.wait((long) "-8805927498369528672")
+1499899351507092:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")
+1499899375316534:      return (void)
+1499899375316618:     return (void)
+1499899375316725:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375316802:     return (java.lang.ref.Reference) "Object"
+1499899375316871:    return (java.lang.ref.Reference) "Object"
+1499899375316936:   return (java.lang.ref.Reference) "Object"
+1499899375317004:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375317090:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375317177:    return (void)
+1499899375317242:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375317310:    return (java.lang.Object) "Object"
+1499899375317376:    public void java.lang.ref.FinalizerReference.clear()
+1499899375317456:    return (void)
+1499899375317521:    native public static long java.lang.System.nanoTime()
+1499899375317608:    return (long) "0"
+1499899375317710:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375317826:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375317919:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375317988:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375318055:    final native public void java.lang.Object.notify()
+1499899375318146:    return (void)
+1499899375318211:    protected void java.util.zip.Deflater.finalize()
+1499899375318282:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375318911:     return (void)
+1499899375318985:     public void java.util.zip.Deflater.end()
+1499899375319059:      public void dalvik.system.CloseGuard.close()
+1499899375319129:      return (void)
+1499899375319224:      private void java.util.zip.Deflater.endImpl()
+1499899375319304:      return (void)
+1499899375319367:     return (void)
+1499899375319440:     private void java.util.zip.Deflater.endImpl()
+1499899375319510:     return (void)
+1499899375319573:     protected void java.lang.Object.finalize()
+1499899375319640:     return (void)
+1499899375319702:    return (void)
+1499899375319763:   return (void)
+1499899375319826:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375319895:   return (boolean) "true"
+1499899375319959:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375320028:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375320121:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375320192:     return (java.lang.ref.Reference) "Object"
+1499899375320260:    return (java.lang.ref.Reference) "Object"
+1499899375320326:   return (java.lang.ref.Reference) "Object"
+1499899375320401:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375320484:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375320569:    return (void)
+1499899375320633:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375320701:    return (java.lang.Object) "Object"
+1499899375320767:    public void java.lang.ref.FinalizerReference.clear()
+1499899375320835:    return (void)
+1499899375320898:    native public static long java.lang.System.nanoTime()
+1499899375320979:    return (long) "0"
+1499899375321045:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375321115:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375322791:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375322880:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375322952:    final native public void java.lang.Object.notify()
+1499899375323023:    return (void)
+1499899375323098:    protected void java.util.zip.ZipFile.finalize()
+1499899375323168:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375323236:     return (void)
+1499899375323335:     protected void java.lang.Object.finalize()
+1499899375323419:     return (void)
+1499899375323486:    return (void)
+1499899375323547:   return (void)
+1499899375323609:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375323679:   return (boolean) "true"
+1499899375323742:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375323810:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375323902:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375323973:     return (java.lang.ref.Reference) "Object"
+1499899375324041:    return (java.lang.ref.Reference) "Object"
+1499899375324106:   return (java.lang.ref.Reference) "Object"
+1499899375324173:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375324254:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375324338:    return (void)
+1499899375324410:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375324479:    return (java.lang.Object) "Object"
+1499899375324545:    public void java.lang.ref.FinalizerReference.clear()
+1499899375324613:    return (void)
+1499899375324675:    native public static long java.lang.System.nanoTime()
+1499899375324755:    return (long) "0"
+1499899375324821:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375325257:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375325338:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375325420:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375325548:    final native public void java.lang.Object.notify()
+1499899375325658:    return (void)
+1499899375325758:    protected void java.io.RandomAccessFile.finalize()
+1499899375325854:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375325923:     return (void)
+1499899375325985:     public void java.io.RandomAccessFile.close()
+1499899375326053:      public void dalvik.system.CloseGuard.close()
+1499899375326119:      return (void)
+1499899375326184:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899375326265:       public boolean java.io.FileDescriptor.valid()
+1499899375326335:       return (boolean) "false"
+1499899375327863:      return (void)
+1499899375336514:     return (void)
+1499899375336583:     protected void java.lang.Object.finalize()
+1499899375336673:     return (void)
+1499899375336735:    return (void)
+1499899375336796:   return (void)
+1499899375336858:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375336928:   return (boolean) "true"
+1499899375336991:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375337061:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375337155:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375337227:     return (java.lang.ref.Reference) "Object"
+1499899375337295:    return (java.lang.ref.Reference) "Object"
+1499899375337360:   return (java.lang.ref.Reference) "Object"
+1499899375337440:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375337522:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375337607:    return (void)
+1499899375337671:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375337739:    return (java.lang.Object) "Object"
+1499899375337805:    public void java.lang.ref.FinalizerReference.clear()
+1499899375337872:    return (void)
+1499899375337934:    native public static long java.lang.System.nanoTime()
+1499899375338016:    return (long) "0"
+1499899375338083:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375338151:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375338221:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375338289:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375338356:    final native public void java.lang.Object.notify()
+1499899375338433:    return (void)
+1499899375338496:    protected void java.io.FileOutputStream.finalize()
+1499899375338564:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375338631:     return (void)
+1499899375338693:     public void java.io.FileOutputStream.close()
+1499899375338760:      public void dalvik.system.CloseGuard.close()
+1499899375338826:      return (void)
+1499899375338895:      new java.io.FileDescriptor((null))
+1499899375338962:      return (void)
+1499899375339024:     return (void)
+1499899375339087:     protected void java.lang.Object.finalize()
+1499899375339154:     return (void)
+1499899375339219:    return (void)
+1499899375339306:   return (void)
+1499899375339376:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375339447:   return (boolean) "true"
+1499899375339511:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375339579:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375339670:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375339740:     return (java.lang.ref.Reference) "Object"
+1499899375340206:    return (java.lang.ref.Reference) "Object"
+1499899375340283:   return (java.lang.ref.Reference) "Object"
+1499899375340353:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375340449:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375340536:    return (void)
+1499899375340601:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375340669:    return (java.lang.Object) "Object"
+1499899375340737:    public void java.lang.ref.FinalizerReference.clear()
+1499899375340804:    return (void)
+1499899375340867:    native public static long java.lang.System.nanoTime()
+1499899375340948:    return (long) "0"
+1499899375341036:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375341172:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375341267:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375341347:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375341426:    final native public void java.lang.Object.notify()
+1499899375341495:    return (void)
+1499899375341559:    protected void java.util.zip.ZipFile.finalize()
+1499899375341627:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375341695:     return (void)
+1499899375341757:     protected void java.lang.Object.finalize()
+1499899375341823:     return (void)
+1499899375341884:    return (void)
+1499899375341944:   return (void)
+1499899375342005:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375342074:   return (boolean) "true"
+1499899375342137:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375342205:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375342296:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375342375:     return (java.lang.ref.Reference) "Object"
+1499899375342444:    return (java.lang.ref.Reference) "Object"
+1499899375342509:   return (java.lang.ref.Reference) "Object"
+1499899375342576:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375342657:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375342741:    return (void)
+1499899375342805:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375342873:    return (java.lang.Object) "Object"
+1499899375342939:    public void java.lang.ref.FinalizerReference.clear()
+1499899375343007:    return (void)
+1499899375343069:    native public static long java.lang.System.nanoTime()
+1499899375343149:    return (long) "0"
+1499899375343216:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375343311:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375343388:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375343457:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375343525:    final native public void java.lang.Object.notify()
+1499899375343594:    return (void)
+1499899375343656:    protected void java.io.RandomAccessFile.finalize()
+1499899375343725:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375343793:     return (void)
+1499899375343854:     public void java.io.RandomAccessFile.close()
+1499899375343922:      public void dalvik.system.CloseGuard.close()
+1499899375344028:      return (void)
+1499899375344095:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899375344178:       public boolean java.io.FileDescriptor.valid()
+1499899375344247:       return (boolean) "false"
+1499899375344310:      return (void)
+1499899375344379:     return (void)
+1499899375344443:     protected void java.lang.Object.finalize()
+1499899375344921:     return (void)
+1499899375344993:    return (void)
+1499899375345058:   return (void)
+1499899375345121:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375345193:   return (boolean) "true"
+1499899375345257:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375345326:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375345429:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375345501:     return (java.lang.ref.Reference) "Object"
+1499899375345569:    return (java.lang.ref.Reference) "Object"
+1499899375345634:   return (java.lang.ref.Reference) "Object"
+1499899375345701:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375345783:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375345868:    return (void)
+1499899375345932:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375345999:    return (java.lang.Object) "Object"
+1499899375346065:    public void java.lang.ref.FinalizerReference.clear()
+1499899375346133:    return (void)
+1499899375346195:    native public static long java.lang.System.nanoTime()
+1499899375346275:    return (long) "0"
+1499899375346341:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375356486:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375356560:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375356631:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375356699:    final native public void java.lang.Object.notify()
+1499899375356768:    return (void)
+1499899375356832:    protected void java.io.FileOutputStream.finalize()
+1499899375356901:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375356968:     return (void)
+1499899375357030:     public void java.io.FileOutputStream.close()
+1499899375357097:      public void dalvik.system.CloseGuard.close()
+1499899375357164:      return (void)
+1499899375357228:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899375357310:       public boolean java.io.FileDescriptor.valid()
+1499899375357389:       return (boolean) "false"
+1499899375357453:      return (void)
+1499899375357515:     return (void)
+1499899375357576:     protected void java.lang.Object.finalize()
+1499899375357643:     return (void)
+1499899375357705:    return (void)
+1499899375357766:   return (void)
+1499899375357827:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375357896:   return (boolean) "true"
+1499899375357959:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375358027:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375358119:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375358190:     return (java.lang.ref.Reference) "Object"
+1499899375358257:    return (java.lang.ref.Reference) "Object"
+1499899375358322:   return (java.lang.ref.Reference) "Object"
+1499899375358397:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375358479:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375358563:    return (void)
+1499899375358627:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375358694:    return (java.lang.Object) "Object"
+1499899375358761:    public void java.lang.ref.FinalizerReference.clear()
+1499899375358828:    return (void)
+1499899375358890:    native public static long java.lang.System.nanoTime()
+1499899375358971:    return (long) "0"
+1499899375359037:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375359106:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375359543:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375359622:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375359694:    final native public void java.lang.Object.notify()
+1499899375359765:    return (void)
+1499899375359829:    protected void android.os.Parcel.finalize()
+1499899375359898:     private void android.os.Parcel.destroy()
+1499899375359966:      native private static void android.os.Parcel.nativeDestroy((int) "-1218808240")
+1499899375360080:      return (void)
+1499899375360145:     return (void)
+1499899375360206:    return (void)
+1499899375360267:   return (void)
+1499899375360329:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375360409:   return (boolean) "true"
+1499899375360472:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375360541:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375360632:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375360703:     return (java.lang.ref.Reference) "Object"
+1499899375360771:    return (java.lang.ref.Reference) "Object"
+1499899375360836:   return (java.lang.ref.Reference) "Object"
+1499899375360903:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375360983:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375361066:    return (void)
+1499899375361130:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375361198:    return (java.lang.Object) "Object"
+1499899375361264:    public void java.lang.ref.FinalizerReference.clear()
+1499899375361331:    return (void)
+1499899375361403:    native public static long java.lang.System.nanoTime()
+1499899375361483:    return (long) "0"
+1499899375361549:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375361618:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375361687:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375361755:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375361821:    final native public void java.lang.Object.notify()
+1499899375361890:    return (void)
+1499899375361952:    protected void java.util.zip.ZipFile.finalize()
+1499899375362020:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375362087:     return (void)
+1499899375362149:     protected void java.lang.Object.finalize()
+1499899375362215:     return (void)
+1499899375362276:    return (void)
+1499899375362337:   return (void)
+1499899375362408:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375362478:   return (boolean) "true"
+1499899375362541:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375362609:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375362700:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375362771:     return (java.lang.ref.Reference) "Object"
+1499899375362838:    return (java.lang.ref.Reference) "Object"
+1499899375362903:   return (java.lang.ref.Reference) "Object"
+1499899375362970:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375363069:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375363156:    return (void)
+1499899375363220:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375363313:    return (java.lang.Object) "Object"
+1499899375363390:    public void java.lang.ref.FinalizerReference.clear()
+1499899375363458:    return (void)
+1499899375363520:    native public static long java.lang.System.nanoTime()
+1499899375363600:    return (long) "0"
+1499899375363666:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375364085:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375364166:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375364238:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375364308:    final native public void java.lang.Object.notify()
+1499899375364389:    return (void)
+1499899375364454:    protected void java.io.RandomAccessFile.finalize()
+1499899375364523:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375364590:     return (void)
+1499899375364653:     public void java.io.RandomAccessFile.close()
+1499899375364720:      public void dalvik.system.CloseGuard.close()
+1499899375364786:      return (void)
+1499899375364850:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899375364930:       public boolean java.io.FileDescriptor.valid()
+1499899375364999:       return (boolean) "false"
+1499899375365061:      return (void)
+1499899375365122:     return (void)
+1499899375365183:     protected void java.lang.Object.finalize()
+1499899375365250:     return (void)
+1499899375365310:    return (void)
+1499899375365379:   return (void)
+1499899375365442:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375365511:   return (boolean) "true"
+1499899375365574:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375365642:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375365733:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375365804:     return (java.lang.ref.Reference) "Object"
+1499899375365871:    return (java.lang.ref.Reference) "Object"
+1499899375365936:   return (java.lang.ref.Reference) "Object"
+1499899375366002:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375366082:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375366165:    return (void)
+1499899375366228:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375366296:    return (java.lang.Object) "Object"
+1499899375368830:    public void java.lang.ref.FinalizerReference.clear()
+1499899375376554:    return (void)
+1499899375376639:    native public static long java.lang.System.nanoTime()
+1499899375376728:    return (long) "0"
+1499899375376798:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375376869:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375376939:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375377008:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375377076:    final native public void java.lang.Object.notify()
+1499899375377145:    return (void)
+1499899375377209:    protected void java.util.zip.Inflater.finalize()
+1499899375377279:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375377356:     return (void)
+1499899375377420:     public void java.util.zip.Inflater.end()
+1499899375377489:      public void dalvik.system.CloseGuard.close()
+1499899375377556:      return (void)
+1499899375377619:     return (void)
+1499899375377680:     protected void java.lang.Object.finalize()
+1499899375377747:     return (void)
+1499899375377808:    return (void)
+1499899375377868:   return (void)
+1499899375377930:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375377999:   return (boolean) "true"
+1499899375378062:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375378130:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375378223:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375378294:     return (java.lang.ref.Reference) "Object"
+1499899375378804:    return (java.lang.ref.Reference) "Object"
+1499899375378881:   return (java.lang.ref.Reference) "Object"
+1499899375378952:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375379037:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375379123:    return (void)
+1499899375379188:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375379262:    return (java.lang.Object) "Object"
+1499899375379339:    public void java.lang.ref.FinalizerReference.clear()
+1499899375379410:    return (void)
+1499899375379473:    native public static long java.lang.System.nanoTime()
+1499899375379554:    return (long) "0"
+1499899375379622:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375379691:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375379760:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375379827:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375379894:    final native public void java.lang.Object.notify()
+1499899375379963:    return (void)
+1499899375380026:    protected void java.io.FileOutputStream.finalize()
+1499899375380094:     public void dalvik.system.CloseGuard.warnIfOpen()
+1499899375380161:     return (void)
+1499899375380223:     public void java.io.FileOutputStream.close()
+1499899375380289:      public void dalvik.system.CloseGuard.close()
+1499899375380363:      return (void)
+1499899375380428:      public static void libcore.io.IoUtils.close((java.io.FileDescriptor) "Object")
+1499899375380511:       public boolean java.io.FileDescriptor.valid()
+1499899375380580:       return (boolean) "false"
+1499899375380642:      return (void)
+1499899375380704:     return (void)
+1499899375380766:     protected void java.lang.Object.finalize()
+1499899375380832:     return (void)
+1499899375380893:    return (void)
+1499899375380953:   return (void)
+1499899375381014:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375381083:   return (boolean) "true"
+1499899375381146:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375381214:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375381305:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375381385:     return (java.lang.ref.Reference) "Object"
+1499899375381453:    return (java.lang.ref.Reference) "Object"
+1499899375381518:   return (java.lang.ref.Reference) "Object"
+1499899375381585:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375381665:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375381749:    return (void)
+1499899375381812:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375381880:    return (java.lang.Object) "Object"
+1499899375381946:    public void java.lang.ref.FinalizerReference.clear()
+1499899375382013:    return (void)
+1499899375382075:    native public static long java.lang.System.nanoTime()
+1499899375382154:    return (long) "0"
+1499899375382221:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375382289:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375382367:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375382435:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375382502:    final native public void java.lang.Object.notify()
+1499899375382571:    return (void)
+1499899375382634:    protected void java.nio.charset.CharsetEncoderICU.finalize()
+1499899375382703:     native public static void libcore.icu.NativeConverter.closeConverter((long) "3075112848")
+1499899375382808:     return (void)
+1499899375383214:     protected void java.lang.Object.finalize()
+1499899375383305:     return (void)
+1499899375383382:    return (void)
+1499899375383446:   return (void)
+1499899375383509:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375383580:   return (boolean) "true"
+1499899375383643:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375383712:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375383806:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375383878:     return (java.lang.ref.Reference) "Object"
+1499899375383946:    return (java.lang.ref.Reference) "Object"
+1499899375384011:   return (java.lang.ref.Reference) "Object"
+1499899375384078:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375384160:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375384255:    return (void)
+1499899375384321:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375384401:    return (java.lang.Object) "Object"
+1499899375384472:    public void java.lang.ref.FinalizerReference.clear()
+1499899375384584:    return (void)
+1499899375384742:    native public static long java.lang.System.nanoTime()
+1499899375384892:    return (long) "0"
+1499899375384964:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375385036:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375385108:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375385178:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375385248:    final native public void java.lang.Object.notify()
+1499899375385320:    return (void)
+1499899375385397:    protected void android.os.Parcel.finalize()
+1499899375385470:     private void android.os.Parcel.destroy()
+1499899375385556:      native private static void android.os.Parcel.nativeDestroy((int) "-1218710856")
+1499899375385709:      return (void)
+1499899375385774:     return (void)
+1499899375385835:    return (void)
+1499899375385897:   return (void)
+1499899375385959:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375386030:   return (boolean) "true"
+1499899375386093:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375386161:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375386258:     public java.lang.ref.Reference java.lang.ref.ReferenceQueue.poll()
+1499899375386421:     return (java.lang.ref.Reference) "Object"
+1499899375386541:    return (java.lang.ref.Reference) "Object"
+1499899375386609:   return (java.lang.ref.Reference) "Object"
+1499899375386677:   private void java.lang.Daemons$FinalizerDaemon.doFinalize((java.lang.ref.FinalizerReference) "Object")
+1499899375386759:    public static void java.lang.ref.FinalizerReference.remove((java.lang.ref.FinalizerReference) "Object")
+1499899375386844:    return (void)
+1499899375386908:    public java.lang.Object java.lang.ref.FinalizerReference.get()
+1499899375386976:    return (java.lang.Object) "Object"
+1499899375387043:    public void java.lang.ref.FinalizerReference.clear()
+1499899375387111:    return (void)
+1499899375387173:    native public static long java.lang.System.nanoTime()
+1499899375387257:    return (long) "0"
+1499899375387472:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375387562:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375387635:    static java.lang.Daemons$FinalizerWatchdogDaemon java.lang.Daemons$FinalizerWatchdogDaemon.access$200()
+1499899375387704:    return (java.lang.Daemons$FinalizerWatchdogDaemon) "Object"
+1499899375387772:    final native public void java.lang.Object.notify()
+1499899375387841:    return (void)
+1499899375387905:    protected void android.content.res.XmlBlock$Parser.finalize()
+1499899375388511:     public void android.content.res.XmlBlock$Parser.close()
+1499899375388595:     return (void)
+1499899375388662:    return (void)
+1499899375388724:   return (void)
+1499899375388787:   protected boolean java.lang.Daemons$Daemon.isRunning()
+1499899375388868:   return (boolean) "true"
+1499899375388932:   public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove()
+1499899375389002:    public java.lang.ref.Reference java.lang.ref.ReferenceQueue.remove((long) "2291642268")
+1499899375389096:     final public void java.lang.Object.wait((long) "-7644563980358254592")
+1499899375389210:      final native public void java.lang.Object.wait((long) "2511050520", (int) "0")

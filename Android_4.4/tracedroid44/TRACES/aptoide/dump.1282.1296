@@ -1,0 +1,180 @@
+1499899333607492: public void android.app.SharedPreferencesImpl$1.run()
+1499899333610759:  static void android.app.SharedPreferencesImpl.access$000((android.app.SharedPreferencesImpl) "Object")
+1499899333610861:   private void android.app.SharedPreferencesImpl.loadFromDiskLocked()
+1499899333610937:    public boolean java.io.File.exists()
+1499899333611008:     private boolean java.io.File.doAccess((int) "-1999181544")
+1499899333611099:      public boolean libcore.io.ForwardingOs.access((java.lang.String) "Object", (int) "-1780999448")
+1499899333611209:       native public boolean libcore.io.Posix.access((java.lang.String) "Object", (int) "-1780998952")
+1499899333611485:        new libcore.io.ErrnoException((java.lang.String) "Object", (int) "2")
+1499899333611576:         new java.lang.Exception((null))
+1499899333611646:          new java.lang.Throwable((null))
+1499899333611714:           final public static java.util.List java.util.Collections.emptyList()
+1499899333611824:           return (java.util.List) "Object"
+1499899333611929:           public java.lang.Throwable java.lang.Throwable.fillInStackTrace()
+1499899333612029:            native private static java.lang.Object java.lang.Throwable.nativeFillInStackTrace()
+1499899333612112:            return (java.lang.Object) "Object"
+1499899333612190:           return (java.lang.Throwable) "Object"
+1499899333612256:          return (void)
+1499899333612316:         return (void)
+1499899333612376:        return (void)
+1499899333612464:       throws libcore.io.ErrnoException
+1499899333612529:      throws libcore.io.ErrnoException
+1499899333612594:     return (boolean) "false"
+1499899333612655:    return (boolean) "false"
+1499899333612718:    public boolean java.io.File.exists()
+1499899333612786:     private boolean java.io.File.doAccess((int) "-1999181544")
+1499899333612874:      public boolean libcore.io.ForwardingOs.access((java.lang.String) "Object", (int) "-1781000512")
+1499899333612969:       native public boolean libcore.io.Posix.access((java.lang.String) "Object", (int) "-1780999984")
+1499899333613151:        new libcore.io.ErrnoException((java.lang.String) "Object", (int) "2")
+1499899333613239:         new java.lang.Exception((null))
+1499899333613306:          new java.lang.Throwable((null))
+1499899333613371:           final public static java.util.List java.util.Collections.emptyList()
+1499899333613439:           return (java.util.List) "Object"
+1499899333613505:           public java.lang.Throwable java.lang.Throwable.fillInStackTrace()
+1499899333613572:            native private static java.lang.Object java.lang.Throwable.nativeFillInStackTrace()
+1499899333613649:            return (java.lang.Object) "Object"
+1499899333613715:           return (java.lang.Throwable) "Object"
+1499899333613779:          return (void)
+1499899333613839:         return (void)
+1499899333613899:        return (void)
+1499899333613977:       throws libcore.io.ErrnoException
+1499899333614039:      throws libcore.io.ErrnoException
+1499899333614102:     return (boolean) "false"
+1499899333614173:    return (boolean) "false"
+1499899333614237:    public java.lang.String java.io.File.getPath()
+1499899333614304:    return (java.lang.String) "Object"
+1499899333614372:    public libcore.io.StructStat libcore.io.ForwardingOs.stat((java.lang.String) "Object")
+1499899333614450:     native public libcore.io.StructStat libcore.io.Posix.stat((java.lang.String) "Object")
+1499899333614596:      new libcore.io.ErrnoException((java.lang.String) "Object", (int) "2")
+1499899333614682:       new java.lang.Exception((null))
+1499899333614748:        new java.lang.Throwable((null))
+1499899333614813:         final public static java.util.List java.util.Collections.emptyList()
+1499899333614880:         return (java.util.List) "Object"
+1499899333614946:         public java.lang.Throwable java.lang.Throwable.fillInStackTrace()
+1499899333615013:          native private static java.lang.Object java.lang.Throwable.nativeFillInStackTrace()
+1499899333615089:          return (java.lang.Object) "Object"
+1499899333615165:         return (java.lang.Throwable) "Object"
+1499899333615699:        return (void)
+1499899333615770:       return (void)
+1499899333615833:      return (void)
+1499899333615915:     throws libcore.io.ErrnoException
+1499899333615978:    throws libcore.io.ErrnoException
+1499899333616052:    new java.util.HashMap((null))
+1499899333616121:     new java.util.AbstractMap((null))
+1499899333616199:     return (void)
+1499899333616262:    return (void)
+1499899333616326:    final native public void java.lang.Object.notifyAll()
+1499899333616540:    return (void)
+1499899333616620:   return (void)
+1499899333616683:  return (void)
+1499899333617330: return (void)
+1499899333617595: final void java.lang.ThreadGroup.removeThread((java.lang.Thread) "Object")
+1499899333617688:  public java.util.Iterator libcore.util.CollectionUtils$1.iterator()
+1499899333617830:   new libcore.util.CollectionUtils$1$1((libcore.util.CollectionUtils$1) "Object")
+1499899333617914:    public java.util.Iterator java.util.ArrayList.iterator()
+1499899333617990:     new java.util.ArrayList$ArrayListIterator((java.util.ArrayList) "Object", (java.util.ArrayList$1) "Object")
+1499899333618074:      new java.util.ArrayList$ArrayListIterator((java.util.ArrayList) "Object")
+1499899333618161:      return (void)
+1499899333618224:     return (void)
+1499899333618283:    return (java.util.Iterator) "Object"
+1499899333618347:   return (void)
+1499899333618407:  return (java.util.Iterator) "Object"
+1499899333618497:  public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333618566:   private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333618636:    public boolean java.util.ArrayList$ArrayListIterator.hasNext()
+1499899333618702:    return (boolean) "true"
+1499899333618765:    public java.lang.Object java.util.ArrayList$ArrayListIterator.next()
+1499899333618832:    return (java.lang.Object) "Object"
+1499899333618907:    public java.lang.Object java.lang.ref.Reference.get()
+1499899333618993:    return (java.lang.Object) "Object"
+1499899333619059:   return (void)
+1499899333619120:  return (boolean) "true"
+1499899333619195:  public java.lang.Object libcore.util.CollectionUtils$1$1.next()
+1499899333619269:   public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333619335:    private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333619401:    return (void)
+1499899333619462:   return (boolean) "true"
+1499899333619522:  return (java.lang.Object) "Object"
+1499899333619589:  public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1499899333619665:  return (boolean) "false"
+1499899333619727:  public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333619793:   private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333619860:    public boolean java.util.ArrayList$ArrayListIterator.hasNext()
+1499899333619926:    return (boolean) "true"
+1499899333619988:    public java.lang.Object java.util.ArrayList$ArrayListIterator.next()
+1499899333620054:    return (java.lang.Object) "Object"
+1499899333620122:    public java.lang.Object java.lang.ref.Reference.get()
+1499899333620198:    return (java.lang.Object) "Object"
+1499899333620263:   return (void)
+1499899333620323:  return (boolean) "true"
+1499899333620385:  public java.lang.Object libcore.util.CollectionUtils$1$1.next()
+1499899333620450:   public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333620515:    private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333620580:    return (void)
+1499899333620640:   return (boolean) "true"
+1499899333620701:  return (java.lang.Object) "Object"
+1499899333620768:  public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1499899333620843:  return (boolean) "false"
+1499899333620905:  public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333620971:   private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333621037:    public boolean java.util.ArrayList$ArrayListIterator.hasNext()
+1499899333621103:    return (boolean) "true"
+1499899333621174:    public java.lang.Object java.util.ArrayList$ArrayListIterator.next()
+1499899333621699:    return (java.lang.Object) "Object"
+1499899333621780:    public java.lang.Object java.lang.ref.Reference.get()
+1499899333621851:    return (java.lang.Object) "Object"
+1499899333621918:   return (void)
+1499899333621980:  return (boolean) "true"
+1499899333622043:  public java.lang.Object libcore.util.CollectionUtils$1$1.next()
+1499899333622110:   public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333622189:    private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333622256:    return (void)
+1499899333622317:   return (boolean) "true"
+1499899333622378:  return (java.lang.Object) "Object"
+1499899333622445:  public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1499899333622522:  return (boolean) "false"
+1499899333622585:  public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333622651:   private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333622718:    public boolean java.util.ArrayList$ArrayListIterator.hasNext()
+1499899333622784:    return (boolean) "true"
+1499899333622846:    public java.lang.Object java.util.ArrayList$ArrayListIterator.next()
+1499899333622914:    return (java.lang.Object) "Object"
+1499899333622980:    public java.lang.Object java.lang.ref.Reference.get()
+1499899333623046:    return (java.lang.Object) "Object"
+1499899333623110:   return (void)
+1499899333623180:  return (boolean) "true"
+1499899333623246:  public java.lang.Object libcore.util.CollectionUtils$1$1.next()
+1499899333623313:   public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333623379:    private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333623445:    return (void)
+1499899333623505:   return (boolean) "true"
+1499899333623566:  return (java.lang.Object) "Object"
+1499899333623632:  public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1499899333623708:  return (boolean) "false"
+1499899333623771:  public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333623836:   private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333623903:    public boolean java.util.ArrayList$ArrayListIterator.hasNext()
+1499899333623969:    return (boolean) "true"
+1499899333624031:    public java.lang.Object java.util.ArrayList$ArrayListIterator.next()
+1499899333624097:    return (java.lang.Object) "Object"
+1499899333624175:    public java.lang.Object java.lang.ref.Reference.get()
+1499899333624241:    return (java.lang.Object) "Object"
+1499899333624306:   return (void)
+1499899333624366:  return (boolean) "true"
+1499899333624428:  public java.lang.Object libcore.util.CollectionUtils$1$1.next()
+1499899333624494:   public boolean libcore.util.CollectionUtils$1$1.hasNext()
+1499899333624559:    private void libcore.util.CollectionUtils$1$1.computeNext()
+1499899333624624:    return (void)
+1499899333624684:   return (boolean) "true"
+1499899333624744:  return (java.lang.Object) "Object"
+1499899333624811:  public boolean java.lang.Object.equals((java.lang.Object) "Object")
+1499899333624887:  return (boolean) "true"
+1499899333624949:  public void libcore.util.CollectionUtils$1$1.remove()
+1499899333625016:   public void java.util.ArrayList$ArrayListIterator.remove()
+1499899333625085:    native public static void java.lang.System.arraycopy((java.lang.Object) "Object", (int) "4", (java.lang.Object) "Object", (int) "0", (int) "-1780997592")
+1499899333625207:    return (void)
+1499899333625271:   return (void)
+1499899333625331:  return (void)
+1499899333625392:  private void java.lang.ThreadGroup.destroyIfEmptyDaemon()
+1499899333625460:  return (void)
+1499899333625520: return (void)
