@@ -865,7 +865,6 @@ static Thread* allocThread(int interpStackSize)
     thread->caller_depth = 0;
     thread->return_depth = 0;
     thread->depth = 0;
-    thread->return_to_skip = 0;
     thread->printing_depth = 0;
     
 #ifndef DVM_NO_ASM_INTERP

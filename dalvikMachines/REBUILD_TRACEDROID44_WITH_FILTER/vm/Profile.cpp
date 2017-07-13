@@ -1279,46 +1279,7 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     u1* ptr;
 
     assert(method != NULL);
-
-    /* If the bytecode of the caller of this method is from a system jar, then
-     * enter only if the current method code is not from a system jar.
-     *
-     * If you would like to see *everything*, you can remove this. You would
-     * then probably have to increase the launch timeout to ensure packages can
-     * still be started while logging with adb though.
-     *
-     * This also removes trace output from system threads (GC, Binder, HeapWorker, ...).
-     */
-
-    //ALOGD("PRINTING DEPTH %d and caller_depth %d", self->depth, self->caller_depth);
-    
-    // // Exit condition of systemTrace -> reaching method outside the system calls
-    // if (self->depth <= self->caller_depth) {
-    //   ALOGD("INSIDE (self->depth <= self->caller_depth)");
-    //   self->caller_class_isSystem = method->clazz->pDvmDex->isSystem;
-    //   self->systemTrace = false; 
-    // } else if (!self->systemTrace) { // Not in system trace calls
-    //   // if both caller class and current method are system then we eant to filter this
-    //   if ( self->caller_class_isSystem &&
-    // 	   method->clazz->pDvmDex->isSystem) {
-    // 	ALOGD("INSIDE self->systemTrace = true;");
-    // 	self->systemTrace = true;
-    //   } else {
-    // 	ALOGD("INSIDe ELSE");
-    // 	// We are not in system calls, this becomes the new parent
-    // 	self->caller_depth = self->depth;
-    // 	self->caller_class_isSystem = method->clazz->pDvmDex->isSystem;
-    //   }
-
-    // }
-
-    // ClassObject *caller_clazz = dvmGetCallerClass(self->interpSave.curFrame);
-    // ALOGD("TRACE_DEBUG: INSIDE dvmMethodTraceAdd. method->name: %s. caller_clazz->descriptor: %s", method->name, caller_clazz->descriptor);
-
-      // const Method *caller_method = dvmGetCallerMethod(self->interpSave.curFrame);
-      // ALOGD("This is the caller_method->name: %s", caller_method->name);
-
-    
+   
     /*
      * Advance "curOffset" atomically.
      */
@@ -1339,13 +1300,11 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     if (action == METHOD_TRACE_ENTER) {
       /* We are entering a method... */
       if (self->caller_class_isSystem && method->clazz->pDvmDex->isSystem && self->caller_depth < self->depth) {
-	/* Skipping call since it's executing Jar bytecode both caller and current method*/
-	self->return_to_skip++;
+	/* Skipping call since both caller and current method are executing system Jar bytecode*/
       } else {
 	handle_method(self, method, state);
-	/* Just the method with the matching depth will be returned*/
-	self->trace_return[self->return_depth] = self->depth;
-	self->return_depth++;
+	/* Just the method with the matching depth will be traced when returning*/
+	self->trace_return_vector.push_back(self->depth);
 	self->printing_depth++;
       }
       self->caller_depth = self->depth;
@@ -1355,26 +1314,21 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     } else if  (action == METHOD_TRACE_EXIT && !dvmCheckException(self)) {
       /* We are returning from a method... */
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      self->return_depth--;
-      if (self->trace_return[self->return_depth] == self->depth) {
+      if (!self->trace_return_vector.empty() && self->trace_return_vector.back() == self->depth) {
+	/* Return is traced since it matches a traced entered method*/
+	self->trace_return_vector.pop_back();
 	self->printing_depth = (self->printing_depth == 0 ? 0 : self->printing_depth-1);
 	handle_return(self, method, state, (JValue *) options);
-      } else {
-	self->return_depth++;
-	self->return_to_skip = (self->return_to_skip == 0 ? 0 : self->return_to_skip-1);
       }
-
     } else if ((action == METHOD_TRACE_EXIT &&  dvmCheckException(self)) ||
                (action == METHOD_TRACE_UNROLL)) {
       /* We are unrolling... */
-      self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      self->return_depth--;
-      if (self->trace_return[self->return_depth] == self->depth) {
+      self->depth = (self->depth == 0 ? 0 : self->depth-1);      
+      if (!self->trace_return_vector.empty() && self->trace_return_vector.back() == self->depth) {
+	/* Exception is traced since it matches a traced entered method*/
+	self->trace_return_vector.pop_back();
 	self->printing_depth = (self->printing_depth == 0 ? 0 : self->printing_depth-1);
 	handle_throws(self, method, state, action, (JValue *) options);
-      } else {
-	self->return_depth++;
-	self->return_to_skip = (self->return_to_skip == 0 ? 0 : self->return_to_skip-1);
       }
     }
 

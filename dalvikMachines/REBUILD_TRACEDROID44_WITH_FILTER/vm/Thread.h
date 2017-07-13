@@ -293,9 +293,9 @@ struct Thread {
     int         trace_return[100];
     int         return_depth;
     int         caller_depth;
-    int         return_to_skip;
     int         depth;
     int         printing_depth;
+    std::vector<int> trace_return_vector;
 
     /* file pointer for method trace output */
     FILE        *dump;
