@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>TRACEDROID</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -302,7 +302,52 @@
 	<section>	  
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Evaluation</h1>
+	    <ol style = "font-size: 24pt;">
+              <li class="fragment">Testing app previously not compatible</li>
+              <li class="fragment">Results: traces analysis</li>
+	      <li class="fragment">Traces sample</li>
+            </ol>
 	  </section>
+
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Evaluation: Testing</h1>
+	    <ul style="font-size: 24pt;">
+	      <li class="fragment">Download of an external apk</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Using ANDROGUARD to check minSdkVersion &gt; 10 (Gingerbread)</li>	    
+	      </ul>
+	      <li class="fragment">Installation of app through adb tool</li>
+	      <li class="fragment">Grep uid of installed app</li>
+	      <li class="fragment">Store uid under /sdcard/uid interface</li>
+	      <li class="fragment">Start app's activity via adb</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Evaluation: Traces analysis</h1>
+	    <ul style="font-size: 24pt;">
+	      <li class="fragment">Retrieve the dump.* files from /sdcard/</li>
+	      <li class="fragment">The traces produced contain the expected output &#8594; compatibility has been increased</li>
+	      <li class="fragment">Difference from original framework &#8594; absence of objectToString()</li>
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Evaluation: Traces sample</h1>
+	    <pre><code data-trim data-noescape>
+1499899388411990: public int com.android.org.bouncycastle.crypto.digests.OpenSSLDigest.doFinal((byte[]) "Object", (int) "-1780431280")
+1499899388412099:  private long com.android.org.bouncycastle.crypto.digests.OpenSSLDigest.getCtx()
+1499899388412175:  return (long) "3076265672"
+1499899388412257:  native public static int com.android.org.conscrypt.NativeCrypto.EVP_DigestFinal((long) "-5234283616350996176", (byte[]) "Object", (int) "-1780431280")
+1499899388412443:  return (int) "0"
+1499899388412518:  public void com.android.org.bouncycastle.crypto.digests.OpenSSLDigest.reset()
+1499899388412593:   private void com.android.org.bouncycastle.crypto.digests.OpenSSLDigest.free()
+1499899388412667:   return (void)
+1499899388412733:  return (void)
+1499899388412798: return (int) "20"
+	    </code></pre>
+	  </section>
+	  
 	</section>
 
 	
@@ -310,9 +355,32 @@
 	<section>
 	  <section>
 	    <h1 style ="margin-bottom: 40px; font-size: 28pt;">Conclusion</h1>
+	    <ul style="font-size: 24pt;">
+	      <li class="fragment">Integration with TAP</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">The new TRACEDROID system.img can substitute the core of DA</li>
+		<li class="fragment">The project repo contains the guides on how to setup the new AVD</li>
+	      </ul>
+	      <br>
+	      <li class="fragment">Future work</li>
+	      <ul style="font-size: 24pt;">
+		<li class="fragment">Android 7 migration &#8594; different runtime (ART)</li>
+		<ul style="font-size: 24pt;">
+		  <li class="fragment">trace.cc is now responsible for profiling apps</li>		
+		</ul>
+	      </ul>
+	    </ul>
 	  </section>
 	</section>
 
+	<!-- The end slide -->
+	<section>
+	  <h2 style ="margin-left: -150px; font-size: 35pt;">THE END</h2>
+	  <ul style="font-size: 28pt;">
+	    <li>Any Questions?</li>
+	  </ul>
+	</section>
+	
       </div>
     </div>
 
