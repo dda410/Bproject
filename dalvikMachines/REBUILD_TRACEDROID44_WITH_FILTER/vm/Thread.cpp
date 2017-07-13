@@ -862,9 +862,11 @@ static Thread* allocThread(int interpStackSize)
     /* we are definitely not in dvmMethodTraceAdd() */
     thread->inMethodTraceAdd = false;
     thread->caller_class_isSystem = false;
-    thread->systemTrace = false;
-    thread->caller_depth = 0; 
+    thread->caller_depth = 0;
+    thread->return_depth = 0;
     thread->depth = 0;
+    thread->return_to_skip = 0;
+    thread->printing_depth = 0;
     
 #ifndef DVM_NO_ASM_INTERP
     thread->mainHandlerTable = dvmAsmInstructionStart;

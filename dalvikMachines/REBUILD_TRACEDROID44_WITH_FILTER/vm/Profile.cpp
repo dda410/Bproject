@@ -1181,7 +1181,7 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
     char **parameters = NULL;
     char *parameterString = NULL;
     
-    char *whitespace         = getWhitespace(self->depth);
+    char *whitespace         = getWhitespace(self->printing_depth);
     char *modifiers          = getModifiers(method);
     char *return_type        = convertDescriptor(dexProtoGetReturnType(&method->prototype));
     char *classDescriptor    = convertDescriptor(method->clazz->descriptor);
@@ -1215,7 +1215,7 @@ void handle_method(Thread *self, const Method *method, MethodTraceState *state) 
 }
 
 void handle_return(Thread *self, const Method *method, MethodTraceState *state, JValue *retval) {
-    char *whitespace = getWhitespace(self->depth);
+    char *whitespace = getWhitespace(self->printing_depth);
     
     /* parameterToString() expects two u4 parameters. We will have to split retval in half. */
     u4 low  = (retval == 0) ? 0 : (u4)  *((u8*)retval);
@@ -1227,7 +1227,7 @@ void handle_return(Thread *self, const Method *method, MethodTraceState *state, 
 }
 
 void handle_throws(Thread *self, const Method *method, MethodTraceState *state, int action, JValue *retval) {
-    char *whitespace = getWhitespace(self->depth);
+    char *whitespace = getWhitespace(self->printing_depth);
     char *classDescriptor;
     /* when action == METHOD_TRACE_UNROLL, retval will be an Object* exception */
     if (action == METHOD_TRACE_EXIT) {
@@ -1290,7 +1290,7 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
      * This also removes trace output from system threads (GC, Binder, HeapWorker, ...).
      */
 
-    ALOGD("PRINTING DEPTH %d and caller_depth %d", self->depth, self->caller_depth);
+    //ALOGD("PRINTING DEPTH %d and caller_depth %d", self->depth, self->caller_depth);
     
     // // Exit condition of systemTrace -> reaching method outside the system calls
     // if (self->depth <= self->caller_depth) {
@@ -1339,7 +1339,14 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     if (action == METHOD_TRACE_ENTER) {
       /* We are entering a method... */
       if (self->caller_class_isSystem && method->clazz->pDvmDex->isSystem && self->caller_depth < self->depth) {
+	/* Skipping call since it's executing Jar bytecode both caller and current method*/
+	self->return_to_skip++;
+      } else {
 	handle_method(self, method, state);
+	/* Just the method with the matching depth will be returned*/
+	self->trace_return[self->return_depth] = self->depth;
+	self->return_depth++;
+	self->printing_depth++;
       }
       self->caller_depth = self->depth;
       self->caller_class_isSystem = method->clazz->pDvmDex->isSystem;
@@ -1348,16 +1355,26 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
     } else if  (action == METHOD_TRACE_EXIT && !dvmCheckException(self)) {
       /* We are returning from a method... */
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      if (self->caller_class_isSystem && method->clazz->pDvmDex->isSystem && self->caller_depth < self->depth) {
+      self->return_depth--;
+      if (self->trace_return[self->return_depth] == self->depth) {
+	self->printing_depth = (self->printing_depth == 0 ? 0 : self->printing_depth-1);
 	handle_return(self, method, state, (JValue *) options);
+      } else {
+	self->return_depth++;
+	self->return_to_skip = (self->return_to_skip == 0 ? 0 : self->return_to_skip-1);
       }
 
     } else if ((action == METHOD_TRACE_EXIT &&  dvmCheckException(self)) ||
                (action == METHOD_TRACE_UNROLL)) {
       /* We are unrolling... */
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
-      if (self->caller_class_isSystem && method->clazz->pDvmDex->isSystem && self->caller_depth < self->depth) {
+      self->return_depth--;
+      if (self->trace_return[self->return_depth] == self->depth) {
+	self->printing_depth = (self->printing_depth == 0 ? 0 : self->printing_depth-1);
 	handle_throws(self, method, state, action, (JValue *) options);
+      } else {
+	self->return_depth++;
+	self->return_to_skip = (self->return_to_skip == 0 ? 0 : self->return_to_skip-1);
       }
     }
 

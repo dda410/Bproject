@@ -289,10 +289,13 @@ struct Thread {
 
     /* are we in dvmMethodTraceAdd()? */
     bool        inMethodTraceAdd;
-    bool caller_class_isSystem;
-    int caller_depth;
-    bool systemTrace;
+    bool        caller_class_isSystem;
+    int         trace_return[100];
+    int         return_depth;
+    int         caller_depth;
+    int         return_to_skip;
     int         depth;
+    int         printing_depth;
 
     /* file pointer for method trace output */
     FILE        *dump;
