@@ -5,7 +5,7 @@ android source code, that has already been downloaded to compile the
 version 2.3, do the following:
 
 - Log into the docker image that has been used so far: `sudo docker
-  run -it ubuntu_pisellone /bin/bash`
+  run -it ubuntu_tracedroid /bin/bash`
 - create a new directory under the root home: `mkdir android4.4`
 - cd into the directory and then synchronize the repo by referencing
   the folder where the android source code has already been
