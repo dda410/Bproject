@@ -36,6 +36,8 @@
 # define UPDATE_MAGIC_PAGE      1
 #endif
 
+#define DMTRACE_ENABLED 0
+
 /*
  * File format:
  *  header
@@ -1274,45 +1276,13 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 {
   
     MethodTraceState* state = &gDvm.methodTrace;
+#if DMTRACE_ENABLED    
     u4 methodVal;
     int oldOffset, newOffset;
     u1* ptr;
-
+#else   
+    /* TRACEDROID profiling */
     assert(method != NULL);
-
-    /* If the bytecode of the caller of this method is from a system jar, then
-     * enter only if the current method code is not from a system jar.
-     *
-     * If you would like to see *everything*, you can remove this. You would
-     * then probably have to increase the launch timeout to ensure packages can
-     * still be started while logging with adb though.
-     *
-     * This also removes trace output from system threads (GC, Binder, HeapWorker, ...).
-     */
-
-    // ClassObject *caller_clazz = dvmGetCallerClass(self->interpSave.curFrame);
-    // ALOGD("TRACE_DEBUG: INSIDE dvmMethodTraceAdd. method->name: %s. caller_clazz->descriptor: %s", method->name, caller_clazz->descriptor);
-
-      // const Method *caller_method = dvmGetCallerMethod(self->interpSave.curFrame);
-      // ALOGD("This is the caller_method->name: %s", caller_method->name);
-
-    
-    /*
-     * Advance "curOffset" atomically.
-     */
-    do {
-        oldOffset = state->curOffset;
-        newOffset = oldOffset + state->recordSize;
-        if (newOffset > state->bufferSize) {
-            state->overflow = true;
-            return;
-        }
-    } while (android_atomic_release_cas(oldOffset, newOffset,
-            &state->curOffset) != 0);
-
-    //assert(METHOD_ACTION((u4) method) == 0);
-
-    methodVal = METHOD_COMBINE((u4) method, action);
 
     if (action == METHOD_TRACE_ENTER) {
       /* We are entering a method... */
@@ -1330,6 +1300,26 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
       self->depth = (self->depth == 0 ? 0 : self->depth-1);
       handle_throws(self, method, state, action, (JValue *) options);
     }
+#endif
+
+#if DMTRACE_ENABLED
+
+    /*
+     * Advance "curOffset" atomically.
+     */
+    do {
+        oldOffset = state->curOffset;
+        newOffset = oldOffset + state->recordSize;
+        if (newOffset > state->bufferSize) {
+            state->overflow = true;
+            return;
+        }
+    } while (android_atomic_release_cas(oldOffset, newOffset,
+            &state->curOffset) != 0);
+
+    //assert(METHOD_ACTION((u4) method) == 0);
+
+    methodVal = METHOD_COMBINE((u4) method, action);
     
     /*
      * Write data into "oldOffset".
@@ -1357,6 +1347,7 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
         *ptr++ = (u1) (wallClockDiff >> 16);
         *ptr++ = (u1) (wallClockDiff >> 24);
     }
+#endif    
 }
 
 
