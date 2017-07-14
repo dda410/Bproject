@@ -36,6 +36,8 @@
 # define UPDATE_MAGIC_PAGE      1
 #endif
 
+#define DMTRACE_ENABLED 0
+
 /*
  * File format:
  *  header
@@ -1274,36 +1276,21 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 {
   
     MethodTraceState* state = &gDvm.methodTrace;
+#if DMTRACE_ENABLED
     u4 methodVal;
     int oldOffset, newOffset;
     u1* ptr;
-
+#else
+    /* TRACEDROID profiling */
     assert(method != NULL);
    
-    /*
-     * Advance "curOffset" atomically.
-     */
-    do {
-        oldOffset = state->curOffset;
-        newOffset = oldOffset + state->recordSize;
-        if (newOffset > state->bufferSize) {
-            state->overflow = true;
-            return;
-        }
-    } while (android_atomic_release_cas(oldOffset, newOffset,
-            &state->curOffset) != 0);
-
-    //assert(METHOD_ACTION((u4) method) == 0);
-
-    methodVal = METHOD_COMBINE((u4) method, action);
-
     if (action == METHOD_TRACE_ENTER) {
       /* We are entering a method... */
       if (self->caller_class_isSystem && method->clazz->pDvmDex->isSystem && self->caller_depth < self->depth) {
 	/* Skipping call since both caller and current method are executing system Jar bytecode*/
       } else {
 	handle_method(self, method, state);
-	/* Just the method with the matching depth will be traced when returning*/
+	/* Just the method with the matching depth will be traced when returning */
 	self->trace_return_vector.push_back(self->depth);
 	self->printing_depth++;
       }
@@ -1331,8 +1318,26 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
 	handle_throws(self, method, state, action, (JValue *) options);
       }
     }
+#endif
 
-    
+#if DMTRACE_ENABLED
+
+    /*
+     * Advance "curOffset" atomically.
+     */
+    do {
+        oldOffset = state->curOffset;
+        newOffset = oldOffset + state->recordSize;
+        if (newOffset > state->bufferSize) {
+            state->overflow = true;
+            return;
+        }
+    } while (android_atomic_release_cas(oldOffset, newOffset,
+            &state->curOffset) != 0);
+
+    //assert(METHOD_ACTION((u4) method) == 0);
+
+    methodVal = METHOD_COMBINE((u4) method, action);
     
     /*
      * Write data into "oldOffset".
@@ -1360,6 +1365,8 @@ void dvmMethodTraceAdd(Thread* self, const Method* method, int action,
         *ptr++ = (u1) (wallClockDiff >> 16);
         *ptr++ = (u1) (wallClockDiff >> 24);
     }
+    
+#endif    
 }
 
 

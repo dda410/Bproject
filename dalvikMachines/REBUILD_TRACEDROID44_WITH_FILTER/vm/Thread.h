@@ -290,7 +290,6 @@ struct Thread {
     /* are we in dvmMethodTraceAdd()? */
     bool        inMethodTraceAdd;
     bool        caller_class_isSystem;
-    int         trace_return[100];
     int         return_depth;
     int         caller_depth;
     int         depth;
