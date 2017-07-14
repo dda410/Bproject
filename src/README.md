@@ -7,8 +7,8 @@ This folder contains the modified dalvik/vm/ sources of TRACEDROID:
 - dalvikTraceDroid4.4_filterTrace: contains the sources of the
   TRACEDROID version that does not trace system jar executed bytecode.
   
-The sources have been moved to these folder on latest commits. In
-order to check the full commit history either do one of the following:
+The sources have been moved to this folder on latest commits. In
+order to check the full commit history do one of the following:
 
 - git log --follow ./path/to/file
 - Look at the history tab under
