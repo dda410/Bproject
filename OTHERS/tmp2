@@ -1,6 +1,0 @@
- build-essential : Depends: gcc (>= 4:4.4.3) but it is not going to be installed
-                   Depends: g++ (>= 4:4.4.3) but it is not going to be installed
- g++-multilib : Depends: cpp (>= 4:4.6.3-1ubuntu5) but it is not going to be installed
-                Depends: gcc-multilib (>= 4:4.6.3-1ubuntu5) but it is not going to be installed
-                Depends: g++ (>= 4:4.6.3-1ubuntu5) but it is not going to be installed
-                Depends: g++-4.6-multilib (>= 4.6.3-1~) but it is not going to be installed
