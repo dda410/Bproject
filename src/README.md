@@ -3,7 +3,7 @@
 This folder contains the modified dalvik/vm/ sources of TRACEDROID:
 
 - dalvikTraceDroid4.4_fullTrace: contains the sources of the
-  tracedroid that performs full tracing.
+  TRACEDROID that performs full tracing.
 - dalvikTraceDroid4.4_filterTrace: contains the sources of the
   TRACEDROID version that does not trace system jar executed bytecode.
   
