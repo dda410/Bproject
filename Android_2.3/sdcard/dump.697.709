@@ -1,3 +1,0 @@
-1493055145862327: public void java.lang.Thread("Thread[AsyncTask #1,5,main]").run()
-1493055145863954:  public java.lang.Object com.android.browser.BrowserActivity$ClearThumbnails("com.android.browser.BrowserActivity$ClearThumbnails@40515540").doInBackground((java.lang.Object[]) "[Ljava.io.File;@40515c38")
-1493055145864454:   public java.lang.Void com.android.browser.BrowserActivity$ClearThumbnails("com.android.browser.BrowserActivity$ClearThumbnails@40515540").doInBackground((java.io.File[]) "[Ljava.io.File
