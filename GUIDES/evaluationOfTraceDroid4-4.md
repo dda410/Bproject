@@ -8,7 +8,10 @@ interacting with it via the adb CLI.
 
 #### TESTING STOCK APPLICATION
 
-We decided to test the default Android browser. We did the following:
+We decided to test the default Android browser. Other default
+applications can be tested with in the same way. Just substitute
+com.android.browser with the default app's package name to be tested
+and select and app activity to start. We did the following:
 
 - Grep the uid of the app: `adb shell dumpsys package
   com.android.browser | grep userId=`
