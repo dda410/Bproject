@@ -46,7 +46,7 @@ performed the following:
 - Grep the uid of the app: `adb shell dumpsys package
   cm.aptoide.pt | grep userId=`
 - Store it under the common input interface of the program: `echo
-  "uidOfTheApp > uid; adb shell uid /sdcard/"`
+  "uidOfTheApp" > uid; adb shell uid /sdcard/"`
 - Check that the app was not already running, otherwise
   kill it with: `adb shell ps | cm.aptoide.pt | awk '{print $2}' | xargs adb shell kill`
 - Start the application by simulating a 'tap' on it: `adb shell monkey
