@@ -24,7 +24,7 @@ last Android version that supports by default a dalvik virtual machine
 The repo has different folders and files, the structure is the
 following:
 
-- GUIDES: contains the guides and howtos that explain the steps that
+- __GUIDES__: contains the guides and howtos that explain the steps that
   need to be taken in order to compile, install and run Tracedroid and
   also the steps required to port Tracedroid to Android 4.4. We
   present them in the chronological order they should be followed:
@@ -63,11 +63,11 @@ following:
       implementation with both a default application and an external
       one.
 
-- JavaOracle6Installer: contains the oracle binary file to install
+- __JavaOracle6Installer__: contains the oracle binary file to install
   java 6 (required to compile Android 4.4).
-- THESIS: contains the written thesis produced for the project. All
+- __THESIS__: contains the written thesis produced for the project. All
   the .tex files and images and the output pds are in this folder.
-- TraceDroid_4.4: contains the files relative to TraceDroid 4.4. Its
+- __TraceDroid_4.4__: contains the files relative to TraceDroid 4.4. Its
   subfolders are divided into:
   
   - compiledImages: contains the TraceDroid 4.4 compiled system
@@ -83,11 +83,11 @@ following:
   linked to external cloud storage via README.md files of the
   folders.
   
-- dalvikMachines: contains the dalvik virtual machines source code
+- __dalvikMachines__: contains the dalvik virtual machines source code
   (dalvik/vm folder in the Android source tree) of Android
   version 2.3.4 (Gingerbread) and 4.4 (KitKat). It also contains the source code of
   TraceDroid 2.3.4. Looking at the diff between Android 2.3.4 and
   TraceDroid 2.3.4 sources was a fundamental stage of the porting.
-- slides: contains the slides used to present the project. 
-- src: contins the TRACEDROID 4.4 source code. The source code consist
+- __slides__: contains the slides used to present the project. 
+- __src__: contins the TRACEDROID 4.4 source code. The source code consist
   in a modified version of the dalvik/vm/ Android source tree directory.
