@@ -55,9 +55,13 @@ following:
   - [compileTracedroidOnAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/compilingTracedroidOnAndroid44.md)
 	  it explains how to compile tracedroid on top of Android 4.4
       source code.
-  - [creatingAVDforAndroid44](https://github.com/dda410/Bproject/blob/master/GUIDES/creatingAVDforAndroid44.md)
+  - [creatingAVDforAndroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/creatingAVDforAndroid44.md)
 	  it explains how to create an Android Virtual Device for Android 4.4 and how to
       emulate it using a custom system.img (the tracedroid one).
+  - [evalutaionOfTraceDroid4.4](https://github.com/dda410/Bproject/blob/master/GUIDES/evaluationOfTraceDroid4-4.md)
+	  it explains how to evaluate and test the TraceDroid 4.4
+      implementation with both a default application and an external
+      one.
 
 - JavaOracle6Installer: contains the oracle binary file to install
   java 6 (required to compile Android 4.4).
