@@ -43,6 +43,12 @@ performed the following:
 - Get list of installed packages and filter them in order to have the
   installed app's package name: `adb shell 'pm list packages -f' | sed
   -e 's/.*=//' | grep aptoide`
+- Grep the uid of the app: `adb shell dumpsys package
+  cm.aptoide.pt | grep userId=`
+- Store it under the common input interface of the program: `echo
+  "uidOfTheApp > uid; adb shell uid /sdcard/"`
+- Check that the app was not already running, otherwise
+  kill it with: `adb shell ps | cm.aptoide.pt | awk '{print $2}' | xargs adb shell kill`
 - Start the application by simulating a 'tap' on it: `adb shell monkey
   -p cm.aptoide.pt -c android.intent.category.LAUNCHER 1`
 - Optionally other activities can be launched by looking at what the
