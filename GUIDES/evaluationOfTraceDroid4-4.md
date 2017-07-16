@@ -37,23 +37,20 @@ performed the following:
   greater than 10 (Android 2.3.4 api level) and smaller or equal to 19
   (Android 4.4 api level). This was important in order to check whether the
   compatibility of TraceDroid was increased. For this purpose we used
-  ANDROGUARD framework: `androaxml.py -i aptoide-8.3.0.6.apk -o
-  aptoide-8.3.0.6_manifest.xml`
-- Install the application: `adb install aptoide-8.3.0.6.apk`
+  ANDROGUARD framework: `androaxml.py -i file.apk -o
+  file_manifest.xml`
+- Install the application: `adb install file.apk`
 - Get list of installed packages and filter them in order to have the
-  installed app's package name: `adb shell 'pm list packages -f' | sed
-  -e 's/.*=//' | grep aptoide`
-- Grep the uid of the app: `adb shell dumpsys package
-  cm.aptoide.pt | grep userId=`
-- Store it under the common input interface of the program: `echo
-  "uidOfTheApp" > uid; adb shell uid /sdcard/"`
+  installed app's package name: `PKG=$(adb shell 'pm list packages -f' | grep appName | awk -F"=" '{print $2}' | sed 's/.$//')`
+- Grep the uid of the app: `APP_UID=$(adb shell dumpsys package $PKG | grep userId | awk -F"=" '{print $2}' | awk '{print $1}')`
+- Store it under the common input interface of the program: `echo "$APP_UID" > uid && adb push uid sdcard/`
 - Check that the app was not already running, otherwise
-  kill it with: `adb shell ps | grep cm.aptoide.pt | awk '{print $2}' | xargs adb shell kill`
+  kill it with: `adb shell ps | grep $PKG | awk '{print $2}' | xargs adb shell kill`
 - Start the application by simulating a 'tap' on it: `adb shell monkey
-  -p cm.aptoide.pt -c android.intent.category.LAUNCHER 1`
+  -p $PKG -c android.intent.category.LAUNCHER 1`
 - Optionally other activities can be launched by looking at what the
   ones the app offers. To have a list of the app's activities: `adb
-  shell dumpsys package cm.aptoide.pt`
+  shell dumpsys package $PKG`
 - After the process terminated pull the dump files store via the
   common output interface with: `adb pull /sdcard/`
 - The dump files are now ready to be analyzed
