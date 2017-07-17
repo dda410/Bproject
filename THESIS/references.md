@@ -25,5 +25,8 @@
 20. https://developer.android.com/studio/index.html
 21. https://developer.android.com/studio/command-line/index.html
 22. https://developer.android.com/studio/command-line/adb.html
-23. http://elinux.org/Android_Build_System
-24. 
+23. https://en.aptoide.com/
+24. https://www.mozilla.org/en-US/firefox/android/
+25. https://www.waze.com/
+26. https://en.wikipedia.org/wiki/List_of_most_downloaded_Android_applications
+27. https://en.wikipedia.org/wiki/Aptoide
