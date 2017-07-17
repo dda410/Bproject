@@ -30,3 +30,5 @@
 25. https://www.waze.com/
 26. https://en.wikipedia.org/wiki/List_of_most_downloaded_Android_applications
 27. https://en.wikipedia.org/wiki/Aptoide
+28. https://pdfs.semanticscholar.org/326c/04e729c3815d83073dd4105c271bb6a90f0c.pdf, ARTDROID
+29. https://android.googlesource.com/platform/art/+/master/runtime/trace.cc, trace.cc Android 7
