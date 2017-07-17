@@ -27,11 +27,12 @@ and select and app activity to start. We did the following:
 
 #### TESTING EXTERNAL APPLICATION
 
-The external application we tested it is called
-[aptoide](https://en.aptoide.com/), a famous alternative app store
-widely used. Any other application with api level <= 19 can be tested
-and used by TraceDroid 4.4. We first downloaded its .apk file and then
-performed the following:
+The external applications we tested
+are [aptoide](https://en.aptoide.com/), a famous alternative app store, [firefox](https://www.mozilla.org/en-US/firefox/android/),
+Mozilla's Android mobile browser and [waze](https://www.waze.com/), a
+widely used mobile navigation app.  Any other application with api
+level <= 19 can be tested and used by TraceDroid 4.4. We first
+downloaded its .apk file and then performed the following:
 
 - Extract the manifest.xml file to check that minSdkVersion was
   greater than 10 (Android 2.3.4 api level) and smaller or equal to 19
