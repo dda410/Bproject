@@ -66,7 +66,7 @@ following:
 - __JavaOracle6Installer__: contains the oracle binary file to install
   java 6 (required to compile Android 4.4).
 - __THESIS__: contains the written thesis produced for the project. All
-  the .tex files and images and the output pds are in this folder.
+  the .tex files and images and the output pdf are in this folder.
 - __TraceDroid_4.4__: contains the files relative to TraceDroid 4.4. Its
   subfolders are divided into:
   
