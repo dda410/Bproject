@@ -1,0 +1,20 @@
+\section{What to collect}
+\label{sec:scope_design}
+
+The main goal of the sandbox is to perform dynamic analysis of Android
+application and to provide extensive and relevant traces of an
+executed application. The output should provide an overview of the app
+behavior and its control flows. Cyber security experts can,
+afterwards, analyze the obtained results to understand whether the
+analyzed code is malicious and, hence, be classified as malware.
+
+Android applications are written in Java programming language and
+after been compiled in \texttt{.dex} file format they are executed by the
+Dalvik Virtual Machine that interprets the code. This intermediate
+runtime layer, described extensively in the previous section, is where
+the core of dynamic analysis resides. Here the modified version of the
+VM, dubbed \textsc{TraceDroid}, traces all the relevant data of a running
+process. The profile obtained should contain specific information like
+the names of the method called, the method's class descriptor, the
+type and value of parameters and returning values and the timestamps
+of the computations.

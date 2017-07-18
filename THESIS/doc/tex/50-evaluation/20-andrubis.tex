@@ -1,0 +1,108 @@
+\section{Result analysis}
+\label{sec:result_analysis}
+
+In listing~\ref{lst:browser_output} we can see a sample of the default Android browser
+testing output. As we can see from the output files, the system works
+as expected: the profile of the app's execution contains all the
+implemented features (see table 4.2). The output results equal to the
+original \textsc{TraceDroid} framework with the only, expected, difference of
+not printing the Java objects because of the limitations of the
+implementation phase.
+
+\begin{listing}[!h]
+  \begin{adjustwidth}{-9em}{-9em}
+    \caption{Default browser sample output}
+    \label{lst:browser_output}
+    \begin{lstlisting}[language=Java]
+1500060766662092:    public void com.android.browser.BrowserSettings$1.run()
+1500060766662173:     static android.content.Context com.android.browser.BrowserSettings.access$000
+((com.android.browser.BrowserSettings) "Object")
+1500060766662258:     return (android.content.Context) "Object"
+1500060766662329:     public android.content.res.Resources android.content.ContextWrapper.getResources()
+1500060766662402:      public android.content.res.Resources android.app.ContextImpl.getResources()
+1500060766662474:      return (android.content.res.Resources) "Object"
+1500060766662542:     return (android.content.res.Resources) "Object"
+1500060766663040:     public android.util.DisplayMetrics android.content.res.Resources.getDisplayMetrics()
+1500060766663123:     return (android.util.DisplayMetrics) "Object"
+1500060766663206:     static float com.android.browser.BrowserSettings.access$102(
+(com.android.browser.BrowserSettings) "Object", (float) "2513820672.000000")
+1500060766663330:     return (float) "1065353216.000000"
+1500060766663442:     private static void dalvik.system.VMDebug.startClassPrep()
+1500060766663525:      public java.lang.Class java.lang.ClassLoader.loadClass((java.lang.String) "Object")
+1500060766663609:       protected java.lang.Class java.lang.ClassLoader.loadClass(
+(java.lang.String) "Object", (boolean) "false")
+1500060766663704:        final protected java.lang.Class java.lang.ClassLoader.findLoadedClass(
+(java.lang.String) "Object")
+1500060766663796:         public static java.lang.BootClassLoader java.lang.BootClassLoader.getInstance()
+1500060766663870:         return (java.lang.BootClassLoader) "Object"
+1500060766663940:         native static java.lang.Class java.lang.VMClassLoader.findLoadedClass(
+(java.lang.ClassLoader) "Object", (java.lang.String) "Object")
+1500060766664039:         return (java.lang.Class) "Object"
+1500060766664107:        return (java.lang.Class) "Object"
+1500060766664176:        protected java.lang.Class java.lang.BootClassLoader.loadClass(
+(java.lang.String) "Object", (boolean) "true")
+1500060766664260:         final protected java.lang.Class java.lang.ClassLoader.findLoadedClass(
+(java.lang.String) "Object")
+1500060766664341:          public static java.lang.BootClassLoader java.lang.BootClassLoader.getInstance()
+1500060766664413:          return (java.lang.BootClassLoader) "Object"
+1500060766664482:          native static java.lang.Class java.lang.VMClassLoader.findLoadedClass(
+(java.lang.ClassLoader) "Object", (java.lang.String) "Object")
+1500060766664577:          return (java.lang.Class) "Object"
+1500060766664645:         return (java.lang.Class) "Object"
+1500060766664722:        return (java.lang.Class) "Object"
+1500060766664788:       return (java.lang.Class) "Object"
+1500060766664862:      return (java.lang.Class) "Object"
+1500060766664933:     return (void)
+    \end{lstlisting}
+  \end{adjustwidth}
+\end{listing}
+
+In listing~\ref{lst:waze_output} we can see a sample of the waze app testing
+output. Analyzing the 3 tested applications' output files we can
+observe that all the \textsc{TraceDroid} implemented features (see table 4.1)
+are working as expected. As for the default browser output, the only
+difference with the original framework is the absence of the Java
+objects string representation in the profile of the executed
+app. These results are fundamental in understanding the app
+compatibility increase of the ported system.
+
+\begin{listing}[!h]
+  \begin{adjustwidth}{-9em}{-9em}
+    \caption{Waze sample output}
+    \label{lst:waze_output}
+    \begin{lstlisting}[language=Java]
+1500218942799907:           new com.waze.NativeManager((null))
+1500218942799993:            native public boolean java.lang.Class.desiredAssertionStatus()
+1500218942800087:            return (boolean) "false"
+1500218942800185:            new java.lang.String((java.lang.String) "Object")
+1500218942800274:            return (void)
+1500218942800341:            public char[] java.lang.String.toCharArray()
+1500218942800428:             native public static void java.lang.System.arraycopy(
+(java.lang.Object) "Object", (int) "-1781292680", (java.lang.Object) "Object", (int) "0", (int) "11")
+1500218942800549:             return (void)
+1500218942800614:            return (char[]) "Object"
+1500218942800739:            new com.waze.utils.TicketRoller$Type((null))
+1500218942800906:             new com.waze.utils.TicketRoller$Type((java.lang.String) "Object", (int) "0")
+1500218942801006:              new java.lang.Enum((java.lang.String) "Object", (int) "0")
+1500218942801135:              return (void)
+1500218942801201:             return (void)
+1500218942801346:             new com.waze.utils.TicketRoller$Type((java.lang.String) "Object", (int) "0")
+1500218942801436:              new java.lang.Enum((java.lang.String) "Object", (int) "1")
+1500218942801523:              return (void)
+1500218942801587:             return (void)
+1500218942801674:             new com.waze.utils.TicketRoller$Type((java.lang.String) "Object", (int) "0")
+1500218942801761:              new java.lang.Enum((java.lang.String) "Object", (int) "2")
+1500218942801844:              return (void)
+1500218942801907:             return (void)
+1500218942801993:             new com.waze.utils.TicketRoller$Type((java.lang.String) "Object", (int) "0")
+1500218942802090:              new java.lang.Enum((java.lang.String) "Object", (int) "3")
+1500218942802176:              return (void)
+1500218942802240:             return (void)
+1500218942802381:             new com.waze.utils.TicketRoller$Type((java.lang.String) "Object", (int) "0")
+1500218942802470:              new java.lang.Enum((java.lang.String) "Object", (int) "4")
+1500218942802554:              return (void)
+1500218942802622:             return (void)
+1500218942802839:            return (void)
+    \end{lstlisting}
+  \end{adjustwidth}
+\end{listing}

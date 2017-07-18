@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Background Information}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Android System Architecture}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Dalvik Virtual Machine}{chapter.2}% 4
+\BOOKMARK [0][-]{chapter.3}{Design}{}% 5
+\BOOKMARK [1][-]{section.3.1}{What to collect}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.2}{Specification}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.3}{Interaction}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 9
+\BOOKMARK [1][-]{section.4.1}{Porting Process}{chapter.4}% 10
+\BOOKMARK [2][-]{subsection.4.1.1}{Target version}{section.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.1.2}{Porting tools}{section.4.1}% 12
+\BOOKMARK [2][-]{subsection.4.1.3}{Porting workflow}{section.4.1}% 13
+\BOOKMARK [2][-]{subsection.4.1.4}{Porting steps}{section.4.1}% 14
+\BOOKMARK [1][-]{section.4.2}{Porting limitations}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Testing}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{Result analysis}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 19

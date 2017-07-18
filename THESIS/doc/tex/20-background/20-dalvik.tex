@@ -1,0 +1,52 @@
+\section{Dalvik Virtual Machine}
+\label{sec:bg_dalvik}
+
+Google decided to adopt Java as the programming language to write
+Android applications due to its popularity and pervasive nature. The
+Java bytecode, produced by the language, is interpreted and executed
+by a virtual machine. A Java mobile ecosystem already existed, named
+JME, but because of its fragmentation Google has created its own suite
+of tools and its own VM, called Dalvik Virtual Machine \cite{ref14}.
+
+Google implemented this VM with the awareness of the hardware
+constraints of the devices running their operating
+system. Smartphones, in fact, have a limited processor speed, limited
+RAM size, no swap space and are battery-powered. The runtime core,
+nevertheless, is based on modern OS principles and process isolation
+is granted by having each application running in its own instance of
+the DVM. This, furthermore, improves also security by virtue of the
+virtual machine sandboxed nature.
+
+Android OS developers, at the bytecode level, performed also an
+optimization by adopting a different format with the primary goal of
+preserving memory. The new format, called DEX (Dalvik EXecutable)
+bytecode, differs from the standard bytecode since Java \texttt{.class} files,
+obtained after compiling the sources, are converted into a single \texttt{.dex}
+file using the \texttt{dx} utility. On one hand the standard \texttt{.class} files
+have their private heterogeneous constant pool for storing different
+types of constants, on the other the \texttt{.dex} files have different type
+specific constant pools shared among all the classes of the same
+program. This constant part accounts for a big part of the Java class
+files, circa 61\%. Space is, hence, saved by having extra pointers
+referring to the same constants in the shared constant pools.
+
+One of the fundamental components of the DVM is the \emph{Zygote}
+process. This special VM process is started at boot and is the parent
+of all the future spawned VM. Once started, it initializes the core
+libraries and listens for the request of a new application. In this
+case the \texttt{fork()} command is called and a new VM instance is
+started. Forking a VM allows to share the core libraries and minimize
+the startup time. Each Application, as a consequence, runs in its own
+isolated process which has a unique \texttt{uid} (user identifier) that can
+only access the set of features, verified during installation,
+requested in its manifest.xml file. This design enforces not only
+minimized load times but also increases the whole OS security.
+
+Another difference between the JVM and Google implementation is that
+the architecture is not Stack-based but register-based. Standard
+virtual machines are based on Stack data structures because of its
+simplicity. The DVM, in contrast, that is based on registers, lacks
+code density (circa 25\% larger source code) but increases the overall
+performance by about 32\%. Having in mind all the hardware constraints
+of the devices the Android OS is designed for, this is an acceptable
+compromise.

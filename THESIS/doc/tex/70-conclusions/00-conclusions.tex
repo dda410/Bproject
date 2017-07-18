@@ -1,0 +1,29 @@
+\chapter{Conclusion}
+\label{chap:conclusions}
+
+In this paper we presented an update of the \textsc{TraceDroid} dynamic
+analysis framework. First we provided an overview of the reasons why
+the system was originally created and why it is still relevant
+nowadays. We also provided the necessary background information, in chapter~\ref{chap:background}, to
+understand how the system is working. Secondly we explained the
+\textsc{TraceDroid} design and the porting process implementation, in chapters~\ref{chap:scope} and \ref{chap:implementation}. Lastly we
+showed, in chapter~\ref{chap:evaluation}, that the data obtained in the evaluation phase confirm the
+success of porting the system from Android 2.3.4 (codename
+Gingerbread) to Android 4.4 (codename KitKat).
+
+The project repository \cite{ref15} contains all the technical guides, the
+compiled images, and the tests output to reproduce the porting
+process, to use the system and test it. The guides, furthermore,
+provide information on how to create an Android Virtual Device and
+emulate the new system image: this should lead to a straightforward
+integration of \textsc{TraceDroid} with \textsc{TAP}.
+
+Android 4.4, the new system version, has still an high market share
+quota among the OS versions developed by Google but, nevertheless, it
+will decrease in the next years. The future of \textsc{TraceDroid} will be a
+complete redesign and reimplementation of the system to adapt it to
+the new Android runtime (ART) of the most recent versions. \textsc{Artdroid}
+\cite{ref28} already shows that it is possible to run a sandbox for dynamic
+analysis in this runtime. Google provides also, in the source code,
+some files where to implement the profiling of an application
+execution \cite{ref29}.

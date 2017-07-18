@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Background Information}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Android System Architecture}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Dalvik Virtual Machine}{8}{section.2.2}
+\contentsline {chapter}{\numberline {3}Design}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}What to collect}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Specification}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Interaction}{11}{section.3.3}
+\contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}\textsc {Porting Process}}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Target version}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Porting tools}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Porting workflow}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Porting steps}{14}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Porting limitations}{16}{section.4.2}
+\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testing}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Result analysis}{22}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusion}{24}{chapter.6}

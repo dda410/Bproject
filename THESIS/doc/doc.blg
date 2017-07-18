@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: doc.aux
+The style file: plainnat.bst
+Database file #1: doc.bib
+Warning--I didn't find a database entry for "Oberheid12"
+You've used 80 entries,
+            2773 wiz_defined-function locations,
+            993 strings with 20143 characters,
+and the built_in function-call counts, 35272 in all, are:
+= -- 2752
+> -- 2544
+< -- 24
++ -- 868
+- -- 783
+* -- 2909
+:= -- 5413
+add.period$ -- 229
+call.type$ -- 80
+change.case$ -- 501
+chr.to.int$ -- 75
+cite$ -- 160
+duplicate$ -- 1696
+empty$ -- 2963
+format.name$ -- 876
+if$ -- 7348
+int.to.chr$ -- 6
+int.to.str$ -- 1
+missing$ -- 59
+newline$ -- 397
+num.names$ -- 300
+pop$ -- 1266
+preamble$ -- 1
+purify$ -- 426
+quote$ -- 0
+skip$ -- 1146
+stack$ -- 0
+substring$ -- 170
+swap$ -- 222
+text.length$ -- 0
+text.prefix$ -- 5
+top$ -- 0
+type$ -- 875
+warning$ -- 0
+while$ -- 225
+width$ -- 0
+write$ -- 952
+(There was 1 warning)

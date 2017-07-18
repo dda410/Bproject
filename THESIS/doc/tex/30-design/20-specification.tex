@@ -1,0 +1,29 @@
+\section{Specification}
+\label{sec:scope_specification}
+
+\textsc{TraceDroid} aims at extending the already default Android profiling
+feature in giving more accurate and precise information about methods
+execution and process flow. The traces should be as close as possible
+to the Java source code of the .dex files running in the DVM. The
+following are the main requirements that the dynamic analysis program
+should implement:
+\begin{itemize*}
+    \item A common interface that specifies which app should be
+      analyzed at runtime.
+    \item A common interface to store the output in files which are
+      named in such a way to understand the process and the thread the
+      traces are generated from.
+    \item Providing full automation through its interfaces in order to
+      be plugged in a bigger framework such as TAP.
+    \item The traces should consist of the following:
+      \begin{itemize*}
+           \item Timestamps of when each computation takes place.
+           \item Called method name.
+           \item Called method class descriptor.
+           \item Called method return type and modifiers.
+           \item Values and types of the parameters and return values.
+           \item Thrown exceptions unwinding.
+           \item Indentation of the calls in order to make it easier
+             to understand the results.
+      \end{itemize*}
+\end{itemize*}      

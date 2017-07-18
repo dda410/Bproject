@@ -1,0 +1,73 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+Android, with over 2 billion devices monthly active (as of May 2017),
+is the most used mobile operating system \cite{ref3}. Google choice of
+designing an operating system both open source and compatible with
+different hardware made it an attractive solution for smartphone
+manufacturers \cite{ref6}, contributing in increasing its mobile OS market
+share up to 86\% in the third quarter of 2016 \cite{ref7}. One of the key
+components of Google's operating system is that it is easy for the
+developers to use the platform \cite{ref6}, as a consequence the increasing
+number of users is directly proportional to the increasing number of
+application programmers. This has led to \num{2800000} apps available and
+more than 65 billion cumulative downloads since 2010 \cite{ref8, ref9}.
+
+The growth of this platform did not come without drawbacks. It, in
+fact, became the target of malwares with the aim of stealing data or
+money from the users. Kaspersky lab \cite{ref2} detected in 2016 over 8
+million malicious installation packages, showing that android security
+is at risk. In late May 2017, as confirmation of this, a malware,
+named \emph{Judy}, was discovered in circa 50 applications in the play store
+\cite{ref5}. The apps containing the malicious code have been downloaded
+approximately 36 million times and have been responsible for
+generating fraudulent clicks to gain money from adverts. Another
+example of a recent (April 2017) malware available directly from the
+play store is the \emph{Dvmap} one \cite{ref11}. It is a sophisticated trojan that
+not only installs its modules into the system but it also injects the
+code into the system runtime libraries. \num{50000} times is the estimation
+of the malicious program total downloads.
+
+Both Google and the scientific community have acknowledged the
+severity of the situation. Google, recently, developed a new system,
+dubbed \textsc{Play Protect}, actively scanning Android devices and new
+versions of apps uploaded to the play store to perform malware
+detection \cite{ref4}. The system is brand new (May 2017), and aims at being a
+bigger security framework including safe browsing protection, and at
+locating and locking the device in case it has been lost. The
+scientific community, on the other hand, is aware of this situation
+since the early days of Android. Many tools have been developed for
+static and dynamic analysis. The first one is performed by analyzing
+the source code or the byte code of an application, the \textsc{Androguard}
+framework is an example of a tool performing this \cite{ref12}. The second
+one, at the contrary, is performed by analyzing a program when is
+running, \textsc{Andrubis}, \textsc{Forsafe}, \textsc{Joe Sandbox Mobile} and \textsc{TraceDroid} are
+examples of sandboxes performing dynamic analysis \cite{ref10}.
+
+We present, in this paper, an update of the \textsc{TraceDroid} sandbox in
+order to increase the compatibility with android applications
+\cite{ref1}. This sandbox is the core of dynamic analysis of a larger
+automated framework, dubbed \textsc{TraceDroid Analysis Platform (TAP)},
+performing both dynamic and static analysis with the integration of
+\textsc{Androguard}. \textsc{TraceDroid} is a sandbox based on Android 2.3.4 that works
+by modifying the core files of the Dalvik Virtual Machine to enable
+profiling and trace dynamically the execution of an application. The
+main goal of the update is to port it to android 4.4: the last android
+version to have the Dalvik Virtual Machine as the default runtime
+environment.
+
+The paper has the following structure:
+\begin{itemize}
+    \item Chapter~\ref{chap:background}: explains the main concepts about android
+      architecture useful at understanding the design and
+      implementation of the system being ported.
+    \item Chapter~\ref{chap:scope}: the framework design is described in detail in a
+      zoom in fashion.
+    \item Chapter~\ref{chap:implementation}: the implementation notes and limitations are
+      discussed.
+    \item Chapter~\ref{chap:evaluation}: provides an evaluation of the system aimed at
+      checking the increase of compatibility with android
+      applications.
+    \item Chapter~\ref{chap:conclusions}: describes future work related to android 7 for
+      dynamic analysis and general concluding notes are considered.
+\end{itemize}

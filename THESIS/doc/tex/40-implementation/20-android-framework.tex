@@ -1,0 +1,76 @@
+\section{Porting limitations}
+\label{sec:porting_limitations}
+
+Features and limitations of our implementation are discussed in this
+section. Most of the original code concerning \textsc{TraceDroid} based on
+android 2.3.4 has been successfully adapted to the sources of android
+4.4. There are, however, some functionalities that could not be ported
+due to bugs or unexpected behavior. We give in table 4.1 a
+comprehensive list of the main features of the system with a brief
+explanation of their functionalities, in which file they are
+implemented and their porting status. The shorthand 'P' for ported,
+'NP' for not ported and 'T' for testing is used.
+
+\begin{longtabu}{XllX}
+  \caption{Overview of the ported features status}\label{tab:porting_limitations_table}\\
+  % header and footer information
+  \hline
+  \textbf{Feature} & \textbf{File} & \textbf{Status} & \textbf{Description} \\
+  \hline
+  \endhead
+  \hline
+  \endfoot
+  % body of table
+  uid interface & Init.cpp & P & Allows to trace a specified app by storing its uid in the /sdcard/uid file \\
+  & & & \\
+  \hline
+  Distinguish method enter, exit and exception throwing & Profile.cpp & P & Makes it possible to produce different traces based on whether a method entrance, a method exit or an exception is throw is being profiled. dvmMethodTraceAdd() detects the type of action and calls a method to handle it. The three methods that can be called are handle\_method, handle\_return, handle\_throws.  \\
+  & & & \\
+  \hline
+  Tracing return values when profiling a method exit & Profile.h & P & The TRACE\_METHOD\_EXIT macro declaration is augmented to hold the returning value of a method. The value is passed as a parameter from the calls to this macro present in the files under dalvik/vm/.  \\
+  & & & \\
+  \hline
+  Tracing exceptions when a thrown statement is caught & Profile.h & P & The TRACE\_METHOD\_UNROLL macro declaration is augmented to hold the thrown exception of a method. The value is passed as a parameter from the Exception.cpp file.  \\
+  & & & \\
+  \hline
+  Compute method calls' timestamps and indentation. & Profile.cpp & P & Implemented by getWhitespace() method.  \\
+  & & & \\
+  \hline
+  Compute method modifiers & Profile.cpp & P & Implemented by getModifiers() method.  \\
+  & & & \\
+  \hline
+  Compute a method's return type and class descriptor & Profile.cpp & P & Both the functionalities are implemented by the convertDescriptor() method.  \\
+  & & & \\
+  \hline
+  Compute string representation of parameters and return value containing both types and values & Profile.cpp & P & The string representation of a returning value is calculated by parameterToString(). Since parameters can be more than one, the computation of their string representation is implemented in getParameters() and getParameterString(). The former returns an array of string representations, the latter a singular string representation with the content of this array. \\
+  & & & \\
+  \hline
+  Filter calls executing bytecode from a system jar & Profile.cpp & T & This feature, implemented in the dvmMethodTraceAdd() method, allows to omit the traces regarding methods that execute bytecode from a system jar where also the caller consist of bytecode from a system jar. Not tracing these calls speeds up the system and excludes to profile calls that are assured not to contain malicious code. It has been implemented completely differently due to unexpected behavior of the original one that was ported. \\
+  & & & \\
+  \hline
+  Compute string representation of a Java object & Profile.cpp & NP & This functionality, originally implemented by the objectToString() method, consists in getting the string representation of a parameter or returning value if it is a Java object. The method calls the object's Java class toString() method in the case there is one. A boolean variable, called inMethodTraceAdd(), is also needed in dvmMethodTraceAdd() not to trace the calls to the toString() method. \\
+  & & & \\
+  \hline
+  Creating trace files under /sdcard/ according to format dump.PID.TID & Profile.cpp & P & Implemented by prep\_log() method. It creates dump files for the current process for each of its threads. The process id and the thread id is part of the dump filenames. This allows distinguishing between the traces of each thread of the profiled application. \\
+  & & & \\
+  \hline
+  Printing traces to dump files & Profile.h & P & Implemented by the ALOGD\_TRACE macro. It acquires a lock to write to the dump files and then it writes the trace logs to the thread dump file.\\
+  & & & \\
+\end{longtabu}
+
+As it can be seen in table 4.1 most functionalities have been
+successfully ported and adapted to Android 4.4 source code. The
+features with the 'T' status have not been included in the stable
+version of the system since the code implementing them is still in
+testing. They are included in a separate source code branch with a
+different compiled system image.
+
+In the stable version of \textsc{TraceDroid}, hence, the filtering of calls
+executing bytecode from a system jar was not included. This results in
+larger output traces for the application we are profiling, increasing
+also the computation steps required by the system. The second feature
+that has not been ported was about computing the string representation
+of the parameters and returning Java objects. It has been substituted
+by printing the class descriptor of the object and the keyword
+\textit{“Object”} to highlight that the parameter or the returning value is a
+Java object created by that class.

@@ -1,0 +1,114 @@
+\ProvidesPackage{doc}
+
+\usepackage{listliketab}
+\usepackage{numprint}
+
+\usepackage[group-separator={,}]{siunitx}
+
+\usepackage[toc,page]{appendix}
+
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{adjustbox}
+
+\usepackage{floatpag}
+\rotfloatpagestyle{empty}
+
+% for a different font:
+%\usepackage{mathptmx}
+
+%\usepackage{avant}
+%\usepackage{bookman}
+%\usepackage{palatcm}
+%\usepackage{ncntrsbk}
+
+% for code listings
+\usepackage{listings}
+ 
+%\usepackage{geometry}
+%\geometry{a4paper,textwidth=418pt,textheight=591pt}
+\usepackage[pass]{geometry}
+
+
+% for adding notes under a table
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+
+\usepackage[numbers]{natbib}
+
+\usepackage{rotating}
+
+% improved tables (make sure that midrule is expands if we increase the margin
+% using adjustwidth)
+\usepackage{tabularx}
+
+% for graphics
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{pgf}
+%\usepackage{tikz}
+\usepackage{pstricks}
+\usepackage{url}
+%\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage[colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black]{hyperref}
+
+\usepackage{etoolbox}
+\makeatletter
+\pretocmd{\NAT@citexnum}{\@ifnum{\NAT@ctype>\z@}{\let\NAT@hyper@\relax}{}}{}{}
+\makeatother
+
+% for landscape
+\usepackage{pdflscape}
+
+% for compact lists
+\usepackage{mdwlist}
+
+% for page filling
+%\usepackage{lipsum}
+
+\usepackage{changepage}
+\usepackage{booktabs}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\lipsum}[1]{#1}
+
+\newcommand{\xxx}[1]{\emph{\textcolor{red}{[#1]}}}
+\newcommand{\x}[1]{\textcolor{blue}{#1}}        
+%\newcommand{\x}[1]{\textcolor{black}{#1}}      
+
+\usepackage[utf8]{inputenc}
+
+% to support €
+\usepackage{lmodern, textcomp}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+\lstset{
+basicstyle  =\ttfamily\footnotesize,
+keywordstyle=\color{deepblue},
+stringstyle =\color{deepgreen},
+commentstyle=\color{red},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}
+
+\usepackage{newfloat}
+
+\DeclareFloatingEnvironment[
+    fileext=lol,
+    name=Listing
+]{listing}
+
+
