@@ -33,9 +33,8 @@ invocation to the \textit{Activity Manager}. The AM, that is a process-like
 manager, forwards the intend of starting a new activity to the \emph{Zygote}
 process. The \emph{Zygote}, the parent of all the VM, invokes a \texttt{fork()} system
 call to create a new virtual machine that performs as a container of
-the application whose activity is started. The \texttt{Init} file is executed
-to create a new VM. This file is modified in the \textsc{TraceDroid} version
-and checks whether the uid of the process started is the same as the
+the application whose activity is started. The functions in the \texttt{Init} file create a new VM. These functions are modified in the \textsc{TraceDroid} version
+in order to check whether the uid of the process started is the same as the
 one stored in \texttt{/sdcard/uid}. Depending on whether the uid is the same or
 not we have two different flows:
 \begin{enumerate*}
@@ -46,7 +45,7 @@ not we have two different flows:
 This design respects the requirements points specified in the previous
 section. The described sequence provides both a common interface for
 tracing an app (the push uid \texttt{/sdcard/}) and for obtaining the dynamic
-analysis results (the pull \texttt{/sdcard/treaces*}). The system, furthermore,
+analysis results (the pull \texttt{/sdcard/traces*}). The system, furthermore,
 allows for full automation using the \texttt{adb} command line tool.
 
 \begin{figure}[!h]
