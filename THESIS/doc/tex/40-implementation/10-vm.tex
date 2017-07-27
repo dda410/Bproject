@@ -20,16 +20,19 @@ decreases drastically.
 We, hence, decided to port the system to an higher Android version to
 increase the compatibility rate with applications to be dynamically
 analyzed. We have chosen Android KitKat as the target version (Android
-4.4, API level 19) for two main reasons. The first one is that this
-version is the last one still using the Dalvik Virtual Machine as
-default runtime environment. In KitKat the VM is now implemented in
-C{}\verb!++! instead of C but the file structure and the functions provided are
-similar, making the porting process smoother. The second reason is
-that the market share of this platform is a high 18.1\% and it is the
-third most used android version. Developers, being aware of the data,
-are interested in supporting this major version and hence most
-applications will have at least version 19 or lower as \textit{minSdkVersion}
-in their manifest file.
+4.4, API level 19). The main reason for this choice is that version
+4.4 is the last one still using the Dalvik Virtual Machine as default
+runtime environment. In KitKat the VM is now implemented in
+C{}\verb!++! instead of C but the file structure and the functions
+provided are similar, making the porting process
+smoother. Furthermore, the market share of this platform is a high
+18.1\% and it is the third most used Android version. Developers,
+being aware of the data, are interested in supporting this major
+version and hence most applications will have at least version 19 or
+lower as \textit{minSdkVersion} in their manifest file. As a
+consequence porting \textsc{TraceDroid} to Android 4.4, despite not
+being the latest Android version, will increase the compatibility rate
+significantly.
 
 \subsection{Porting tools}
 \label{sec:porting_tools}
@@ -101,74 +104,81 @@ showing the workflow of the porting process can be seen in figure~\ref{fig:porti
 
 We explain in this section the incremental steps taken to perform the
 porting process. We describe them in a chronological order as follows:
-\begin{itemize}
-  \item Enabling tracing for a specified app: we added to the file
-    \texttt{Globals.h} the variables to deal with the common interface
-    to specify which app to track by adding the uid file containing
-    the uid of the application to be dynamically analyzed. We modified
-    the \texttt{Init.cpp} file to implement the functionality of
-    reading the \texttt{/sdcard/uid} file and start the tracing in
-    case an app with that unique identifier is launched.
-  \item Entering method, exiting method and exception throwing
-    capturing: \texttt{dvmMethodTraceAdd()} is the method in
-    \texttt{Profile.cpp} responsible for intercepting the calls to
-    enter or exit a method and also the thrown exceptions. Every time
-    this method is called, the action integer-type parameter holds one
-    of the three values, defined by three different macros, specifying
-    what kind of call is caught. In this step we added to
-    \texttt{Profile.cpp} the code to analyze this value and, depending
-    on that to call, a method to handle the case. The three methods to
-    work with the three different possibilities were also added,
-    namely \texttt{handle\_method}, \texttt{handle\_return} and
-    \texttt{handle\_throws}.
-  \item Getting method indentation and timestamps: in this phase we
-    added the integer-type depth variable to the \texttt{Thread.h}
-    header to hold the indentation level. This value is increased
-    before calling \texttt{handle\_method} and decreased before
-    calling either \texttt{handle\_return} or
-    \texttt{handle\_throws}. The \texttt{getWhitespace()} method was
-    then ported and the calls to this method added in the three handle
-    ones in order to print correctly the indentation level and the
-    timestamps of each method entered, or returned or an exception
-    thrown.
-  \item Getting method modifiers, return type and class descriptor:
-    the functions to get the called method modifiers calculated by
-    \texttt{getModifiers()}, the return type and the class descriptor, both
-    computed by \texttt{convertDescriptor()}, were ported at this stage. The
-    calls to these function were added to \texttt{handle\_method}.
-  \item Retrieving parameters types and values: first the
-    \texttt{parameterToString()} method was ported to get a string
-    representation of a parameter containing both its type and its
-    value. Second the \texttt{getParameters()} one that iteratively computes
-    the string representations of all the parameters by calling the
-    previously described method and returns an array containing the
-    string representations of all the parameters. Last the
-    \texttt{getParameterString()} function is implemented. It gives a string
-    representation of the array computed by \texttt{getParameters()}. The calls
-    to these computational procedures were then added to \texttt{handle\_method}
-    with an additional check to call them only in the case there are
-    parameters to be computed.
-  \item Retrieving exceptions and return value: to compute the string
-    representation of a thrown exception or a returning value we first
-    needed to modify the header declaration (\texttt{Profile.h}) regarding
-    \texttt{dvmMethodTraceAdd()} and the two macros responsible of calling this
-    method in case of exception or returning method, respectively
-    \texttt{TRACE\_METHOD\_UNROLL} and \texttt{TRACE\_METHOD\_EXIT}. The modification was
-    implemented by adding an extra value to hold either the thrown
-    exception or the returning value. The new parameter was also added
-    to \texttt{handle\_return} and \texttt{handle\_throws}. The returning value or the
-    exception risen were added in the files were the macros to unroll
-    or exit a method were present. We added, as a last step, in
-    \texttt{handle\_return} and \texttt{handle\_throws} respectively \texttt{parameterToString()}
-    and \texttt{convertDescriptor()} functions to get a string representation
-    of the returning value and the exception.
-  \item Printing the traces to \texttt{/sdcard/} : First the file pointer to
-    the printing file and the lock to perform the writing were added
-    to \texttt{Thread.h}. The \texttt{prep\_log()} function was implemented in
-    \texttt{Profile.cpp} in order to create the traces in files that follows
-    the format \texttt{dump.ProcessID.ThreadID}. The \texttt{ALOGD\_TRACE} macro was
-    declared in the \texttt{Profile.h} header to actually print the retrieved
-    values to the appropriate dump file. The last step was to add this
-    macro to the three handle methods functions to print the values
-    calculated by the previously ported functions.
-\end{itemize}
+
+\paragraph{Enabling tracing for a specified app} ~\\
+We added to the file \texttt{Globals.h} the variables to deal with the
+common interface to specify which app to track. The variables hold the
+uid file containing the uid of the application to be dynamically
+analyzed. We modified the \texttt{Init.cpp} file to implement the
+functionality of reading the \texttt{/sdcard/uid} file and start the
+tracing in case an app with that unique identifier is launched.
+
+\paragraph{Entering method, exiting method and exception throwing capturing} ~\\
+\texttt{dvmMethodTraceAdd()} is the method in \texttt{Profile.cpp}
+responsible for intercepting the calls to enter or exit a method and
+also the thrown exceptions. Every time this method is called, the
+action integer-type parameter holds one of the three values, defined
+by three different macros, specifying what kind of call is caught. In
+this step we added to \texttt{Profile.cpp} the code to analyze this
+value and, depending on that to call, a method to handle the case. The
+three methods to work with the three different possibilities were also
+added, namely \texttt{handle\_method}, \texttt{handle\_return} and
+\texttt{handle\_throws}.
+
+\paragraph{Getting method indentation and timestamps} ~\\
+In this phase we added the integer-type depth variable to the
+\texttt{Thread.h} header to hold the indentation level. This value is
+increased before calling \texttt{handle\_method} and decreased before
+calling either \texttt{handle\_return} or \texttt{handle\_throws}. The
+\texttt{getWhitespace()} method was then ported and the calls to this
+method added in the three handle ones in order to print correctly the
+indentation level and the timestamps.
+
+\paragraph{Getting method modifiers, return type and class descriptor} ~\\
+The functions to get the called method modifiers calculated by
+\texttt{getModifiers()}, the return type and the class descriptor,
+both computed by \texttt{convertDescriptor()}, were ported at this
+stage. The calls to these function were added to
+\texttt{handle\_method}.
+
+\paragraph{Retrieving parameters types and values} ~\\
+First the \texttt{parameterToString()} method was ported to get a
+string representation of a parameter containing both its type and its
+value. Second the \texttt{getParameters()} one that iteratively
+computes the string representations of all the parameters. It
+accomplishes this by calling the previously described method for each
+parameter. The array containing the parameters' string representation
+is then returned. Last the \texttt{getParameterString()} function was
+implemented. It gives a string representation of the array computed by
+\texttt{getParameters()}. The calls to these computational procedures
+were then added to \texttt{handle\_method} with an additional check to
+call them only in the case there are parameters to be computed.
+
+\paragraph{Retrieving exceptions and return value} ~\\
+To compute the string representation of a thrown exception or a
+returning value we first needed to modify the header declaration
+(\texttt{Profile.h}) regarding
+\texttt{dvmMethodTraceAdd()}. Furthermore, we also redefined the two
+macros responsible of calling this method in case of exception or
+returning method, respectively \texttt{TRACE\_METHOD\_UNROLL} and
+\texttt{TRACE\_METHOD\_EXIT}. The modification was implemented by
+adding an extra value to hold either the thrown exception or the
+returning value. The new parameter was also added to
+\texttt{handle\_return} and \texttt{handle\_throws}. The returning
+value or the exception risen were added in the files were the macros
+to unroll or exit a method were present. We added, as a last step, in
+\texttt{handle\_return} and \texttt{handle\_throws} respectively
+\texttt{parameterToString()} and \texttt{convertDescriptor()}
+functions to get a string representation of the returning value and
+the exception.
+
+\paragraph{Printing the traces to \texttt{/sdcard/}} ~\\
+First the file pointer to the output file and the lock to perform the
+writing were added to \texttt{Thread.h}. The \texttt{prep\_log()}
+function was implemented in \texttt{Profile.cpp} in order to create
+the traces in files that follows the format
+\texttt{dump.ProcessID.ThreadID}. The \texttt{ALOGD\_TRACE} macro was
+declared in the \texttt{Profile.h} header to actually print the
+retrieved values to the appropriate dump file. The last step was to
+add this macro to the three handle methods functions to print the
+values calculated by the previously ported functions.
