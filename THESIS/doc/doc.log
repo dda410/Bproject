@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.29)  18 JUL 2017 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.29)  27 JUL 2017 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1552,17 +1552,7 @@ ting ' on input line 112.
 \newfloat@ftype=\count307
 Package newfloat Info: float type `listing'=8 on input line 112.
 \c@sublisting=\count308
-) (./doc.aux
-
-LaTeX Warning: Label `tab:porting_limitations_table' multiply defined.
-
-
-LaTeX Warning: Label `tab:porting_limitations_table' multiply defined.
-
-
-LaTeX Warning: Label `tab:porting_limitations_table' multiply defined.
-
-)
+) (./doc.aux)
 \openout1 = `doc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -1581,7 +1571,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 9.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 9.
@@ -1775,12 +1766,7 @@ l.17 \listoffigures
 Chapter 1.
 [5
 
-]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 61.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-(./tex/20-background/00-overview.tex [6]
+]) (./tex/20-background/00-overview.tex [6]
 Chapter 2.
 ) (./tex/20-background/10-architecture.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1788,7 +1774,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 5.
 
-<./img/architecture/architecture.pdf, id=217, 727.51793pt x 590.20488pt>
+<./img/architecture/architecture.pdf, id=213, 727.51793pt x 590.20488pt>
 File: ./img/architecture/architecture.pdf Graphic file (type pdf)
 
 <use ./img/architecture/architecture.pdf>
@@ -1804,17 +1790,22 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [8 <./img/architecture/architecture.pdf>]) (./tex/30-design/00-scope.tex [9]
 Chapter 3.
 ) (./tex/30-design/10-design.tex) (./tex/30-design/20-specification.tex
-[10
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 11.
 
-]) (./tex/30-design/30-interaction.tex [11]
-<./img/design/interaction.pdf, id=309, 974.64125pt x 815.045pt>
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [10
+
+])
+(./tex/30-design/30-interaction.tex [11]
+<./img/design/interaction.pdf, id=306, 974.64125pt x 815.045pt>
 File: ./img/design/interaction.pdf Graphic file (type pdf)
 
 <use ./img/design/interaction.pdf>
-Package pdftex.def Info: ./img/design/interaction.pdf used on input line 54.
+Package pdftex.def Info: ./img/design/interaction.pdf used on input line 53.
 (pdftex.def)             Requested size: 426.79134pt x 356.90465pt.
 
-Overfull \hbox (81.79134pt too wide) in paragraph at lines 54--55
+Overfull \hbox (81.79134pt too wide) in paragraph at lines 53--54
  [][] 
  []
 
@@ -1828,321 +1819,59 @@ LaTeX Font Warning: Font shape `OT1/lmr/bx/sc' undefined
 
 [13
 
-] <./img/porting/flowDiagram.pdf, id=338, 684.5575pt x 273.02pt>
+] <./img/porting/flowDiagram.pdf, id=335, 684.5575pt x 273.02pt>
 File: ./img/porting/flowDiagram.pdf Graphic file (type pdf)
 
 <use ./img/porting/flowDiagram.pdf>
-Package pdftex.def Info: ./img/porting/flowDiagram.pdf used on input line 94.
+Package pdftex.def Info: ./img/porting/flowDiagram.pdf used on input line 97.
 (pdftex.def)             Requested size: 345.0pt x 137.59697pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [14]
-Overfull \hbox (76.30489pt too wide) in paragraph at lines 112--124
-[]\OT1/lmr/m/n/10 Entering method, ex-it-ing method and ex-cep-tion throw-ing c
-ap-tur-ing: \OT1/lmtt/m/n/10 dvmMethodTraceAdd()
+Overfull \hbox (10.33025pt too wide) in paragraph at lines 137--143
+\OT1/lmr/m/n/10 the re-turn type and the class de-scrip-tor, both com-puted by 
+\OT1/lmtt/m/n/10 convertDescriptor()\OT1/lmr/m/n/10 ,
  []
 
 
-Overfull \hbox (10.85788pt too wide) in paragraph at lines 134--139
-\OT1/lmr/m/n/10 turn type and the class de-scrip-tor, both com-puted by \OT1/lm
-tt/m/n/10 convertDescriptor()\OT1/lmr/m/n/10 ,
+Overfull \hbox (11.71524pt too wide) in paragraph at lines 137--143
+\OT1/lmr/m/n/10 were ported at this stage. The calls to these func-tion were ad
+ded to \OT1/lmtt/m/n/10 handle[]method\OT1/lmr/m/n/10 . 
  []
 
 [15 <./img/porting/flowDiagram.pdf>]
-Overfull \hbox (12.69861pt too wide) in paragraph at lines 151--165
-\OT1/lmr/m/n/10 turn-ing method, re-spec-tively \OT1/lmtt/m/n/10 TRACE[]METHOD[
-]UNROLL \OT1/lmr/m/n/10 and \OT1/lmtt/m/n/10 TRACE[]METHOD[]EXIT\OT1/lmr/m/n/10
- .
- []
-
-) (./tex/40-implementation/20-android-framework.tex
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Makes it pos-si-ble to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 based on whether a
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 175.
+)
+(./tex/40-implementation/20-android-framework.tex
+Overfull \hbox (26.88884pt too wide) in paragraph at lines 175--1
+\OT1/lmr/m/n/10 in or-der to cre-ate the traces in files that fol-lows the for-
+mat \OT1/lmtt/m/n/10 dump.ProcessID.ThreadID\OT1/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 method en-trance, a
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+[16]
+Overfull \hbox (26.76836pt too wide) in paragraph at lines 46--52
+\OT1/lmr/m/n/10 trance, a method exit or an ex-cep-tion is throw is be-ing pro-
+filed. \OT1/lmtt/m/n/10 dvmMethodTraceAdd()
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 pro-filed. dvm-Method-
+Overfull \hbox (21.52458pt too wide) in paragraph at lines 72--79
+\OT1/lmr/m/n/10 The string rep-re-sen-ta-tion of a re-turn-ing value is cal-cu-
+lated by \OT1/lmtt/m/n/10 parameterToString()\OT1/lmr/m/n/10 .
  []
 
-
-Underfull \hbox (badness 1221) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 TraceAdd() de-tects the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 a method to han-dle
- []
-
-
-Underfull \hbox (badness 2261) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 it. The three meth-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 are han-dle[]method,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 han-dle[]return, han-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Tracing re-turn val-ues
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 The
- []
-
-
-Overfull \hbox (5.12328pt too wide) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 TRACE[]METHOD[]EXIT
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 mented to hold the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 re-turn-ing value of a
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 passed as a pa-ram-e-ter
- []
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 from the calls to this
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 a thrown state-ment is
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 The
- []
-
-
-Overfull \hbox (22.34598pt too wide) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 TRACE[]METHOD[]UNROLL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 mented to hold the
- []
-
-
-Underfull \hbox (badness 2119) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 thrown ex-cep-tion of a
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 passed as a pa-ram-e-ter
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Compute method calls'
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Implemented by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 getWhites-pace()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 are im-ple-mented by
- []
-
-
-Underfull \hbox (badness 6364) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 the con-vert-De-scrip-tor()
- []
-
-
-Underfull \hbox (badness 1107) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 re-turn value con-tain-ing
- []
-
-
-Underfull \hbox (badness 1748) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 their string rep-re-sen-ta-
- []
-
-
-Underfull \hbox (badness 1077) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 tion is im-ple-mented in
- []
-
-
-Underfull \hbox (badness 3568) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 for-mer re-turns an ar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Filter calls ex-e-cut-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 This fea-ture, im-ple-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 mented in the dvm-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 Method-TraceAdd()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 the traces re-gard-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 meth-ods that ex-e-cute
- []
-
-
-Underfull \hbox (badness 5189) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 these calls speeds up
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 as-sured not to con-tain
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 un-ex-pected be-hav-ior of
- []
-
-
-Underfull \hbox (badness 4582) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 i-nally im-ple-mented by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 the ob-ject-ToString()
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 method, con-sists in
- []
-
-
-Underfull \hbox (badness 7722) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 or re-turn-ing value if
- []
-
-
-Underfull \hbox (badness 7722) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 it is a Java ob-ject.
- []
-
-
-Underfull \hbox (badness 3302) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 The method calls the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 ob-ject's Java class
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 toString() method in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 in-Method-TraceAdd(),
- []
-
-
-Underfull \hbox (badness 8000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 Method-TraceAdd() not
- []
-
-
-Underfull \hbox (badness 6625) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 /s-d-card/ ac-cord-ing to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Implemented by
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 prep[]log() method.
- []
-
-
-Underfull \hbox (badness 6252) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 It cre-ates dump files
- []
-
-
-Underfull \hbox (badness 3302) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 thread of the pro-filed
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
-[]\OT1/lmr/m/n/10 Implemented by the
- []
-
-
-Underfull \hbox (badness 3386) in paragraph at lines 59--59
-\OT1/lmr/m/n/10 It ac-quires a lock to
- []
-
-[16] [17] [18]) [19] (./tex/50-evaluation/00-evaluation.tex [20]
+[17]) (./tex/50-evaluation/00-evaluation.tex [18]
 Chapter 5.
 ) (./tex/50-evaluation/10-benchmarks.tex
 Overfull \hbox (4.69826pt too wide) in paragraph at lines 15--23
@@ -2150,7 +1879,7 @@ Overfull \hbox (4.69826pt too wide) in paragraph at lines 15--23
  the com-piled \OT1/lmr/m/sc/10 Trace-
  []
 
-) (./tex/50-evaluation/20-andrubis.tex [21
+) (./tex/50-evaluation/20-andrubis.tex [19
 
 ]
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
@@ -2190,7 +1919,7 @@ Overfull \hbox (15.6055pt too wide) in paragraph at lines 46--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[22]
+[20]
 Overfull \hbox (15.6055pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
@@ -2220,9 +1949,9 @@ Overfull \hbox (15.6055pt too wide) in paragraph at lines 101--102
 ][][][][][][][][][][][][][] 
  []
 
-) (./tex/70-conclusions/00-conclusions.tex [23]
+) (./tex/70-conclusions/00-conclusions.tex [21]
 Chapter 6.
-) [24
+) [22
 
 ] (./tex/biblio.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -2283,7 +2012,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 /10 https : / / github . com / androguard /
  []
 
-[25
+[23
 
 
 ]
@@ -2316,7 +2045,7 @@ Underfull \hbox (badness 1014) in paragraph at lines 28--29
 ][]$\OT1/lmtt/m/n/10 https : / / en . wikipedia .
  []
 
-) [26]
+) [24]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (./doc.aux)
@@ -2328,19 +2057,16 @@ Package rerunfilecheck Info: File `doc.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 30133 strings out of 493105
- 563761 string characters out of 6137072
- 670570 words of memory out of 5000000
- 32837 multiletter control sequences out of 15000+600000
- 84313 words of font info for 59 fonts, out of 8000000 for 9000
+ 30099 strings out of 493105
+ 563475 string characters out of 6137072
+ 669751 words of memory out of 5000000
+ 32783 multiletter control sequences out of 15000+600000
+ 84623 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,96p,10393b,1658s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 66i,10n,96p,10393b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/
 texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-
@@ -2351,12 +2077,13 @@ onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10
 usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmtt8.pfb>
-Output written on doc.pdf (29 pages, 777655 bytes).
+mri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.
+pfb>
+Output written on doc.pdf (27 pages, 802433 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 564 compressed objects within 6 object streams
- 169 named destinations out of 1000 (max. 500000)
+ 650 PDF objects out of 1000 (max. 8388607)
+ 583 compressed objects within 6 object streams
+ 188 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

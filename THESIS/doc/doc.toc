@@ -9,11 +9,32 @@
 \contentsline {chapter}{\numberline {4}Implementation}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}\textsc {Porting Process}}{13}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Target version}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Porting tools}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Porting tools}{14}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Porting workflow}{14}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Porting steps}{14}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Porting steps}{15}{subsection.4.1.4}
+\contentsline {paragraph}{Enabling tracing for a specified app}{15}{section*.8}
+\contentsline {paragraph}{Entering method, exiting method and exception throwing capturing}{15}{section*.9}
+\contentsline {paragraph}{Getting method indentation and timestamps}{15}{section*.10}
+\contentsline {paragraph}{Getting method modifiers, return type and class descriptor}{15}{section*.11}
+\contentsline {paragraph}{Retrieving parameters types and values}{16}{section*.12}
+\contentsline {paragraph}{Retrieving exceptions and return value}{16}{section*.13}
+\contentsline {paragraph}{Printing the traces to \texttt {/sdcard/}}{16}{section*.14}
 \contentsline {section}{\numberline {4.2}Porting limitations}{16}{section.4.2}
-\contentsline {chapter}{\numberline {5}Evaluation}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Testing}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Result analysis}{22}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusion}{24}{chapter.6}
+\contentsline {paragraph}{}{16}{section*.16}
+\contentsline {paragraph}{uid interface}{17}{section*.17}
+\contentsline {paragraph}{Distinguish method enter, exit and exception throwing}{17}{section*.18}
+\contentsline {paragraph}{Tracing return values when profiling a method exit}{17}{section*.19}
+\contentsline {paragraph}{Tracing exceptions when a thrown statement is caught}{17}{section*.20}
+\contentsline {paragraph}{Compute method calls' timestamps and indentation}{17}{section*.21}
+\contentsline {paragraph}{Compute method modifiers}{17}{section*.22}
+\contentsline {paragraph}{Compute a method's return type and class descriptor}{17}{section*.23}
+\contentsline {paragraph}{Compute string representation of parameters and return value}{18}{section*.24}
+\contentsline {paragraph}{Filter calls executing bytecode from a system jar}{18}{section*.25}
+\contentsline {paragraph}{Compute string representation of a Java object}{18}{section*.26}
+\contentsline {paragraph}{Creating trace files under \texttt {/sdcard/}}{18}{section*.27}
+\contentsline {paragraph}{Printing traces to dump files}{18}{section*.28}
+\contentsline {paragraph}{}{18}{section*.29}
+\contentsline {chapter}{\numberline {5}Evaluation}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testing}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Result analysis}{20}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusion}{22}{chapter.6}
