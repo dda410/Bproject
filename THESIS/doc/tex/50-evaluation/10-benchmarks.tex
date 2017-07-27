@@ -4,7 +4,7 @@
 The aim of this phase is to test the implemented system in order to
 obtain relevant output that could be later analyzed to understand if
 the porting was successful. The first step was to decide which
-applications to give as input to the new \textsc{TraceDroid} version. We chose
+applications to give as input to the new \textsc{TraceDroid} version, dubbed \textsc{TraceDroidv4.4}. We chose
 to use the system with a default Android 4.4 application and with 3
 external ones not compatible with \textsc{TraceDroid} based on Android
 2.3.4. On one hand, testing a default application gave us the output
@@ -13,7 +13,7 @@ other, testing 3 previously-not-compatible applications generated the
 output to understand if the compatibility of \textsc{TraceDroid} was increased.
 
 The testing environment was the Android emulator with the compiled
-\textsc{TraceDroid} 4.4 system image and the Android 4.4 AVD as input. We chose
+\textsc{TraceDroidv4.4} system image and the Android 4.4 AVD as input. We chose
 the Android browser as the default input application. We stored the
 app's uid under the common input interface, described in previous
 chapters, and then we started one of the browser's activity (opening a
@@ -28,7 +28,7 @@ to use \cite{ref23, ref24, ref25}. The following are the reasons behind this cho
     manifest.xml decompiled with \textsc{Androguard} \cite{ref12}, greater
     than API level 10, the one used by the previous
     \textsc{TraceDroid} version, and smaller or equal to API level 19,
-    the one used by the ported \textsc{TraceDroid} version. This is
+    the one used by \textsc{TraceDroidv4.4}. This is
     essential to evaluate the compatibility increase of the new system
     image.
   \item They are among the most downloaded Android applications \cite{ref26, ref27}.
@@ -37,7 +37,7 @@ The environment used for testing and the steps were the same used for
 the default Android browser except for the need to install the
 applications since they were not already present in the emulated AVD.
 
-All the 4 used applications were executed with both the \textsc{TraceDroid}
+All the 4 used applications were executed with both the \textsc{TraceDroidv4.4}
 image producing full traces and the testing one omitting
 calls executing bytecode from a system Jar. The whole testing process
 is reproducible and the guides on how it was performed with the
