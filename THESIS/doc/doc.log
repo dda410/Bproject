@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.29)  27 JUL 2017 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2017.6.29)  28 JUL 2017 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1860,9 +1860,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
  []
 
 [16]
-Overfull \hbox (26.76836pt too wide) in paragraph at lines 46--52
-\OT1/lmr/m/n/10 trance, a method exit or an ex-cep-tion is throw is be-ing pro-
-filed. \OT1/lmtt/m/n/10 dvmMethodTraceAdd()
+Overfull \hbox (23.3794pt too wide) in paragraph at lines 46--52
+\OT1/lmr/m/n/10 trance, a method exit or an ex-cep-tion thrown is be-ing pro-fi
+led. \OT1/lmtt/m/n/10 dvmMethodTraceAdd()
  []
 
 
@@ -1883,68 +1883,68 @@ Overfull \hbox (4.69826pt too wide) in paragraph at lines 15--23
 
 ]
 Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 14.
+t line 13.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 17.
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 16.
 
 
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.4054pt too wide) in paragraph at lines 21--22
+Overfull \hbox (5.4054pt too wide) in paragraph at lines 20--21
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 25--26
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 24--25
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 31--32
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 30--31
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
  []
 
 
-Overfull \hbox (10.50545pt too wide) in paragraph at lines 36--37
+Overfull \hbox (10.50545pt too wide) in paragraph at lines 35--36
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 46--47
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 45--46
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [20]
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 85--86
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 84--85
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 89--90
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 88--89
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 93--94
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 92--93
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 97--98
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 96--97
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (15.6055pt too wide) in paragraph at lines 101--102
+Overfull \hbox (15.6055pt too wide) in paragraph at lines 100--101
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
@@ -2062,7 +2062,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
 Here is how much of TeX's memory you used:
  30099 strings out of 493105
  563475 string characters out of 6137072
- 669751 words of memory out of 5000000
+ 669753 words of memory out of 5000000
  32783 multiletter control sequences out of 15000+600000
  84623 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2080,7 +2080,7 @@ exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 mri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.
 pfb>
-Output written on doc.pdf (27 pages, 802433 bytes).
+Output written on doc.pdf (27 pages, 802403 bytes).
 PDF statistics:
  650 PDF objects out of 1000 (max. 8388607)
  583 compressed objects within 6 object streams
