@@ -2,14 +2,14 @@
 \label{sec:porting_limitations}
 
 Features and limitations of our implementation are discussed in this
-section. Most of the original code concerning \textsc{TraceDroid} based on
-Android 2.3.4 has been successfully adapted to the sources of Android
-4.4. There are, however, some functionalities that could not be ported
-due to bugs or unexpected behavior. We give in table 4.1 a
-comprehensive list of the main features of the system, in which file they are
-implemented and their porting status. The shorthand 'P' for ported,
-'NP' for not ported and 'T' for testing is used. A brief description
-of the features listed follows the table.
+section. Most of the original code concerning \textsc{TraceDroid}
+based on Android 2.3.4 has been successfully adapted to the sources of
+Android 4.4. There are, however, some functionalities that could not
+be ported due to bugs or unexpected behavior. We show in table 4.1 a
+comprehensive list of the main features of the system, the files they
+are implemented in and their porting status. The shorthand 'P' for
+ported, 'NP' for not ported and 'T' for testing is used. A brief
+description of the features listed follows the table.
 
 \begin{table}[!h]
     \caption{Overview of the ported features status}
@@ -45,7 +45,7 @@ Allows to trace a specified app by storing its uid in the
 
 \paragraph{Distinguish method enter, exit and exception throwing} ~\\
 Makes it possible to produce different traces based on whether a
-method entrance, a method exit or an exception is throw is being
+method entrance, a method exit or an exception thrown is being
 profiled. \texttt{dvmMethodTraceAdd()} detects the type of action and calls a
 method to handle it. The three methods that can be called are
 \texttt{handle\_method}, \texttt{handle\_return}, \texttt{handle\_throws}.
@@ -53,7 +53,7 @@ method to handle it. The three methods that can be called are
 \paragraph{Tracing return values when profiling a method exit} ~\\
 The \texttt{TRACE\_METHOD\_EXIT} macro declaration is augmented to hold the
 returning value of a method. The value is passed as a parameter from
-the calls to this macro present in the files under \texttt{dalvik/vm/}.
+the files where the macro is present.
 
 \paragraph{Tracing exceptions when a thrown statement is caught} ~\\
 The \texttt{TRACE\_METHOD\_UNROLL} macro declaration is augmented to hold the
@@ -71,37 +71,37 @@ Both the functionalities are implemented by the \texttt{convertDescriptor()} met
 
 \paragraph{Compute string representation of parameters and return value} ~\\
 The string representation of a returning value is calculated by
-\texttt{parameterToString()}. Since parameters can be more than one, the
-computation of their string representation is implemented in
-\texttt{getParameters()} and \texttt{getParameterString()}. The former returns an array
-of string representations, the latter a singular string representation
-with the content of this array.
+\texttt{parameterToString()}. Since parameters can be more than one,
+the computation of their string representation is implemented by
+\texttt{getParameters()} and \texttt{getParameterString()},
+respectively returning an array of strings and a singular string
+representation of this array.
 
 \paragraph{Filter calls executing bytecode from a system jar} ~\\
-This feature, implemented in the \texttt{dvmMethodTraceAdd()} method, allows to
-omit the traces regarding methods that execute bytecode from a system
-jar where also the caller consist of bytecode from a system jar. Not
-tracing these calls speeds up the system and excludes to profile calls
-that are assured not to contain malicious code. It has been
-implemented completely differently due to unexpected behavior of the
-original one that was ported.
+This feature, implemented in the \texttt{dvmMethodTraceAdd()} method,
+allows to omit the traces regarding methods that execute bytecode from
+a system jar where also the caller consists of bytecode from a system
+jar. Not tracing these calls speeds up the system and excludes to
+profile calls assured not to contain malicious code. This feature has
+been implemented in a different way compared to the one present in the
+original \textsc{TraceDroid} version to solve its unexpected behaviour.
 
 \paragraph{Compute string representation of a Java object} ~\\
 This functionality, originally implemented by the
 \texttt{objectToString()} method, consists in getting the string
-representation of a parameter or returning value if it is a Java
+representation of a parameter or of a returning value if it is a Java
 object. The method calls the object's Java class \texttt{toString()}
-method in the case there is one. A boolean variable, called
-\texttt{inMethodTraceAdd()}, is also needed in
-\texttt{dvmMethodTraceAdd()} not to trace the calls to the
-\texttt{toString()} method.
+method in the case there is one. Furthermore, a boolean variable,
+named \texttt{inMethodTraceAdd}, is also needed in
+\texttt{dvmMethodTraceAdd()} to avoid tracing the \texttt{toString()}
+calls.
 
 \paragraph{Creating trace files under \texttt{/sdcard/}} ~\\
 Implemented by \texttt{prep\_log()} method. It creates dump files for
 the current process for each of its threads. The process id and the
-thread id is part of the dump filenames (\texttt{dump.PID.TID}). This
-allows distinguishing between the traces of each thread of the
-profiled application.
+thread id are part of the dump filenames (\texttt{dump.PID.TID}). This
+allows to distinguish between the traces of each profiled application
+thread.
 
 \paragraph{Printing traces to dump files} ~\\
 Implemented by the \texttt{ALOGD\_TRACE} macro. It acquires a lock to
@@ -116,9 +116,9 @@ version of the system since the code implementing them is still in
 testing. They are included in a separate source code branch with a
 different compiled system image.
 
-In the stable version of \textsc{TraceDroid}, hence, the filtering of calls
+In the stable version of \textsc{TraceDroidv4.4}, hence, the filtering of calls
 executing bytecode from a system jar was not included. This results in
-larger output traces for the application we are profiling, increasing
+larger output traces for the profiled application, increasing
 also the computation steps required by the system. The second feature
 that has not been ported was about computing the string representation
 of the parameters and returning Java objects. It has been substituted
