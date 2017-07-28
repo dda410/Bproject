@@ -8,12 +8,12 @@ The original version of the sandbox is based on Android 2.3.4, one of
 the earliest versions of the Google OS. Nowadays Gingerbread is
 largely outdated and accounts for only 0.8\% in the Android platforms
 distribution \cite{ref16}. The main drawback of having an outdated version at
-the core of dynamic analysis is that the API level used by the sandbox
-is not supporting most of the applications. Applications, in fact,
+the dynamic analysis core is that the API level, used by the sandbox,
+does not supporting most of the applications. Applications, in fact,
 contain in their manifest file an integer value called \textit{minSdkVersion}
 which expresses the minimum API level required to run the application
 \cite{ref17}. Developers, as a consequence, are not interested in creating
-apps compatible with an Android version which has just a 0.8\% of
+apps compatible with an Android version with 0.8\% of
 market share. The \textsc{TraceDroid} compatibility rate, as a consequence,
 decreases drastically.
 
@@ -25,8 +25,8 @@ analyzed. We have chosen Android KitKat as the target version (Android
 runtime environment. In KitKat the VM is now implemented in
 C{}\verb!++! instead of C but the file structure and the functions
 provided are similar, making the porting process
-smoother. Furthermore, the market share of this platform is a high
-18.1\% and it is the third most used Android version. Developers,
+smoother. Furthermore, the market share of this platform is
+18.1\%, corresponding to the third most used Android version. Developers,
 being aware of the data, are interested in supporting this major
 version and hence most applications will have at least version 19 or
 lower as \textit{minSdkVersion} in their manifest file. As a
@@ -46,7 +46,7 @@ to build Android \cite{ref18}. We chose to use a docker container as a build
 environment for Android 4.4 to avoid dependencies issues on the client
 Linux machine we were working from. We selected Ubuntu 12.04 64-bit
 image from the official Ubuntu docker repository because of its
-compatibility with older versions of the Google mobile OS. We then
+compatibility with Google mobile OS older versions. We then
 downloaded the Android source code \cite{ref19} and successfully compiled it after
 solving the dependencies issues causing compilation errors. The
 technical details regarding the dependencies installed in the docker
@@ -56,9 +56,9 @@ the Github repository of the project \cite{ref15}.
 We needed to install also the Android SDK tools \cite{ref21} to be able to emulate
 an Android system image. We performed this by installing Android
 studio and the required dependencies in our client Linux machine, in
-the specific \textit{debian 3.16.0-4-amd64} \cite{ref20}. The SDK tools allow
+the specific \textit{debian 3.16.0-4-amd64} \cite{ref20}. The SDK tools allowed
 us to create an Android Virtual Device (AVD) to hold the system image
-with its properties and then emulate it \cite{ref15}. This is fundamental to
+with its properties and then emulate it \cite{ref15}. This was fundamental to
 access our custom \textsc{TraceDroid} system image and interact with
 it via the \texttt{adb} (Android Debug Bridge) command line interface
 \cite{ref22}.
@@ -82,13 +82,13 @@ together with the addition of debugging messages to the Android logs
 via the \texttt{ALOGD} macro. After performing every step in the porting
 process we pushed the implemented files to the docker image
 responsible of building the sources. We compiled the \texttt{dalvik/vm/} module
-with the mm utility and then linked it to the other modules with a
-make at the root of the Android source tree. After the compilation was
+with the \texttt{mm} utility and then linked it to the other modules with the
+\texttt{make} command executed at the root of the Android source tree. After the compilation was
 terminated we pulled the generated system image from the container and
 we emulated it. We started some activities to trigger \textsc{TraceDroid} and
 analyzed the logs after it was terminated. In the case there were no
-compile or runtime errors and the system was behaving as expected the
-next modifications could be applied otherwise we rolled back to the
+compile or runtime errors and the system was behaving as expected, the
+next modifications could be applied. In case of errors, we rolled back the
 applied changes and performed bug tracking and bug fixing. The diagram
 showing the workflow of the porting process can be seen in figure~\ref{fig:porting_workflow}.
 
@@ -108,9 +108,9 @@ porting process. We describe them in a chronological order as follows:
 \paragraph{Enabling tracing for a specified app} ~\\
 We added to the file \texttt{Globals.h} the variables to deal with the
 common interface to specify which app to track. The variables hold the
-uid file containing the uid of the application to be dynamically
+uid file containing the application uid to be dynamically
 analyzed. We modified the \texttt{Init.cpp} file to implement the
-functionality of reading the \texttt{/sdcard/uid} file and start the
+functionality of reading the \texttt{/sdcard/uid} file and starting the
 tracing in case an app with that unique identifier is launched.
 
 \paragraph{Entering method, exiting method and exception throwing capturing} ~\\
@@ -144,15 +144,15 @@ stage. The calls to these function were added to
 \paragraph{Retrieving parameters types and values} ~\\
 First the \texttt{parameterToString()} method was ported to get a
 string representation of a parameter containing both its type and its
-value. Second the \texttt{getParameters()} one that iteratively
-computes the string representations of all the parameters. It
-accomplishes this by calling the previously described method for each
+value. Second the \texttt{getParameters()} method, that iteratively
+computes the string representations of all the parameters, was implemented. This
+is accomplished by calling the previously described method for each
 parameter. The array containing the parameters' string representation
 is then returned. Last the \texttt{getParameterString()} function was
 implemented. It gives a string representation of the array computed by
 \texttt{getParameters()}. The calls to these computational procedures
 were then added to \texttt{handle\_method} with an additional check to
-call them only in the case there are parameters to be computed.
+call them only in case there are parameters to be computed.
 
 \paragraph{Retrieving exceptions and return value} ~\\
 To compute the string representation of a thrown exception or a
@@ -165,8 +165,8 @@ returning method, respectively \texttt{TRACE\_METHOD\_UNROLL} and
 adding an extra value to hold either the thrown exception or the
 returning value. The new parameter was also added to
 \texttt{handle\_return} and \texttt{handle\_throws}. The returning
-value or the exception risen were added in the files were the macros
-to unroll or exit a method were present. We added, as a last step, in
+value or the exception risen was added as parameter to 
+the macros called when unrolling or exiting a method. We added, as a last step, in
 \texttt{handle\_return} and \texttt{handle\_throws} respectively
 \texttt{parameterToString()} and \texttt{convertDescriptor()}
 functions to get a string representation of the returning value and
