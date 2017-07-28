@@ -24,7 +24,7 @@ bytecode, differs from the standard bytecode since Java \texttt{.class} files,
 obtained after compiling the sources, are converted into a single \texttt{.dex}
 file using the \texttt{dx} utility. On one hand the standard \texttt{.class} files
 have their private heterogeneous constant pool for storing different
-types of constants, on the other the \texttt{.dex} files have different type
+types of constants, on the other hand the \texttt{.dex} files have different type
 specific constant pools shared among all the classes of the same
 program. This constant part accounts for a big part of the Java class
 files, circa 61\%. Space is, hence, saved by having extra pointers
@@ -40,13 +40,13 @@ the startup time. Each Application, as a consequence, runs in its own
 isolated process which has a unique \texttt{uid} (user identifier) that can
 only access the set of features, verified during installation,
 requested in its manifest.xml file. This design enforces not only
-minimized load times but also increases the whole OS security.
+minimized load times, but also increases the whole OS security.
 
 Another difference between the JVM and Google implementation is that
 the architecture is not Stack-based but register-based. Standard
 virtual machines are based on Stack data structures because of its
 simplicity. The DVM, in contrast, that is based on registers, lacks
 code density (circa 25\% larger source code) but increases the overall
-performance by about 32\%. Having in mind all the hardware constraints
+performance by about 32\%. Keeping in mind all the hardware constraints
 of the devices the Android OS is designed for, this is an acceptable
 compromise.
